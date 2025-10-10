@@ -18,14 +18,14 @@ export default defineConfig({
         text: 'Python',
         collapsed: true,
         items: [
-          { text: '启动设置', link: '/posts/python/run.md'}
+          { text: 'python启动设置', link: '/posts/python/run.md'}
         ]
       },
       {
         text: 'Golang',
         collapsed: true,
         items: [
-          { text: '编译优化', link: 'posts/golang/build.md'}
+          { text: 'go编译优化', link: 'posts/golang/build.md'}
         ]
       },
       {
