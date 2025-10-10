@@ -1,1 +1,0 @@
-import{_ as t,c as e,o as a}from"./chunks/framework.BKhkn9_V.js";const _=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"posts/golang/build.md","filePath":"posts/golang/build.md"}'),o={name:"posts/golang/build.md"};function s(n,r,c,d,i,l){return a(),e("div")}const m=t(o,[["render",s]]);export{_ as __pageData,m as default};
