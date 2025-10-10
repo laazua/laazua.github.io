@@ -1,0 +1,30 @@
+
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
+}
+:root.dark {
+  --vp-c-bg: #0f172a;
+  --vp-c-text: #e2e8f0;
+  --vp-c-brand: #60a5fa;
+}
+
+/* 调整代码块样式 */
+.vp-doc pre code {
+  font-size: 14px;
+  background-color: #1e1e2f;
+  border-radius: 8px;
+}
+
+/* 自定义页头标题样式 */
+.vp-doc h1 {
+  color: var(--vp-c-brand);
+  border-bottom: 2px solid var(--vp-c-brand);
+  padding-bottom: 0.3em;
+}
+
+/* 修改首页 hero 区域样式 */
+.VPHomeHero .name {
+  color: var(--vp-c-brand);
+  font-size: 2.8rem;
+}
