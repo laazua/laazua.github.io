@@ -16,4 +16,4 @@ export PYTHONWARNINGS=ignore
 export PYTHONPATH=vendor/
 # python --help-all 查看所有启动优化配置
 ```
-2. python -m app
+2. python -S -s -E -O -m app
