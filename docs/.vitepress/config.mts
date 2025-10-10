@@ -18,7 +18,7 @@ export default defineConfig({
         text: 'Python',
         collapsed: true,
         items: [
-          { text: '程序启动优化', link: '/posts/python/run'}
+          { text: '启动设置', link: '/posts/python/run.md'}
         ]
       },
       {
