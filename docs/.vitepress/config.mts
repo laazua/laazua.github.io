@@ -24,7 +24,9 @@ export default defineConfig({
       {
         text: 'Golang',
         collapsed: true,
-        items: []
+        items: [
+          { text: '编译优化', link: 'posts/golang/build.md'}
+        ]
       },
       {
         text: 'Network',
