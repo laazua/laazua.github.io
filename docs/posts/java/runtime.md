@@ -26,5 +26,4 @@ someone@debian:~$ $JAVA_HOME/bin/jlink \
 
 > [瘦身脚本jar-slim.sh](runtime-jar.md)  
 
-- **启动参数**
 > [启动参数优化](runtime-optimized.md)
