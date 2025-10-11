@@ -36,6 +36,13 @@ export default defineConfig({
         ]
       },
       {
+        text: 'Java',
+        collapsed: true,
+        items: [
+          { text: '运行时环境优化', link: '/posts/java/runtime.md' }
+        ]
+      },
+      {
         text: 'Network',
         collapsed: true,
         items: [
