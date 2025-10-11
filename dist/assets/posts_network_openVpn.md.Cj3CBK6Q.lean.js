@@ -1,1 +1,0 @@
-import{_ as e,c as t,o}from"./chunks/framework.BKhkn9_V.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"posts/network/openVpn.md","filePath":"posts/network/openVpn.md"}'),n={name:"posts/network/openVpn.md"};function p(s,r,a,c,_,d){return o(),t("div")}const f=e(n,[["render",p]]);export{m as __pageData,f as default};

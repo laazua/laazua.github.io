@@ -17,7 +17,7 @@ hero:
 #       link: /about
 ---
 
-## ✨ 最新文章
+### ✨ 最新文章
 
 这里是我最近更新的几篇博客 👇  
 - [v2ray部署](/posts/network/v2ray.md)
@@ -40,10 +40,10 @@ hero:
 
 --- -->
 
-## 👨‍💻 作者简介
+### 👨‍💻 关于我
 
-**LAAZUA**  
-> Linux 系统运维 & DevOps 工程师，专注于系统可靠性与自动化。
+*LAAZUA*  
+> Linux 系统运维 & DevOps 工程师, 专注于系统可靠性与自动化.  
 
 - 🌍 GitHub: [@laazua](https://github.com/laazua)
 <!-- - 🐦 Twitter: [@laazua_dev](https://twitter.com/laazua_dev)

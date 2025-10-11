@@ -15,6 +15,13 @@ export default defineConfig({
     ],
     sidebar: [
       {
+        text: 'Linux',
+        collapsed: true,
+        items: [
+          { text: '内核参数调整', link: '/posts/linux/kernel.md' }
+        ]
+      },
+      {
         text: 'Python',
         collapsed: true,
         items: [
@@ -41,8 +48,8 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/laazua' }
     ],
     footer: {
-      message: '@laazua',
-      copyright: 'copyright by laazua'
+      message: '欢迎来到我的站点',
+      copyright: '版权归 laazua 所有'
     }
   }
 })
