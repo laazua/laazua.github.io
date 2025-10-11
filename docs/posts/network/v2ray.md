@@ -1,4 +1,4 @@
-### v2ray 部署
+##### V2ray
 
 - **v2ray安装**
 > 从官网下载软件包: v2ray-linux-64.zip  

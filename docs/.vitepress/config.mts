@@ -8,7 +8,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/avatar.png',
-    siteTitle: "Laazua's Blog",
+    siteTitle: "Laazua 的博客",
     nav: [
       { text: '首页', link: '/' },
       { text: '文章', link: '/posts' }
@@ -42,14 +42,21 @@ export default defineConfig({
           { text: 'v2ray', link: '/posts/network/v2ray.md' },
           { text: 'openVpn', link: '/posts/network/openVpn.md' }
         ]
+      },
+      {
+        text: 'Kubernetes',
+        collapsed: true,
+        items: [
+          { text: 'docker', link: '/posts/kubernetes/docker.md'}
+        ]
       }
     ],
     socialLinks: [
       { icon: 'github', link: 'https://github.com/laazua' }
     ],
     footer: {
-      message: '欢迎来到我的站点',
-      copyright: '版权归 laazua 所有'
+      message: '欢迎来到 Laazua 的站点',
+      copyright: '版权归 Laazua 所有'
     }
   }
 })

@@ -1,5 +1,5 @@
+##### 编译
 
-- **编译**
 ```shell
 # 设置静态编译及平台架构
 CGO_ENABLED=0 GOOS=linux GOARCH=amd64

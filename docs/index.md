@@ -1,8 +1,8 @@
 ---
 layout: home
-title: "LAAZUA 的博客"
+title: "Laazua 的博客"
 hero:
-  name: "LAAZUA の BLOG"
+  name: "Laazua の Blog"
   text: "记录 · 思考 · 实践"
   tagline: "记录日常学习、工作与思考的点点滴滴。"
 #   image:
