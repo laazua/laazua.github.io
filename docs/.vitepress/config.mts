@@ -26,6 +26,13 @@ export default defineConfig({
         collapsed: true,
         items: [
           {
+            text: 'Java',
+            collapsed: true,
+            items: [
+              { text: '运行时环境优化', link: '/posts/language/java/runtime' },
+            ]
+          },
+          {
             text: 'Python',
             collapsed: true,
             items: [
@@ -38,13 +45,6 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'go编译优化', link: '/posts/language/golang/build' },
-            ]
-          },
-          {
-            text: 'Java',
-            collapsed: true,
-            items: [
-              { text: '运行时环境优化', link: '/posts/language/java/runtime' },
             ]
           }
         ]
