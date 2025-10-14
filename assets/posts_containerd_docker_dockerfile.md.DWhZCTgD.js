@@ -1,0 +1,25 @@
+import{_ as i,c as a,o as n,af as l}from"./chunks/framework.BKhkn9_V.js";const o=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"posts/containerd/docker/dockerfile.md","filePath":"posts/containerd/docker/dockerfile.md"}'),p={name:"posts/containerd/docker/dockerfile.md"};function t(e,s,h,k,r,E){return n(),a("div",null,[...s[0]||(s[0]=[l(`<h5 id="dockerfile示例" tabindex="-1">Dockerfile示例 <a class="header-anchor" href="#dockerfile示例" aria-label="Permalink to “Dockerfile示例”">​</a></h5><div class="language-Dockerfile"><button title="Copy Code" class="copy"></button><span class="lang">Dockerfile</span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># ===== 构建阶段 =====</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> python:3.10-slim </span><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">AS</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> builder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">LABEL</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> stage=builder</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> /build</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> requirements.txt .</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> pip install --upgrade pip &amp;&amp; \\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    pip install --user -r requirements.txt</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># ===== 运行阶段 =====</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> gcr.io/distroless/python3-debian12</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">LABEL</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> maintainer=</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;ops@example.com&quot;</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">ENV</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> TZ=Asia/Shanghai \\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    APP_HOME=/app \\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    PYTHONUNBUFFERED=1</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> $APP_HOME</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> --from=builder /root/.local /root/.local</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> . .</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">USER</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> nobody</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">EXPOSE</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> 8000</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">HEALTHCHECK</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> CMD python -c </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;import urllib.request; urllib.request.urlopen(&#39;http://localhost:8000/health&#39;)&quot;</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">ENTRYPOINT</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;/root/.local/bin/python&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">, </span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;main.py&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span></code></pre></div>`,2)])])}const c=i(p,[["render",t]]);export{o as __pageData,c as default};
