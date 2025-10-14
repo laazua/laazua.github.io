@@ -18,44 +18,50 @@ export default defineConfig({
         text: 'Linux',
         collapsed: true,
         items: [
-          { text: '内核参数调整', link: '/posts/linux/kernel.md' }
+          { text: '内核参数调整', link: '/posts/linux/kernel' }
         ]
       },
       {
-        text: 'Python',
+        text: 'Language',
         collapsed: true,
         items: [
-          { text: 'python启动设置', link: '/posts/python/run.md' },
-          { text: 'django-drf接口示例', link: '/posts/python/py-drf.md'}
-        ]
-      },
-      {
-        text: 'Golang',
-        collapsed: true,
-        items: [
-          { text: 'go编译优化', link: '/posts/golang/build.md' }
-        ]
-      },
-      {
-        text: 'Java',
-        collapsed: true,
-        items: [
-          { text: '运行时环境优化', link: '/posts/java/runtime.md' }
+          {
+            text: 'Python',
+            collapsed: true,
+            items: [
+              { text: 'python启动设置', link: '/posts/language/python/run' },
+              { text: 'django-drf接口示例', link: '/posts/language/python/py-drf' },
+            ]
+          },
+          {
+            text: 'Golang',
+            collapsed: true,
+            items: [
+              { text: 'go编译优化', link: '/posts/language/golang/build' },
+            ]
+          },
+          {
+            text: 'Java',
+            collapsed: true,
+            items: [
+              { text: '运行时环境优化', link: '/posts/language/java/runtime' },
+            ]
+          }
         ]
       },
       {
         text: 'Network',
         collapsed: true,
         items: [
-          { text: 'v2ray', link: '/posts/network/v2ray.md' },
-          { text: 'openVpn', link: '/posts/network/openVpn.md' }
+          { text: 'v2ray', link: '/posts/network/v2ray' },
+          { text: 'openVpn', link: '/posts/network/openVpn' }
         ]
       },
       {
         text: 'Kubernetes',
         collapsed: true,
         items: [
-          { text: 'docker', link: '/posts/kubernetes/docker.md'}
+          { text: 'docker', link: '/posts/kubernetes/docker'}
         ]
       }
     ],
