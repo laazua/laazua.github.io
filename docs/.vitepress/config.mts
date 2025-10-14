@@ -25,7 +25,8 @@ export default defineConfig({
         text: 'Python',
         collapsed: true,
         items: [
-          { text: 'python启动设置', link: '/posts/python/run.md' }
+          { text: 'python启动设置', link: '/posts/python/run.md' },
+          { text: 'django-drf接口示例', link: '/posts/python/py-drf.md'}
         ]
       },
       {
