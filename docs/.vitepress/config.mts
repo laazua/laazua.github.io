@@ -15,14 +15,14 @@ export default defineConfig({
     ],
     sidebar: [
       {
-        text: 'Linux',
+        text: '系统相关',
         collapsed: true,
         items: [
-          { text: '内核参数调整', link: '/posts/linux/kernel' }
+          { text: 'linux内核参数调整', link: '/posts/linux/kernel' }
         ]
       },
       {
-        text: 'Language',
+        text: '语言相关',
         collapsed: true,
         items: [
           {
@@ -50,7 +50,7 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Network',
+        text: '网络相关',
         collapsed: true,
         items: [
           { text: 'v2ray', link: '/posts/network/v2ray' },
