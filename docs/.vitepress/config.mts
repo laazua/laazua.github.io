@@ -58,10 +58,32 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Kubernetes',
+        text: '容器相关',
         collapsed: true,
         items: [
-          { text: 'docker', link: '/posts/kubernetes/docker'}
+          {
+            text: 'Docker',
+            collapsed: true,
+            items: [
+              { text: '基础指令详解', link: '/posts/containerd/docker/base' },
+              { text: 'dockerfile示例', link: '/posts/containerd/docker/dockerfile' }
+            ]
+          },
+          {
+            text: 'Kubernetes',
+            collapsed: true,
+            items: [
+              { text: 'k8s部署', link: 'https://github.com/laazua/k8s' },
+              { text: 'k8s示例', link: 'https://github.com/laazua/k8s/tree/main/examples'}
+            ]
+          }
+        ]
+      },
+      {
+        text: '中间件相关',
+        collapsed: true,
+        items: [
+          
         ]
       }
     ],
