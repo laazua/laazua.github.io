@@ -1,24 +1,26 @@
 ##### V2ray
 
 - **v2ray安装**
+> 版本: V2Ray 5.38.0
 > 从官网下载软件包: v2ray-linux-64.zip  
 > 解压v2ray软件包: unzip v2ray-linux-64.zip -d ./v2ray && mv v2ray /etc/  
+> [使用脚本生成配置](./v2ray-conf.md)  
 
 
 - **服务端配置**
-> 创建配置目录 configs/ : mkdir /etc/v2ray/configs  
-> log字段配置: [configs/log.json](v2ray-log.md)  
-> api字段配置: [configs/api.json](v2ray-api.md)  
-> dns字段配置: [configs/dns.json](v2ray-dns.md)  
-> inbounds字段配置: [configs/inbounds.json](v2ray-inbounds.md)  
-> outbounds字段配置: [configs/outbounds.json](v2ray-outbounds.md)  
-> routing字段配置: [configs/routing.json](v2ray-routing.md)  
+> 创建配置目录 server/ : mkdir /etc/v2ray/server  
+> log字段配置: [server/log.json](v2ray-log.md)  
+> api字段配置: [server/api.json](v2ray-api.md)  
+> dns字段配置: [server/dns.json](v2ray-dns.md)  
+> inbounds字段配置: [server/inbounds.json](v2ray-inbounds.md)  
+> outbounds字段配置: [server/outbounds.json](v2ray-outbounds.md)  
+> routing字段配置: [server/routing.json](v2ray-routing.md)  
 
 
 - **linux客户端配置**
-> 创建配置目录 configs/ : mkdir /etc/v2ray/configs  
-> inbounds字段配置: [configs/inbounds.json](v2ray-client-inbounds.md)  
-> outbounds字段配置: [configs/outbounds.json](v2ray-client-outbounds.md)  
+> 创建配置目录 client/ : mkdir /etc/v2ray/client  
+> inbounds字段配置: [client/inbounds.json](v2ray-client-inbounds.md)  
+> outbounds字段配置: [client/outbounds.json](v2ray-client-outbounds.md)  
 > linux系统如果需要使用v2ray代理服务,则需要配置http_proxy和https_proxy环境变量  
 
 - **windows客户端配置**
