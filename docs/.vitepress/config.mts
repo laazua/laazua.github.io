@@ -83,7 +83,13 @@ export default defineConfig({
         text: '中间件相关',
         collapsed: true,
         items: [
-          
+          { 
+            text: 'Jenkins',
+            collapsed: true,
+            items: [
+              { text: '共享库示例', link: 'https://github.com/laazua/sharedlib' }
+            ]
+          }
         ]
       }
     ],
