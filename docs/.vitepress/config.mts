@@ -91,6 +91,13 @@ export default defineConfig({
             ]
           }
         ]
+      },
+      {
+        text: '其他',
+        collapsed: true,
+        items: [
+          { text: "编辑器字体", link: '/posts/other/font' }
+        ]
       }
     ],
     socialLinks: [
