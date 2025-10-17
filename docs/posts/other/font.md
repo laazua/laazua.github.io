@@ -1,6 +1,6 @@
 ##### 字体
 
-- JetBrains Mono
+- JetBrains Mono Medium
 - SF Mono
 - Fira Code
 - Cascadia Mono
