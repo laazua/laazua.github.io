@@ -29,3 +29,5 @@
 - **检查配置并运行**
 > 检查配置语法: v2ray test -d configs  
 > 运行v2ray服务: v2ray run -d configs  
+
+- **[关于v2ray具体配置参考这里](https://www.v2fly.org/)**
