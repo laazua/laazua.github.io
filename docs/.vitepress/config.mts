@@ -18,8 +18,9 @@ export default defineConfig({
         text: '系统相关',
         collapsed: true,
         items: [
+          { text: 'bash脚本相关', link: '/posts/linux/bash'},
           { text: 'linux内核参数调整', link: '/posts/linux/kernel' },
-          { text: 'ssh服务相关配置详解', link: '/posts/linux/sshd.md' }
+          { text: 'ssh服务相关配置详解', link: '/posts/linux/sshd' }
         ]
       },
       {
