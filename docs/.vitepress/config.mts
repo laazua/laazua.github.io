@@ -41,7 +41,7 @@ export default defineConfig({
               { text: 'uv项目管理工具', link: '/posts/language/python/uv' },
               { text: 'python启动设置', link: '/posts/language/python/run' },
               { text: 'django-drf接口示例', link: '/posts/language/python/py-drf' },
-              { text: '标准库 asyncio', link: '/posts/language/python/asyncio'}
+              { text: '标准库 asyncio', link: '/posts/language/python/asyncio' }
             ]
           },
           {
@@ -132,7 +132,7 @@ export default defineConfig({
         text: '其他',
         collapsed: true,
         items: [
-          { text: "编辑器字体", link: '/posts/other/font' }
+          { text: "编辑器", link: '/posts/other/font' }
         ]
       }
     ],
