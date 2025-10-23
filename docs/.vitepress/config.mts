@@ -38,8 +38,10 @@ export default defineConfig({
             text: 'Python',
             collapsed: true,
             items: [
+              { text: 'uv项目管理工具', link: '/posts/language/python/uv' },
               { text: 'python启动设置', link: '/posts/language/python/run' },
               { text: 'django-drf接口示例', link: '/posts/language/python/py-drf' },
+              { text: '标准库 asyncio', link: '/posts/language/python/asyncio'}
             ]
           },
           {
@@ -85,6 +87,38 @@ export default defineConfig({
         text: '中间件相关',
         collapsed: true,
         items: [
+          {
+            text: 'Redis',
+            collapsed: true,
+            items: []
+          },
+          {
+            text: 'MySQL',
+            collapsed: true,
+            items: []
+          },
+          {
+            text: 'Nginx',
+            collapsed: true,
+            items: []
+          },
+          {
+            text: 'Kafka',
+            collapsed: true,
+            items: [],
+          },
+          {
+            text: 'Rabbitmq',
+            collapsed: true,
+            items: [],
+          },
+          {
+            text: 'Haproxy',
+            collapsed: true,
+            items: [
+              { text: '', link: ''}
+            ]
+          },
           { 
             text: 'Jenkins',
             collapsed: true,
