@@ -26,6 +26,14 @@ uv sync
 uv run django-admin startapp app_name
 ```
 
+- **开发项目**
+```bash
+# 在实际开发项目中, 加入创建了app模块
+# 当遇到开发的模块在本项目中导入报错: ModuleNotFoundError: No module named 'app'
+## 解决方案
+uv 
+```
+
 - **部署项目**
 ```bash
 # 1. 使用uv进行部署(需要安装uv)
