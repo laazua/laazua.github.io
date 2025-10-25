@@ -24,6 +24,14 @@ export default defineConfig({
         ]
       },
       {
+        text: '运维工具',
+        collapsed: true,
+        items: [
+          { text: 'Ansible', link: '/posts/tools/ansible' },
+          { text: 'Pyinfra', link: '/posts/tools/pyinfra' },
+        ]
+      },
+      {
         text: '语言相关',
         collapsed: true,
         items: [
