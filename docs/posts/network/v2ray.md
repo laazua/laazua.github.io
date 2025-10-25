@@ -1,5 +1,9 @@
 ##### V2ray
 
+<pre>
+  v2ray是一款网络代理软件.
+</pre>
+
 - **v2ray安装**
 > 版本: V2Ray 5.38.0
 > 从官网下载软件包: v2ray-linux-64.zip  
