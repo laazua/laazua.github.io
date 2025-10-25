@@ -1,19 +1,60 @@
-
 :root {
+  /* 设置侧边栏宽度 */
+  --vp-sidebar-width: 300px;
+  /* 中间内容区域的宽度（默认 688px，可改大或改小） */
+  --vp-content-width: 1600px; /* 你可以根据需要再调整 */
+  --vp-layout-max-width: 1860px;
+
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
 }
-:root.dark {
-  --vp-c-bg: #0f172a;
-  --vp-c-text: #e2e8f0;
-  --vp-c-brand: #60a5fa;
+
+.VPContent {
+  padding-left: 16px;   /* 增加左右内边距，让内容更靠中 */
+  padding-right: 16px;
 }
 
-/* 调整代码块样式 */
-.vp-doc pre code {
-  font-size: 14px;
-  background-color: #1e1e2f;
+/* 代码块样式 */
+html.dark .vp-doc pre,
+.vp-doc pre {
+  background-color: #1e1e1e;
+  color: #dcdcdc;
   border-radius: 8px;
+  padding: 16px 20px;       /* 增加内边距，让代码显示更舒展 */
+  border: 1px solid #2d2d2d;
+  max-width: calc(var(--vp-content-width) - 32px); /* 宽度随内容区域 */
+  overflow-x: auto;
+  box-shadow: 0 2px 8px rgba(58, 58, 58, 0.3);
+}
+
+.vp-doc pre code {
+  font-size: 14px;  /* 略大一点更易阅读 */
+  font-family: "Fira Code", "JetBrains Mono", Consolas, monospace;
+  color: #dcdcdc;
+  line-height: 1.6;
+  background: transparent;
+}
+
+/* 表格样式 */
+.vp-doc table {
+  width: 100%;  /* 占满内容区域 */
+  max-width: var(--vp-content-width); /* 最大宽度限制 */
+  border-collapse: collapse;
+  margin-bottom: 1.5em;
+  overflow-x: auto;
+  display: block;  /* 保证超长表格横向滚动 */
+}
+
+.vp-doc th,
+.vp-doc td {
+  border: 1px solid var(--vp-c-border);
+  padding: 10px 12px;  /* 增加单元格内边距 */
+  text-align: left;
+}
+
+.vp-doc th {
+  background-color: var(--vp-c-bg-alt);
+  color: var(--vp-c-brand);
 }
 
 /* 自定义页头标题样式 */

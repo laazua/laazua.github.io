@@ -32,6 +32,7 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: '运行时环境优化', link: '/posts/language/java/runtime' },
+              { text: '模块化编程', link: '/posts/language/java/module' },
             ]
           },
           {
@@ -81,6 +82,10 @@ export default defineConfig({
               { text: 'k8s部署', link: 'https://github.com/laazua/k8s' },
               { text: 'k8s示例', link: 'https://github.com/laazua/k8s/tree/main/examples'}
             ]
+          },
+          {
+            text: 'Helm',
+            collapsed: true
           }
         ]
       },
