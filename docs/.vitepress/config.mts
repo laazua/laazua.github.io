@@ -29,6 +29,16 @@ export default defineConfig({
         items: [
           { text: 'Ansible', link: '/posts/tools/ansible' },
           { text: 'Pyinfra', link: '/posts/tools/pyinfra' },
+          { text: 'Elk', link: '/posts/tools/elk' },
+          { text: 'Zabbix', link: '/posts/tools/zabbix' },
+          { text: 'Prometheus', link: '/posts/tools/prometheus' },
+          { 
+            text: 'Jenkins',
+            collapsed: true,
+            items: [
+              { text: '共享库示例', link: 'https://github.com/laazua/sharedlib' }
+            ]
+          }
         ]
       },
       {
@@ -48,7 +58,7 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'uv项目管理工具', link: '/posts/language/python/uv' },
-              { text: 'python启动设置', link: '/posts/language/python/run' },
+              { text: 'python启动设置', link: '/posts/language/python/py-run-env' },
               { text: 'django-drf接口示例', link: '/posts/language/python/py-drf' },
               { text: '标准库 asyncio', link: '/posts/language/python/asyncio' },
               { text: 'python项目环境差异化配置', link: '/posts/language/python/py-config' }
@@ -88,12 +98,13 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'k8s部署', link: 'https://github.com/laazua/k8s' },
-              { text: 'k8s示例', link: 'https://github.com/laazua/k8s/tree/main/examples'}
+              { text: 'k8s示例', link: 'https://github.com/laazua/k8s/tree/main/examples' }
             ]
           },
           {
             text: 'Helm',
-            collapsed: true
+            collapsed: true,
+            items: [],
           }
         ]
       },
@@ -108,6 +119,16 @@ export default defineConfig({
           },
           {
             text: 'MySQL',
+            collapsed: true,
+            items: []
+          },
+          { 
+            text: 'MongoDB',
+            collapsed: true,
+            items: []
+          },
+          {
+            text: 'PostgreSQL',
             collapsed: true,
             items: []
           },
@@ -129,16 +150,7 @@ export default defineConfig({
           {
             text: 'Haproxy',
             collapsed: true,
-            items: [
-              { text: '', link: ''}
-            ]
-          },
-          { 
-            text: 'Jenkins',
-            collapsed: true,
-            items: [
-              { text: '共享库示例', link: 'https://github.com/laazua/sharedlib' }
-            ]
+            items: []
           }
         ]
       },
