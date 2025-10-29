@@ -6,11 +6,11 @@
 # 面向资源进行增删改查,如下说明
 
 方法      资源             返回
-GET      /api/books      : 返回所有资源(列表)
-POST     /api/books      : 返回添加了什么资源
-DELETE   /api/books/<id> : 返回删除了什么资源
-GET      /api/books/<id> : 返回单个资源
-PUT      /api/books/<id> : 返回更新了什么资源
+POST     /api/books      : 返回添加了什么资源       create
+DELETE   /api/books/<id> : 返回删除了什么资源       delete
+PUT      /api/books/<id> : 返回更新了什么资源       update
+GET      /api/books/<id> : 返回单个资源            retrieve
+GET      /api/books      : 返回所有资源(列表)       list
 ```
 
 - **创建项目**
