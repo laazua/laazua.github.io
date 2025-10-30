@@ -7,7 +7,7 @@
 
 方法      资源             返回
 POST     /api/books      : 返回添加了什么资源       create
-DELETE   /api/books/<id> : 返回删除了什么资源       delete
+DELETE   /api/books/<id> : 返回删除了什么资源       destroy
 PUT      /api/books/<id> : 返回更新了什么资源       update
 GET      /api/books/<id> : 返回单个资源            retrieve
 GET      /api/books      : 返回所有资源(列表)       list

@@ -61,7 +61,8 @@ export default defineConfig({
               { text: 'python启动设置', link: '/posts/language/python/py-run-env' },
               { text: 'django-drf接口示例', link: '/posts/language/python/py-drf' },
               { text: '标准库 asyncio', link: '/posts/language/python/asyncio' },
-              { text: 'python项目环境差异化配置', link: '/posts/language/python/py-config' }
+              { text: 'python项目环境差异化配置', link: '/posts/language/python/py-config' },
+              { text: '好用的三方库' , link: '/posts/language/python/third-py.md' },
             ]
           },
           {
@@ -69,6 +70,7 @@ export default defineConfig({
             collapsed: true,
             items: [
               { text: 'go编译优化', link: '/posts/language/golang/build' },
+              // { text: 'go项目代码组织', link: '/posts/language/golang/desc' },
             ]
           }
         ]
@@ -158,7 +160,8 @@ export default defineConfig({
         text: '其他',
         collapsed: true,
         items: [
-          { text: "编辑器", link: '/posts/other/font' }
+          { text: '编辑器', link: '/posts/other/font' },
+          { text: 'windows截屏制作', link: '/posts/other/cut' },
         ]
       }
     ],

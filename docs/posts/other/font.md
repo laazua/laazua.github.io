@@ -14,3 +14,4 @@
 - Cold Python Theme
 - Jetbrains Rider New UI theme
 - JetBrains New UI Dark Theme
+- Material Icon Theme
