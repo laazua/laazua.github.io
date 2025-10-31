@@ -72,6 +72,20 @@ export default defineConfig({
               { text: 'go编译优化', link: '/posts/language/golang/build' },
               // { text: 'go项目代码组织', link: '/posts/language/golang/desc' },
             ]
+          },
+          {
+            text: 'Rust',
+            collapsed: true,
+            items: [
+              
+            ]
+          },
+          {
+            text: 'C/C++',
+            collapsed: true,
+            items: [
+              
+            ]
           }
         ]
       },
