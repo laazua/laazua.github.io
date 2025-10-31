@@ -39,3 +39,11 @@ sds/
 └── user
     └── go.mod
 ```
+
+- **升级项目GO版本**
+```shell
+# 1. 更新go版本
+# 2. vscode 更新 go tools: ctrl + shift + p && Go Install && Update Tools
+# 3. 重启vscode
+# 4. 更新 go.mod 文件: go mod edit -go=1.25.3
+```
