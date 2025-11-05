@@ -47,3 +47,10 @@ sds/
 # 3. 重启vscode
 # 4. 更新 go.mod 文件: go mod edit -go=1.25.3
 ```
+
+- **面向接口编程**
+<pre>
+  如果项目分层为 controller -> service -> repositry -> db,
+则, controller定义的需要使用的关于service层的接口,那么service层实现该接口。
+以此类推 service， repositry 等
+</pre>
