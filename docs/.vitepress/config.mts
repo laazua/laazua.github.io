@@ -131,7 +131,9 @@ export default defineConfig({
           {
             text: 'Redis',
             collapsed: true,
-            items: []
+            items: [
+              { text: '技术文档', link: '/posts/middleware/redis/redis'}
+            ]
           },
           {
             text: 'MySQL',
