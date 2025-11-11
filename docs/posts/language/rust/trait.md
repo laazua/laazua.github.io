@@ -1,6 +1,6 @@
-#### 孤儿原则
+#### trait
 
-- **示例**
+- **孤儿原则**
 ```rust
 // 假设我们有一些外部定义（不在当前 crate）
 extern crate other_crate;

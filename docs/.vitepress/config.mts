@@ -110,6 +110,11 @@ export default defineConfig({
             ]
           },
           {
+            text: 'Podman',
+            collapsed: true,
+            items: []
+          },
+          {
             text: 'Kubernetes',
             collapsed: true,
             items: [
