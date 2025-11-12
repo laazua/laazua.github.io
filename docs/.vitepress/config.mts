@@ -69,7 +69,6 @@ export default defineConfig({
             text: 'Golang',
             collapsed: true,
             items: [
-              { text: '编译优化', link: '/posts/language/golang/build' },
               { text: '编码事项', link: '/posts/language/golang/index' },
             ]
           },
