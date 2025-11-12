@@ -1,5 +1,6 @@
 ##### Optimized
 
+- **参数示例**
 ```shell
 java \
 # 启用 Server 模式 JVM，使用优化后的 JIT 编译器（C2）生成高性能机器码
@@ -40,3 +41,13 @@ java \
 -Dspring.profiles.active=prod \
 -jar app.jar
 ```
+
+- **GC选择**
+
+|场景|推荐GC|JDK版本|关键参数|
+|----|-----|-----------|-------|
+|开发/测试(适合客户端应用、小型服务)|Serial|所有|-XX:+UseSerialGC|
+|批处理任务(多核服务器，注重吞吐量)|Parallel|所有|-XX:+UseParallelGC|
+|Web服务(平衡吞吐量和延迟，大堆内存)|G1|JDK 9+|-XX:+UseG1GC|
+|实时系统(超大堆，亚毫秒级暂停)|ZGC|JDK 11+|-XX:+UseZGC|
+|大数据(超大堆，亚毫秒级暂停)|Shenandoah|JDK 12+|-XX:+UseShenandoahGC|

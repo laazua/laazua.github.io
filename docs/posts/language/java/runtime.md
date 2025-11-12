@@ -12,7 +12,8 @@ someone@debian:~$ $JAVA_HOME/bin/jlink \
 
 - **瘦身jar**
 > 分析jar文件内容: jar tf target/app.jar  
-> 整理jar包中不需要的内容(参考:jar-slim.sh)
+> 整理jar包中不需要的内容(参考:jar-slim.sh)  
+> [瘦身脚本jar-slim.sh](runtime-jar.md)  
 
 | 类型         | 示例                                         | 是否排除      |
 | ---------- | ------------------------------------------ | --------- |
@@ -24,6 +25,6 @@ someone@debian:~$ $JAVA_HOME/bin/jlink \
 | 配置文件（开发环境） | `application-dev.yml`, `logback-test.xml`  | ✅         |
 | 构建元数据      | `META-INF/INDEX.LIST`, `LICENSE`, `NOTICE` | 可选排除      |
 
-> [瘦身脚本jar-slim.sh](runtime-jar.md)  
+
 
 - [启动参数优化](runtime-optimized.md)
