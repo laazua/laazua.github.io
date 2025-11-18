@@ -58,12 +58,9 @@ export default defineConfig({
             text: 'Python',
             collapsed: true,
             items: [
+              { text: '一些知识点', link: '/posts/language/python/index' },
               { text: 'uv项目管理工具', link: '/posts/language/python/uv' },
               { text: 'python启动设置', link: '/posts/language/python/py-run-env' },
-              { text: 'django-drf接口示例', link: '/posts/language/python/py-drf' },
-              { text: '标准库 asyncio', link: '/posts/language/python/asyncio' },
-              { text: 'python项目环境差异化配置', link: '/posts/language/python/py-config' },
-              { text: '好用的三方库' , link: '/posts/language/python/third-py.md' },
             ]
           },
           {
