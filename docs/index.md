@@ -1,8 +1,8 @@
 ---
 layout: home
-title: "Laazua 的博客"
+title: "Laazua 的文档"
 hero:
-  name: "Laazua の Blog"
+  name: "Laazua の Document"
   text: "记录 · 思考 · 实践"
   tagline: "记录日常学习、工作与思考的点点滴滴。"
 #   image:
@@ -43,7 +43,7 @@ hero:
 ### 👨‍💻 关于我
 
 *LAAZUA*  
-> 编程语言, 会点 Python 和 Golang.  
+> 能够使用 Python & Golang 制作一些工具.  
 > Linux 系统运维 & DevOps 工程师, 专注于系统可靠性与自动化.  
 
 - 🌍 GitHub: [@laazua](https://github.com/laazua)
