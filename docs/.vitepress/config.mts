@@ -3,12 +3,12 @@ import { defineConfig } from 'vitepress'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'zh-CN',
-  title: "LAAZUA 的博客",
-  description: "日常学习和工作的点点滴滴",
+  title: "LAAZUA 的资料文档",
+  description: "记录日常学习和工作的点点滴滴",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/avatar.png',
-    siteTitle: "Laazua 的博客",
+    siteTitle: "Laazua 的资料文档",
     nav: [
       { text: '首页', link: '/' },
       { text: '文章', link: '/posts' }

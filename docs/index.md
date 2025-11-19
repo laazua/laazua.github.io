@@ -43,6 +43,7 @@ hero:
 ### 👨‍💻 关于我
 
 *LAAZUA*  
+> 编程语言, 会点 Python 和 Golang.  
 > Linux 系统运维 & DevOps 工程师, 专注于系统可靠性与自动化.  
 
 - 🌍 GitHub: [@laazua](https://github.com/laazua)
