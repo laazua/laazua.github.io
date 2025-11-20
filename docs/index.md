@@ -43,7 +43,8 @@ hero:
 ### 👨‍💻 关于我
 
 *LAAZUA*  
-> 能够使用 Python & Golang 制作一些工具.  
+> 熟悉 Docker, K8s & Helm 等容器化技术.  
+> 能够使用 Python & Golang 制作一些工具, 也懂点 Java.  
 > Linux 系统运维 & DevOps 工程师, 专注于系统可靠性与自动化.  
 
 - 🌍 GitHub: [@laazua](https://github.com/laazua)

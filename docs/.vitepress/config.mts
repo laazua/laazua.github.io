@@ -15,12 +15,10 @@ export default defineConfig({
     ],
     sidebar: [
       {
-        text: '系统相关',
+        text: '操作系统',
         collapsed: true,
         items: [
-          { text: 'bash脚本相关', link: '/posts/linux/bash'},
-          { text: 'linux内核参数调整', link: '/posts/linux/kernel' },
-          { text: 'ssh服务相关配置详解', link: '/posts/linux/sshd' }
+          { text: 'Linux相关', link: '/posts/linux/index'},
         ]
       },
       {
