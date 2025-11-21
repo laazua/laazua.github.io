@@ -7,3 +7,5 @@
 - [内核参数调整示例](./kernel.md)
 
 - [OpenSSL自签证书](./cert.md)
+
+- [一些系统相关配置](./config.md)
