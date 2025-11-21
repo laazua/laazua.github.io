@@ -8,4 +8,8 @@
 
 - [OpenSSL自签证书](./cert.md)
 
+- [OpenSSL加密解密](./salt.md)
+
 - [一些系统相关配置](./config.md)
+
+- [firewalld简介](./firewalld.md)

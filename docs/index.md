@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "Laazua 的文档"
+title: "Laazua の Document"
 hero:
   name: "Laazua の Document"
   text: "记录 · 思考 · 实践"
