@@ -31,11 +31,7 @@ export default defineConfig({
           { text: 'Zabbix', link: '/posts/tools/zabbix' },
           { text: 'Prometheus', link: '/posts/tools/prometheus' },
           { 
-            text: 'Jenkins',
-            collapsed: true,
-            items: [
-              { text: '共享库示例', link: 'https://github.com/laazua/sharedlib' }
-            ]
+            text: 'Jenkins', link: '/posts/tools/jenkins'
           },
           { text: 'eBpf技术', link: '/posts/tools/ebpf' },
         ]

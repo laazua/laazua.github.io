@@ -1,5 +1,9 @@
 ##### python
 
+<pre>
+  安装pip： python3 -m ensurepip
+</pre>
+
 - [django-drf接口示例](./py-drf-api.md)
 - [标准库 asyncio](./asyncio.md)
 - [python项目环境差异化配置](./py-config.md)
