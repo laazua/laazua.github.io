@@ -13,3 +13,5 @@
 - [一些系统相关配置](./config.md)
 
 - [firewalld简介](./firewalld.md)
+
+- [NetworkManager配置](./net.md)
