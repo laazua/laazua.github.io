@@ -84,6 +84,7 @@ export default defineConfig({
         text: '网络相关',
         collapsed: true,
         items: [
+          { text: '网络模型', link: '/posts/network/index' },
           { text: 'v2ray', link: '/posts/network/v2ray' },
           { text: 'openVpn', link: '/posts/network/openVpn' }
         ]
