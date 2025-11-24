@@ -7,7 +7,7 @@
 
 - **配置示例**
 
-```text
+```bash
 ###### 主机配置 ######
 # 匹配所有主机
 Host *
@@ -63,4 +63,20 @@ Host myserver
     ControlMaster auto        # 启用连接复用
     ControlPath ~/.ssh/cm-%r@%h:%p
     ControlPersist 10m        # 连接保持时间
+```
+
+- **使用过的配置**
+```bash
+# cat ~/.ssh/config
+Host *
+    ControlMaster auto
+    ControlPath ~/.ssh/cm_socket/%r@%h:%p
+    ControlPersist yes
+    ServerAliveInterval 60
+    ServerAliveCountMax 99999
+    TCPKeepAlive yes
+    # 以下为网络优化参数
+    IPQoS throughput
+    Compression yes
+    ConnectTimeout 0
 ```
