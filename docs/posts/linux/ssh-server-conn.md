@@ -6,7 +6,7 @@
 
 
 - **配置选项**
-```text
+```bash
 # 监听设置
 Port 22                            # SSH服务监听端口（可多个Port 22 Port 2222）
 ListenAddress 0.0.0.0              # 监听IP地址（0.0.0.0表示所有接口）
@@ -41,17 +41,17 @@ IgnoreUserKnownHosts no            # 忽略用户known_hosts
 IgnoreRhosts yes                   # 忽略rhosts文件
 
 # 用户限制
-AllowUsers user1 user2@host       # 允许的用户列表
-DenyUsers user3 user4             # 拒绝的用户列表
-AllowGroups group1 group2         # 允许的用户组
-DenyGroups group3 group4          # 拒绝的用户组
+AllowUsers user1 user2@host        # 允许的用户列表
+DenyUsers user3 user4              # 拒绝的用户列表
+AllowGroups group1 group2          # 允许的用户组
+DenyGroups group3 group4           # 拒绝的用户组
 
 # 用户环境
 PermitUserEnvironment no           # 是否允许用户环境
-AcceptEnv LANG LC_*               # 接受的环境变量
+AcceptEnv LANG LC_*                # 接受的环境变量
 PrintMotd yes                      # 显示MOTD信息
 PrintLastLog yes                   # 显示最后登录信息
-XAuthLocation /usr/bin/xauth      # xauth程序路径
+XAuthLocation /usr/bin/xauth       # xauth程序路径
 
 # 会话管理
 ClientAliveInterval 0              # 客户端活跃间隔（秒）
@@ -90,7 +90,7 @@ KexAlgorithms diffie-hellman-group-exchange-sha256 # 密钥交换算法
 ```
 
 - **安全加固配置示例**
-```text
+```bash
 # 引入自定义配置
 Include /etc/ssh/sshd_config.d/*.conf
 

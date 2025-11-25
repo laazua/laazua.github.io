@@ -3,8 +3,11 @@
 - **文档注释**
 ```bash
 : '
-文档注释
+多行注释 ...
+文档注释 ...
 '
+
+# 单行注释
 ```
 ---
 
@@ -80,7 +83,7 @@ set convert-meta off
 ```bash
 #!/bin/bash
 
-log() {
+xlog() {
     local message="$1"
     local level="${2:-INFO}"
     
@@ -94,15 +97,15 @@ log() {
 }
 
 process_data() {
-    log "开始处理数据" "DEBUG"
+    xlog "开始处理数据" "DEBUG"
     # 处理逻辑...
-    log "数据处理完成" "DEBUG"
+    xlog "数据处理完成" "DEBUG"
 }
 
 main() {
-    log "程序启动"
+    xlog "程序启动"
     process_data
-    log "程序结束"
+    xlog "程序结束"
 }
 
 main

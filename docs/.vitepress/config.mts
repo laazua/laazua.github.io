@@ -175,6 +175,7 @@ export default defineConfig({
         items: [
           { text: '编辑器', link: '/posts/other/font' },
           { text: 'windows截屏制作', link: '/posts/other/cut' },
+          { text: '源码分析工具 Zread', link: 'https://zread.ai/' }
         ]
       }
     ],

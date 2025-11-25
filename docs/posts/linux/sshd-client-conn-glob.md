@@ -6,7 +6,7 @@
 一般在 /etc/ssh/ssh_config.d 目录下进行配置  
 
 - **配置选项**
-```text
+```bash
 # 引入自定义配置
 Include /etc/ssh/ssh_config.d/*.conf
 
@@ -109,7 +109,7 @@ CanonicalizePermittedCNAMEs    # 允许的CNAME规范
 ```
 
 - **客户端配置示例**
-```text
+```bash
 # 全局默认配置
 Host *
     # 基本设置
