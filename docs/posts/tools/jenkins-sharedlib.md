@@ -24,10 +24,10 @@ sharedlib/
 
 - **所需插件**
   + gitee
-  + Global Pipeline Libraries
-  + pipeline stage view
-  + Pipeline Utility Steps
+  + Pipeline
+  <!-- + Pipeline Utility Steps
   + AnsiColor
+  + pipeline-groovy-lib.hpi -->
 
 - **系统配置**
   + [全局共享库配置](https://www.jenkins.io/zh/doc/book/pipeline/shared-libraries/)
