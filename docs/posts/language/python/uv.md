@@ -47,3 +47,27 @@ uv pip compile pyproject.toml -o requirements.txt     # 导出项目依赖
 python -m pip install -r requirements.txt -t vendor   # 传统方式安装依赖
 export PYTHONPATH=vendor && python -m app             # 设置依赖路径并运行
 ```
+
+- **uv下载和安装离线包**
+    + uv python 安装 pip 包: 
+    ```bash
+    uv run python -m ensurepip
+    ```
+    + 使用 uv 生成 requirements.txt(或者requirements.lock):
+    ```bash
+    uv pip freeze > requirements.txt
+    # 生成精准依赖锁文件: 
+    # uv pip compile pyproject.toml -o requirements.lock
+    ```
+    + 下载依赖包到离线依赖包路径(deps/)：
+    ```bash
+    uv run python -m pip download -d deps/ -r requirements.txt
+    # 或者使用精准依赖锁文件: 
+    # uv run python -m pip download -d deps/ -r requirements.lock
+    ```
+    + 安装离线目录依赖到指定的路径：
+    ```bash
+    uv run python -m pip install --no-index --find-links deps/ -t vendor -r requirements.txt
+    # 或者使用精准依赖锁文件: 
+    # uv run python -m pip install --no-index --find-links deps/ -t vendor -r requirements.lock
+    ```

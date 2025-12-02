@@ -110,8 +110,9 @@ export default defineConfig({
             text: 'Kubernetes',
             collapsed: true,
             items: [
-              { text: 'k8s部署', link: 'https://github.com/laazua/k8s' },
-              { text: 'k8s示例', link: 'https://github.com/laazua/k8s/tree/main/examples' }
+              { text: '详解', link: '/posts/containerd/k8s/index' },
+              { text: '部署', link: 'https://github.com/laazua/k8s' },
+              { text: '示例', link: 'https://github.com/laazua/k8s/tree/main/examples' }
             ]
           },
           {
