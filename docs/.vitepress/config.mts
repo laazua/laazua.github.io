@@ -19,6 +19,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: 'Linux相关', link: '/posts/linux/index'},
+          { text: 'RockyLinux', link: '/posts/linux/rocky' },
         ]
       },
       {
@@ -84,7 +85,7 @@ export default defineConfig({
         text: '网络相关',
         collapsed: true,
         items: [
-          { text: '网络模型', link: '/posts/network/index' },
+          { text: '网络概念', link: '/posts/network/index' },
           { text: 'v2ray', link: '/posts/network/v2ray' },
           { text: 'openVpn', link: '/posts/network/openVpn' }
         ]
@@ -97,8 +98,7 @@ export default defineConfig({
             text: 'Docker',
             collapsed: true,
             items: [
-              { text: '基础指令详解', link: '/posts/containerd/docker/base' },
-              { text: 'dockerfile示例', link: '/posts/containerd/docker/dockerfile' }
+              { text: '基础知识', link: '/posts/containerd/docker/index' },
             ]
           },
           {
