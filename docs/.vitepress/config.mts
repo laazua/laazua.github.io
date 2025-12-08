@@ -28,7 +28,7 @@ export default defineConfig({
         items: [
           { text: 'Ansible', link: '/posts/tools/ansible' },
           { text: 'Pyinfra', link: '/posts/tools/pyinfra' },
-          { text: 'Elastic', link: '/posts/tools/elk' },
+          // { text: 'Elastic', link: '/posts/tools/elk' },
           { text: 'Zabbix', link: '/posts/tools/zabbix' },
           { text: 'Prometheus', link: '/posts/tools/prometheus' },
           { 
@@ -126,6 +126,13 @@ export default defineConfig({
         text: '中间件相关',
         collapsed: true,
         items: [
+          {
+            text: 'Elastic',
+            collapsed: true,
+            items: [
+              { text: 'ELK技术栈', link: '/posts/middleware/elastic/index' }
+            ]
+          },
           {
             text: 'Redis',
             collapsed: true,

@@ -16,4 +16,5 @@ api = [
 ]
 
 # 查看资产清单: pyinfra inventory.py debug-inventory
+# 测试任务流程: pyinfra inventory.py deploy.py --dry
 ```

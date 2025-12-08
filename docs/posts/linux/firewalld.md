@@ -1,5 +1,39 @@
 ##### firewalld
 
+- **白名单**
+```bash
+### 默认拒绝所有，只允许明确的
+
+# 默认策略：拒绝所有入站，只允许出站
+sudo firewall-cmd --set-default-zone=drop  # 或 block
+
+# 然后明确允许需要的服务
+sudo firewall-cmd --add-service=http
+sudo firewall-cmd --add-service=https
+sudo firewall-cmd --add-service=ssh
+
+# 或者使用富规则允许特定IP
+sudo firewall-cmd --add-rich-rule='rule family="ipv4" source address="192.168.1.0/24" accept'
+
+# ✅ 更安全：未知的连接默认被拒绝
+# ✅ 需要明确配置每个允许的服务/IP
+# ✅ 适合服务器、生产环境
+```
+- **黑名单**
+```bash
+### 默认允许所有，只拒绝明确的
+
+# 默认策略：允许所有入站
+sudo firewall-cmd --set-default-zone=public  # 默认允许
+
+# 然后明确拒绝不需要的或恶意的
+sudo firewall-cmd --add-rich-rule='rule family="ipv4" source address="10.0.0.5" reject'
+sudo firewall-cmd --add-rich-rule='rule family="ipv4" source address="203.0.113.0/24" drop'
+
+# 或者禁用某些端口
+sudo firewall-cmd --remove-port=135-139/tcp
+
+```
 - **zone**
 
 | zone   |     默认规则     |                         适用场景                             |

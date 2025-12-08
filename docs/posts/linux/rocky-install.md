@@ -26,19 +26,19 @@ EOF
     ```bash
     [connection]
     id=ens192
-    uuid=9dfb6146-1f4d-395e-877d-b97db47d36e9
+    uuid=a00f6140-1ed5-3878-9a96-0c371162080b
     type=ethernet
     autoconnect-priority=-999
     interface-name=ens192
-    timestamp=1747526432
+    timestamp=1764920727
 
     [ethernet]
 
     [ipv4]
+    address1=192.168.165.84/24
+    dns=8.8.8.8;114.114.114.114;
+    gateway=192.168.165.254
     method=manual
-    # address1=ip/网段,网关(这里没有设置网关,默认)
-    address1=192.168.165.83/24
-    dns=8.8.8.8;114.114.114.144
 
     [ipv6]
     addr-gen-mode=eui64
