@@ -137,7 +137,8 @@ export default defineConfig({
             text: 'Redis',
             collapsed: true,
             items: [
-              { text: '技术文档', link: '/posts/middleware/redis/redis'}
+              { text: '基础知识', link: '/posts/middleware/redis/index' },
+              { text: '技术文档', link: '/posts/middleware/redis/redis' },
             ]
           },
           {

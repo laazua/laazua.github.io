@@ -27,6 +27,12 @@ git push --set-upstream origin main
 ```bash
 # 新建分组
 git branch test
+
 # 将新分支推送到远程仓库
 git push -u origin test
+
+# 从一个已经存在的分支创建新分支
+git checkout -b newBranchName existBranchName
+# 从main分支创建一个名为fix-5201的分支
+git checkout -b fix-5201 main
 ```

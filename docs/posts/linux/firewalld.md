@@ -35,6 +35,10 @@ sudo firewall-cmd --remove-port=135-139/tcp
 
 ```
 - **zone**
+```bash
+firewall-cmd --get-zones
+## 网络接口和服务分配到不同的zone上,会对应不同的默认规则和策略
+```
 
 | zone   |     默认规则     |                         适用场景                             |
 |:------:|:---------------:|:------------------------------------------------------------:|
@@ -64,30 +68,101 @@ rule [family="ipv4|ipv6"] [source address="ip/MASK" mac="MAC地址"|destination 
 ```
 2. 示例：
 ```bash
-# 允许特定IP访问指定服务
+## 允许特定IP访问指定服务
 firewall-cmd --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.1.100" service name="ssh" accept'  
-# 拒绝某网段的 ICMP 并记录日志
+
+## 拒绝某网段的 ICMP 并记录日志
 firewall-cmd --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.2.0/24" protocol value="icmp" log prefix="ICMP BLOCK: " level="warning" reject'  
-# 限速http请求
+
+## 限速http请求
 firewall-cmd --zone=public --add-rich-rule='rule family="ipv4" port port="80" protocol="tcp" limit value="10/minute" accept'  
-# 端口转发(公网 8080 → 内网 80)
+
+## 端口转发(公网 8080 → 内网 80)
 firewall-cmd --zone=external --add-rich-rule='rule family="ipv4" forward-port port="8080" protocol="tcp" to-port="80" to-addr="192.168.1.2"'  
-# 临时生效指定时长(30秒)
+
+## 临时生效指定时长(30秒)
 firewall-cmd --zone=public --add-rich-rule='rule family="ipv4" source address="10.0.0.5" service name="http" accept' --timeout=30  
-# 端口转发
-# echo "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysctl.conf
-# sudo sysctl -p
-# 网卡接口绑定
-#   外部接口（eth0）绑定到 external zone（默认启用伪装 masquerade）。
+
+## 端口转发
+## echo "net.ipv4.ip_forward=1" | sudo tee -a /etc/sysctl.conf
+## sudo sysctl -p
+## 网卡接口绑定
+##   外部接口（eth0）绑定到 external zone（默认启用伪装 masquerade）。
 firewall-cmd --zone=external --change-interface=eth0 --permanent
-#   内部接口（如 eth1）绑定到 internal zone。
+
+##   内部接口（如 eth1）绑定到 internal zone。
 firewall-cmd --zone=internal --change-interface=eth1 --permanent
-# 使用 forward-port 参数实现 DNAT：
+
+## 使用 forward-port 参数实现 DNAT：
 sudo firewall-cmd --zone=external --add-rich-rule='rule family="ipv4" forward-port port="8080" protocol="tcp" to-port="80" to-addr="192.168.1.100"' --permanent
-# 允许 192.168.1.0/24 通过防火墙访问外网，并启用 SNAT
+
+## 允许 192.168.1.0/24 通过防火墙访问外网，并启用 SNAT
 firewall-cmd --zone=external --add-rich-rule='rule family="ipv4" source address="192.168.1.0/24" masquerade' --permanent
 ```
 ---
+
+- **IPSET示例**
+
+    - 主要字段
+
+    | 字段          | 说明                           |
+    | ----------- | ---------------------------- |
+    | **name**    | ipset 名称，用于引用                |
+    | **type**    | ipset 类型，决定存储结构和匹配方式         |
+    | **options** | 创建时的额外参数（如最大条目、超时、范围等）       |
+    | **entries** | ipset 内部存储的 IP / 网段 / MAC 条目 |
+
+    - firewalld 支持的 ipset 类型及用途
+
+    | type                 | 用途                | 适用 option                          |
+    | -------------------- | ----------------- | ---------------------------------- |
+    | **hash:ip**          | 单个 IP             | maxelem, hashsize, timeout, family |
+    | **hash:net**         | 网段 (CIDR)         | maxelem, hashsize, timeout, family |
+    | **hash:mac**         | MAC 地址            | maxelem, hashsize                  |
+    | **hash:ip,port**     | IP + 端口组合         | maxelem, hashsize                  |
+    | **hash:net,port**    | 网段 + 端口           | maxelem, hashsize                  |
+    | **hash:ip,port,ip**  | 源 IP + 端口 + 目标 IP | maxelem, hashsize                  |
+    | **hash:ip,port,net** | 源 IP + 端口 + 目标网段  | maxelem, hashsize                  |
+    | **bitmap:ip**        | 连续 IP 范围          | range, maxelem                     |
+
+    - options 只能在创建 ipset 时设置，多 option 用逗号分隔
+
+    | Option              | 说明               | 适用类型              |
+    | ------------------- | ---------------- | ----------------- |
+    | maxelem=N           | 最大条目数            | hash 系列           |
+    | hashsize=N          | 哈希表初始大小          | hash 系列           |
+    | timeout=N           | 每条 entry 有效时间（秒） | hash:ip, hash:net |
+    | family=inet / inet6 | IPv4 / IPv6      | hash:ip, hash:net |
+    | range=IP1-IP2       | 连续 IP 范围         | bitmap:ip         |
+
+    ```bash
+    ##### firewalld ipset使用示例
+    ## firewall-cmd --set-default-zone=drop
+    # 1. 新建ipset
+    IPSET_NAME=whitelist
+    firewall-cmd --permanent --new-ipset=${IPSET_NAME} --type=hash:ip
+    # 2. 查看ipset: IPSET_NAME
+    firewall-cmd --permanent --info-ipset=${IPSET_NAME}
+    # 3. 将指定ip加入: IPSET_NAME
+    firewall-cmd --permanent --ipset=${IPSET_NAME} --add-entry=192.168.165.89
+    # 4. 将指定ip段加入: IPSET_NAME
+    firewall-cmd --permanent --ipset=${IPSET_NAME} --add-entry=192.168.165.0/24
+    # 5. 指定端口放行 IPSET_NAME
+    firewall-cmd --permanent --add-rich-rule="rule family='ipv4' source ipset='whitelist' port protocol='tcp' port=8080 accept"
+
+    # 6. 列出 rich rules
+    firewall-cmd --permanent --list-rich-rules
+    # 7. 从 IPSET_NAME 移除 指定ip
+    firewall-cmd --permanent --ipset=${IPSET_NAME} --remove-entry=192.168.165.89
+    # 8. 从 IPSET_NAME 移除 指定ip段
+    firewall-cmd --permanent --ipset=${IPSET_NAME} --remove-entry=192.168.165.0/24
+    # 9. 清空 IPSET_NAME
+    firewall-cmd --permanent --ipset=${IPSET_NAME} --flush
+    # 10. 删除 IPSET_NAME 
+    firewall-cmd --permanent --delete-ipset=${IPSET_NAME}
+    # 11. 列出存在的ipset
+    firewall-cmd --permanent --get-ipsets
+    ```
 
 
 - **特别说明**

@@ -1,5 +1,7 @@
 ### Linux
 
+- [linux命令](./command.md)
+
 - [Bash脚本语法](./bash.md)
 
 - [sshd服务配置](./sshd.md)
@@ -17,3 +19,5 @@
 - [NetworkManager配置](./net.md)
 
 - [Git仓库操作](./git.md)
+
+- [给 dnf/yum 源设置代理](./yum-repo.md)
