@@ -44,5 +44,5 @@ sudo useradd -r -m -s /bin/bash -u 1000 zhangsan
 sudo groupadd -g 995 elastic
 sudo useradd -r -s /sbin/nologin -g 995 elastic
 
-# 所有 elastic 相关的服务都与 elastic组和用户绑定
+# 所有 elastic 相关的服务都与 elastic 组和用户绑定
 ```

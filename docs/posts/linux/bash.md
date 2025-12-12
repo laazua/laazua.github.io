@@ -77,6 +77,9 @@ set convert-meta off
 ```
 ---
 
+- **脚本调用**
+    + 本地调用: bash test.sh 1 2 或者 cat test.sh|bash -s 1 2
+    + 远程调用: curl -fsSL https://github.com/laazua/scripts/test.sh | bash -s 1 2
 
 
 - **日志函数**
