@@ -3,10 +3,13 @@
 
 * **分区(根据实际情况调整)**
 ```bash
+## vmware
 挂载点: /boot        大小: 800M
 挂载点: /boot/efi    大小: 260M
 挂载点: swap         大小: 2000M
 挂载点: /            大小: 剩余所有
+
+## 新增其他磁盘进行分区
 ```
 
 * **创建一个普通用户**
@@ -61,9 +64,11 @@ EOF
     - [参考阿里云替换源](https://developer.aliyun.com/mirror/)
     ```bash
     # 替换源并备份
-    sed -e 's|^mirrorlist=|#mirrorlist=|g' -e 's|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.aliyun.com/rockylinux|g' -i.bak /etc/yum.repos.d/rocky-*.repo
+    sudo sed -e 's|^mirrorlist=|#mirrorlist=|g' -e 's|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.aliyun.com/rockylinux|g' -i.bak /etc/yum.repos.d/rocky-*.repo
     # 建立元数据缓存
-    dnf makecache
+    sudo dnf makecache
+    # 添加repo源
+    sudo dnf install -y epel-release
     ```
 
 * **禁用SELinux**

@@ -31,6 +31,7 @@ export default defineConfig({
           // { text: 'Elastic', link: '/posts/tools/elk' },
           { text: 'Zabbix', link: '/posts/tools/zabbix' },
           { text: 'Prometheus', link: '/posts/tools/prometheus' },
+          { text: 'Grafana', link: '/posts/tools/grafana' },
           { 
             text: 'Jenkins', link: '/posts/tools/jenkins'
           },
