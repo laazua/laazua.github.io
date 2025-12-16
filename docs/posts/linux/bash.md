@@ -146,4 +146,53 @@ for key in "${!hosts[@]}";do
 done
 ```
 
+- **bash常用参数**
+```bash
+## -c 执行字符串参数
+bash -c "echo hello"
+bash -c 'echo $1 $2' -- "12 58"
+bash -c '
+echo 123
+echo 456
+echo 789
+'
 
+## -x 调试模式
+bash -x test.sh
+
+## -n 脚本语法检查
+bash -n test.sh
+
+## -i 交互模式: bash -i
+
+## -l | --login 登录shell: bash -l
+
+## --posix POSIX模式
+## POSIX模式下，bash会禁用一些扩展特性以符合标准
+
+## --restricted 或 -r 受限模式
+## 在受限模式下，某些操作如cd、修改环境变量等会被禁止
+```
+
+- **引号与数组**
+```bash
+# 数组和引号
+files=("file1.txt" "file with spaces.txt" "file2.txt")
+
+# 错误：不引用数组元素
+for file in ${files[@]}; do
+    echo "处理: $file"  # file with spaces.txt 会被分成三个词
+done
+
+# 正确：引用数组元素
+for file in "${files[@]}"; do
+    echo "处理: $file"  # 正确处理带空格的文件名
+done
+
+# 特殊参数在引号中的行为
+set -- "arg one" "arg two" "arg three"
+echo "所有参数 (@):"
+printf '"%s"\n' "$@"
+echo -e "\n所有参数 (*):"
+printf '"%s"\n' "$*"
+```
