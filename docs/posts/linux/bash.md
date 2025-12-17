@@ -80,7 +80,7 @@ set convert-meta off
 - **脚本调用**
     + 本地调用: bash test.sh 1 2 或者 cat test.sh|bash -s 1 2
     + 远程调用: curl -fsSL https://github.com/laazua/scripts/test.sh | bash -s 1 2
-
+    + 设置环境变量并运行脚本: AA=12 bash test.sh
 
 - **日志函数**
 ```bash
@@ -196,3 +196,34 @@ printf '"%s"\n' "$@"
 echo -e "\n所有参数 (*):"
 printf '"%s"\n' "$*"
 ```
+
+
+- **使用自定义环境变量**
+
+    + 定义环境变量: .env
+    ```bash
+    API_KEY='xkn2N62%mn893U2MD'
+    DB_HOST='192.168.165.100'
+    DB_NAME='test_db'
+    ```
+    + 使用环境变量: test.sh
+    ```bash
+    #!/bin/bash
+    ## 严格模式
+    set -euo pipefail
+    
+    ## 加载环境变量
+    ENV_FILE=${1:-".env"}
+    if [[ -f "${ENV_FILE}" ]];then
+        source "${ENV_FILE}"
+    fi
+    ## 检测环境变量是否设置
+    : "${API_KEY:?API_KEY environment variable is required}"
+    : "${DB_HOST:?DB host is required}"
+    : "${DB_NAME:?DB name is required}"
+
+    ## 使用环境变量(DB_PORT未定义使用默认值:3306)
+    echo $API_KEY $DB_HOST $DB_NAME ${DB_PORT:-3306}
+    ```
+    + 运行脚本:  bash test.sh 或者 bash test.sh .env 
+

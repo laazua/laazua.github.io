@@ -35,4 +35,6 @@
 > 检查配置语法: v2ray test -d configs  
 > 运行v2ray服务: v2ray run -d configs  
 
+- **[服务端V2Ray配置生成:v2confg.sh](./v2config.md)**
+
 - **[关于v2ray具体配置参考这里](https://www.v2fly.org/)**
