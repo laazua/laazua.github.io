@@ -1,8 +1,10 @@
 ### Linux
 
-- [linux命令](./command.md)
+- [Linux命令](./command.md)
 
 - [Bash脚本语法](./bash.md)
+
+- [Linux权限系统](./permission.md)
 
 - [sshd服务配置](./sshd.md)
 
