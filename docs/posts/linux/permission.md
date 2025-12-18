@@ -59,6 +59,11 @@ Sticky: t或T (其他用户执行位)
     - 基础权限操作
     ```bash
     ## chmod
+    ## augo: 
+    ##     u -> 用户
+    ##     g -> 组
+    ##     o -> 其他
+    ##     a -> 所有
     chmod 0755 test.txt
     chmod u+r+w-x,g+r-x,o+r-x test.txt
 
