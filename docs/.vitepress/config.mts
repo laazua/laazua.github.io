@@ -65,13 +65,13 @@ export default defineConfig({
               { text: '编码事项', link: '/posts/language/golang/index' },
             ]
           },
-          // {
-          //   text: 'Rust',
-          //   collapsed: true,
-          //   items: [
-          //      { text: '编码事项', link: '/posts/language/rust/index' },
-          //   ]
-          // },
+          {
+            text: 'Rust',
+            collapsed: true,
+            items: [
+               { text: '编码事项', link: '/posts/language/rust/index' },
+            ]
+          },
           // {
           //   text: 'C/C++',
           //   collapsed: true,
@@ -182,9 +182,7 @@ export default defineConfig({
         text: '其他',
         collapsed: true,
         items: [
-          { text: '编辑器', link: '/posts/other/font' },
-          { text: 'windows截屏制作', link: '/posts/other/cut' },
-          { text: '源码分析工具 Zread', link: 'https://zread.ai/' }
+          { text: '一些工具', link: '/posts/other/index' },
         ]
       }
     ],
