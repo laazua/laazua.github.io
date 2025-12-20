@@ -60,6 +60,15 @@ firewall-cmd --get-zones
 3. 所有 zone 默认允许出站流量，但入站流量根据 zone 规则控制
 ---
 
+- **direct rules**
+    1. 基本语法
+    ```bash 
+    ## 允许指定 IP 访问端口
+    sudo firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 10 -s 192.168.1.100 -p tcp --dport 80 -j ACCEPT
+    ## 拒绝指定 IP 访问端口
+    sudo firewall-cmd --permanent --direct --add-rule ipv4 filter INPUT 10 -s 192.168.1.100 -p tcp --dport 22 -j DROP
+    ## 设置优先级（数字越小优先级越高）
+    ```
 
 - **rich-rule**
     1. 基本语法
@@ -70,6 +79,7 @@ firewall-cmd --get-zones
     ```bash
     ## 允许特定IP访问指定服务
     firewall-cmd --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.1.100" service name="ssh" accept'  
+
 
     ## 拒绝某网段的 ICMP 并记录日志
     firewall-cmd --zone=public --add-rich-rule='rule family="ipv4" source address="192.168.2.0/24" protocol value="icmp" log prefix="ICMP BLOCK: " level="warning" reject'  
@@ -104,6 +114,24 @@ firewall-cmd --get-zones
     ```
 ---
 
+- **创建 zone 进行管理**
+    1. 基本语法
+    ```bash
+    # 1. 创建新 zone
+    sudo firewall-cmd --permanent --new-zone=trusted_access
+
+    # 2. 设置默认规则（默认拒绝）
+    sudo firewall-cmd --permanent --zone=trusted_access --set-target=REJECT
+
+    # 3. 添加允许的 IP
+    sudo firewall-cmd --permanent --zone=trusted_access --add-source=192.168.1.100
+
+    # 4. 开放端口给这个 zone
+    sudo firewall-cmd --permanent --zone=trusted_access --add-port=8080/tcp
+
+    # 5. 重载配置
+    sudo firewall-cmd --reload
+    ```
 - **IPSET示例**
 
     - 主要字段
@@ -138,6 +166,7 @@ firewall-cmd --get-zones
     | family=inet / inet6 | IPv4 / IPv6      | hash:ip, hash:net |
     | range=IP1-IP2       | 连续 IP 范围         | bitmap:ip         |
 
+    - 创建使用
     ```bash
     ##### firewalld ipset使用示例
     ## firewall-cmd --set-default-zone=drop
@@ -166,6 +195,68 @@ firewall-cmd --get-zones
     # 11. 列出存在的ipset
     firewall-cmd --permanent --get-ipsets
     ```
+    - 一些示例
+    ```bash
+    ### 创建IPSET
+    # 创建 ipset（永久生效）
+    sudo firewall-cmd --permanent --new-ipset=blacklist --type=hash:ip
+    sudo firewall-cmd --permanent --new-ipset=whitelist --type=hash:net
+    sudo firewall-cmd --permanent --new-ipset=countries --type=hash:net
+    # 创建带选项的 ipset
+    sudo firewall-cmd --permanent --new-ipset=blocklist \
+        --type=hash:ip \
+        --option=timeout=3600 \
+        --option=family=inet
+    # 查看可用的 ipset 类型
+    sudo firewall-cmd --get-ipset-types
+    # hash:ip, hash:net, hash:ip,port 等
+
+    ### 添加IP到IPSET
+    # 添加单个 IP
+    sudo firewall-cmd --permanent --ipset=blacklist --add-entry=192.168.1.100
+    # 添加 IP 网段
+    sudo firewall-cmd --permanent --ipset=whitelist --add-entry=192.168.1.0/24
+    # 添加多个 IP（从文件读取）
+    sudo firewall-cmd --permanent --ipset=blacklist --add-entries-from-file=/path/to/ip_list.txt
+    # 文件格式（每行一个IP）
+    # 192.168.1.100
+    # 10.0.0.50
+    # 172.16.0.0/16
+
+    ### 从IPSET移除IP
+    # 删除单个 IP
+    sudo firewall-cmd --permanent --ipset=blacklist --remove-entry=192.168.1.100
+    # 清空 ipset
+    sudo firewall-cmd --permanent --ipset=blacklist --remove-entries-from-file=/path/to/ip_list.txt
+
+    ### 基于rich rule的IPSET
+    # 拒绝黑名单 IP 访问所有端口
+    sudo firewall-cmd --permanent --add-rich-rule='rule source ipset=blacklist drop'
+    # 允许白名单 IP 访问 SSH
+    sudo firewall-cmd --permanent --add-rich-rule='rule source ipset=whitelist port port=22 protocol=tcp accept'
+    # 拒绝黑名单访问特定端口
+    sudo firewall-cmd --permanent --add-rich-rule='rule source ipset=blacklist port port=80 protocol=tcp reject'
+
+    ### 结合 zone 使用
+    # 创建自定义 zone
+    sudo firewall-cmd --permanent --new-zone=restricted
+    # 将 ipset 添加到 zone
+    sudo firewall-cmd --permanent --zone=restricted --add-source=ipset:blacklist
+    # 设置 zone 默认行为
+    sudo firewall-cmd --permanent --zone=restricted --set-target=DROP
+
+    ### 阻止恶意IP
+    # 1. 创建恶意 IP 列表
+    sudo firewall-cmd --permanent --new-ipset=bad_ips --type=hash:ip
+    # 2. 添加恶意 IP
+    sudo firewall-cmd --permanent --ipset=bad_ips --add-entry=10.0.0.100
+    sudo firewall-cmd --permanent --ipset=bad_ips --add-entry=172.16.0.50
+    # 3. 阻止这些 IP
+    sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source ipset="bad_ips" drop'
+    # 4. 重载配置
+    sudo firewall-cmd --reload
+    ```
+---
 
 
 - **特别说明**

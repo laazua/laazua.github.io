@@ -127,6 +127,13 @@ export default defineConfig({
         collapsed: true,
         items: [
           {
+            text: 'Etcd',
+            collapsed: true,
+            items: [
+              { text: '基础知识', link: '/posts/middleware/etcd/index' }
+            ]
+          },
+          {
             text: 'Elastic',
             collapsed: true,
             items: [
@@ -159,7 +166,9 @@ export default defineConfig({
           {
             text: 'Nginx',
             collapsed: true,
-            items: []
+            items: [
+              { text: '基础知识', link: '/posts/middleware/nginx/index' },
+            ]
           },
           {
             text: 'Kafka',
@@ -175,7 +184,7 @@ export default defineConfig({
             text: 'Haproxy',
             collapsed: true,
             items: []
-          }
+          },
         ]
       },
       {
