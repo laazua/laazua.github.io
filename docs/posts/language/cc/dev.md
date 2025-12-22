@@ -20,3 +20,40 @@ target_link_libraries("your target" ${BOOST_LIBRARIES} )
 ```
 
 - **[如何内嵌的方式在项目中加入三方库](https://github.com/avplayer/avpn/tree/master/third_party/boost)**
+
+
+- **项目依赖三方库 jmalloc 如何制作Docker镜像**
+```dockerfile
+FROM gcc:latest
+
+# 安装基础构建工具
+RUN apt-get update && apt-get install -y \
+    cmake \
+    make \
+    git \
+    autoconf \
+    automake \
+    libtool \
+    && rm -rf /var/lib/apt/lists/*
+
+# 下载并编译 jemalloc
+RUN git clone https://github.com/jemalloc/jemalloc.git /tmp/jemalloc \
+    && cd /tmp/jemalloc \
+    && ./autogen.sh \
+    && ./configure --prefix=/usr/local \
+    && make -j$(nproc) \
+    && make install \
+    && rm -rf /tmp/jemalloc
+
+# 复制项目代码
+WORKDIR /app
+COPY . .
+
+# 构建项目，链接 jemalloc
+RUN g++ -o myapp main.cpp -I/usr/local/include -L/usr/local/lib -ljemalloc
+
+# 设置运行时链接库路径
+ENV LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
+
+CMD ["./myapp"]
+```

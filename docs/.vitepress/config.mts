@@ -72,13 +72,13 @@ export default defineConfig({
                { text: '编码事项', link: '/posts/language/rust/index' },
             ]
           },
-          // {
-          //   text: 'C/C++',
-          //   collapsed: true,
-          //   items: [
-              
-          //   ]
-          // }
+          {
+            text: 'C/C++',
+            collapsed: true,
+            items: [
+              { text: '编码事项', link: '/posts/language/cc/index' },
+            ]
+          }
         ]
       },
       {

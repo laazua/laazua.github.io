@@ -5,3 +5,7 @@
 - [windows截屏制作](./cut.md)
 
 - [源码分析工具 Zread](https://zread.ai/)
+
+- [浏览器插件](./chrome.md)
+
+- [bootschool](https://bootschool.net/)
