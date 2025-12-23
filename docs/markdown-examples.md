@@ -80,6 +80,17 @@ This is a dangerous warning.
 This is a details block.
 :::
 
+**代码分组**
+::: code-group
+```bash [v2config.sh]
+echo "hello"
+```
+
+```python [v2config.py]
+print("hello")
+```
+:::
+
 ## More
 
 Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).

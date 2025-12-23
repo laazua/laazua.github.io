@@ -13,16 +13,17 @@ V2RAY_CONFIG_DIR="${V2RAY_WORK_DIR}/configs/"
 V2RAY_CLIENT_UUID1=cd8b8eb8-0849-420a-8c66-4d84f938cb27
 V2RAY_CLIENT_UUID2=a8c97892-d1ac-95c5-9bec-cae7d01e3e51
 V2RAY_CLIENT_UUID3=b0e35abb-ebd3-8438-305b-36c8e7fd0956
-V2RAY_QUIC_SETTING_KEY="vVFDoiw5d3Vz+KcAOGNhpA"
 """
 
 ## 服务器主机生成 V2Ray 5.38.0 服务配置
 ## 测试: v2ray test -c ${V2RAY_CONFIG_FILE} -d ${V2RAY_CONFIG_DIR}
 ## 运行: v2ray run  -c ${V2RAY_CONFIG_FILE} -d ${V2RAY_CONFIG_DIR}
 
+# 生成协议类型
+XY_TYPE=${1:-'vmess'}
 
 ### 生成 V2Ray 配置文件
-ENV_FILE=${1:-'.env'}
+ENV_FILE=${2:-'.env'}
 if [ ! -f "$ENV_FILE" ]; then
     echo "环境变量文件 $ENV_FILE 不存在！"
     exit 1
@@ -42,8 +43,6 @@ source "$ENV_FILE"
 : "${V2RAY_CONFIG_FILE:?请在 $ENV_FILE 中设置 V2RAY_CONFIG_FILE 环境变量}"
 # V2Ray 配置目录
 : "${V2RAY_CONFIG_DIR:?请在 $ENV_FILE 中设置 V2RAY_CONFIG_DIR 环境变量}"
-# V2Ray quic seting key
-: "${V2RAY_QUIC_SETTING_KEY:?请在 $ENV_FILE 中设置 V2RAY_QUIC_SETTING_KEY 环境变量}"
 
 : "
 v2ray/
@@ -72,6 +71,8 @@ if [ -f "$V2RAY_CONFIG_FILE" ]; then
     mv "$V2RAY_CONFIG_FILE" "$V2RAY_WORK_DIR/config.json.bak" 
 fi
 
+## vless协议
+function _vless() {
 # 生成主配置文件
 cat > "$V2RAY_CONFIG_FILE" << EOF
 {
@@ -213,3 +214,117 @@ cat > "${V2RAY_CONFIG_DIR}/06_dns.json" << EOF
   }
 }
 EOF
+}
+
+## vmess协议
+function _vmess() {
+cat > "${V2RAY_CONFIG_DIR}/api.json" << EOF
+{
+  "api": {
+    "tag": "server-endpoint",
+    "services": [
+      "HandlerService",
+      "LoggerService",
+      "StatsService"
+    ]
+  }
+}
+EOF
+
+cat > "${V2RAY_CONFIG_DIR}/dns.json" << EOF
+{
+  "dns": {
+    "tag": "dns-srv",
+    "hosts": {
+      "google.com": "google.com"
+    },
+    "servers": [
+      {
+        "address": "",
+        "port": 5353,
+        "domains": [
+          "domain:v2ray.com"
+        ],
+        "expectIPs": [
+          "geoip:cn"
+        ]
+      }
+    ]
+  }
+}
+EOF
+
+cat > "${V2RAY_CONFIG_DIR}/inbounds.json" << EOF
+{
+  "inbounds": [
+    {
+      "port": ${V2RAY_PORT},
+      "protocol": "vmess",
+      "listen": "${V2RAY_LISTEN_ADDR}",
+      "settings": {
+        "clients": [
+          {
+            "id": "${V2RAY_CLIENT_UUID1}",
+            "alterId": 0
+          },
+          {
+            "id": "${V2RAY_CLIENT_UUID2}",
+            "alterId": 0
+          },
+          {
+            "id": "${V2RAY_CLIENT_UUID3}",
+            "altrId": 0
+          }
+        ]
+      }
+    }
+  ]
+}
+EOF
+
+cat > "${V2RAY_CONFIG_DIR}/log.json" << EOF
+{
+  "log": {
+    "access": "/var/log/v2ray/access.log",
+    "error": "/var/log/v2ray/error.log",
+    "loglevel": "info"
+  }
+}
+EOF
+
+cat > "${V2RAY_CONFIG_DIR}/outbounds.json" << EOF
+{
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}
+EOF
+
+cat > "${V2RAY_CONFIG_DIR}/routing.json" << EOF
+{
+  "routing": {
+    "rules": [
+      {
+        "type": "field",
+        "outboundTag": "direct",
+        "ip": ["geoip:cn"]
+      },
+      {
+	"type": "field",
+	"ip": [
+	  "geoip:private"
+        ],
+	"outboundTag": "direct"
+      }
+    ]
+  }
+}
+EOF
+}
+
+[[ "$1" == "vmess" ]] && _vmess && echo "生成 vmess 协议配置" && exit
+[[ "$1" == "vless" ]] && _vless && echo "生成 vless 协议配置" && exit
+echo "Usage: $1 [vmess|vless] env_file"

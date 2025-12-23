@@ -28,7 +28,7 @@ fs.file-max = 1048576
 
 ---
 - **v2config.sh配置(.env)**
-```bash
+```bash [.env]
 ##### .env与v2config.sh同级目录
 V2RAY_PORT=6686
 V2RAY_LISTEN_ADDR="0.0.0.0"
@@ -44,7 +44,7 @@ V2RAY_CLIENT_UUID3=b0e35abb-ebd3-8438-305b-36c8e7fd0956
 
 ---
 - **v2config.sh生成V2Ray服务端配置**
-```bash
+```bash [v2config.sh]
 #!/bin/bash
 
 set -eu
@@ -434,4 +434,7 @@ jq -n '
     ```
     - 启动中继V2Ray服务: ./v2ray -c relay_tcp.json
     - 使用示例参考v2rayN的配置
-  
+
+
+
+---
