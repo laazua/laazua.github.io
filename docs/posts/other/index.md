@@ -9,3 +9,7 @@
 - [浏览器插件](./chrome.md)
 
 - [bootschool](https://bootschool.net/)
+
+- [DMIT VPS](https://www.dmit.io/)
+
+- [ssh Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
