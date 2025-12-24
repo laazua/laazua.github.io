@@ -88,3 +88,15 @@ Sticky: t或T (其他用户执行位)
 ---
 
 * **SELinux策略**
+    - 相关命令
+    ```bash
+    sestatus    # 查看 SELinux 详细状态：sestatus
+    getenforce  # 获取当前模式 (Enforcing/Permissive/Disabled): getenforce
+    setenforce  # 临时切换模式 (0为宽容模式，1为强制模式): sudo setenforce 0
+    ls -Z       # 查看文件安全上下文
+    chcon       # 临时修改文件安全上下文: sudo chcon -t httpd_sys_content_t /var/www/html/test.html
+    semanage
+    restorecon
+    getsebool
+    setsebool
+    ```

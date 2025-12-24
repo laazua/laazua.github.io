@@ -192,6 +192,7 @@ export default defineConfig({
         collapsed: true,
         items: [
           { text: '一些工具', link: '/posts/other/index' },
+          { text: '生活常识', link: '/posts/other/life/index' },
         ]
       }
     ],
