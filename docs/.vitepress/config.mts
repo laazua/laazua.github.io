@@ -42,13 +42,20 @@ export default defineConfig({
         collapsed: true,
         items: [
           {
-            text: 'Java',
+            text: 'Rust',
             collapsed: true,
             items: [
-              { text: '运行时环境优化', link: '/posts/language/java/runtime' },
-              { text: '模块化编程', link: '/posts/language/java/module' },
+               { text: '编码事项', link: '/posts/language/rust/index' },
             ]
           },
+          // {
+          //   text: 'Java',
+          //   collapsed: true,
+          //   items: [
+          //     { text: '运行时环境优化', link: '/posts/language/java/runtime' },
+          //     { text: '模块化编程', link: '/posts/language/java/module' },
+          //   ]
+          // },
           {
             text: 'Python',
             collapsed: true,
@@ -65,20 +72,13 @@ export default defineConfig({
               { text: '编码事项', link: '/posts/language/golang/index' },
             ]
           },
-          {
-            text: 'Rust',
-            collapsed: true,
-            items: [
-               { text: '编码事项', link: '/posts/language/rust/index' },
-            ]
-          },
-          {
-            text: 'C/C++',
-            collapsed: true,
-            items: [
-              { text: '编码事项', link: '/posts/language/cc/index' },
-            ]
-          }
+          // {
+          //   text: 'C/C++',
+          //   collapsed: true,
+          //   items: [
+          //     { text: '编码事项', link: '/posts/language/cc/index' },
+          //   ]
+          // }
         ]
       },
       {

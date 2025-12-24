@@ -65,3 +65,5 @@ pipeline {
     }
 }
 ```
+
+- [共享库示例](https://github.com/laazua/sharedlib)
