@@ -1,0 +1,44 @@
+import{_ as i,c as a,o as n,af as l}from"./chunks/framework.CpcvffoB.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"posts/language/cc/dev.md","filePath":"posts/language/cc/dev.md"}'),p={name:"posts/language/cc/dev.md"};function t(h,s,k,e,r,E){return n(),a("div",null,[...s[0]||(s[0]=[l(`<h5 id="c-c" tabindex="-1">C/C++ <a class="header-anchor" href="#c-c" aria-label="Permalink to “C/C++”">​</a></h5><ul><li><strong>项目开发</strong></li></ul><blockquote><p>以项目内嵌三方库的方式进行开发(示例如下)</p></blockquote><div class="language-shell"><button title="Copy Code" class="copy"></button><span class="lang">shell</span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 将三方库添加到项目的根路径的third_party目录下</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">git</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> submodule</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> add</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> https://github.com/microcai/boost.git</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> third_party/boost</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># CMakeLists.txt进行如下设置</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">set</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">Boost_USE_STATIC_LIBS</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> ON</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;">set</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">(</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">Boost_USE_STATIC_RUNTIME</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> ON</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">find_package(Boost</span><span style="--shiki-light:#005CC5;--shiki-dark:#79B8FF;"> 1.55</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> COMPONENTS</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> thread</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> system</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> filesystem</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> program_options</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> random</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> atomic</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> chrono</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">if</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> (</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">NOT</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;"> Boost_FOUND</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">add_subdirectory($</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">{CMAKE_CURRENT_SOURCE_DIR}</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">/third_party/boost</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">)</span></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">endif</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">()</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">target_link_libraries(</span><span style="--shiki-light:#6F42C1;--shiki-dark:#B392F0;">&quot;your target&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> \${BOOST_LIBRARIES} )</span></span></code></pre></div><ul><li><p><strong><a href="https://github.com/avplayer/avpn/tree/master/third_party/boost" target="_blank" rel="noreferrer">如何内嵌的方式在项目中加入三方库</a></strong></p></li><li><p><strong>项目依赖三方库 jmalloc 如何制作Docker镜像</strong></p></li></ul><div class="language-dockerfile"><button title="Copy Code" class="copy"></button><span class="lang">dockerfile</span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">FROM</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> gcc:latest</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 安装基础构建工具</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> apt-get update &amp;&amp; apt-get install -y \\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    cmake \\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    make \\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    git \\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    autoconf \\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    automake \\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    libtool \\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &amp;&amp; rm -rf /var/lib/apt/lists/*</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 下载并编译 jemalloc</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> git clone https://github.com/jemalloc/jemalloc.git /tmp/jemalloc \\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &amp;&amp; cd /tmp/jemalloc \\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &amp;&amp; ./autogen.sh \\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &amp;&amp; ./configure --prefix=/usr/local \\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &amp;&amp; make -j$(nproc) \\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &amp;&amp; make install \\</span></span>
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    &amp;&amp; rm -rf /tmp/jemalloc</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 复制项目代码</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">WORKDIR</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> /app</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">COPY</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> . .</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 构建项目，链接 jemalloc</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> g++ -o myapp main.cpp -I/usr/local/include -L/usr/local/lib -ljemalloc</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 设置运行时链接库路径</span></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">ENV</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH</span></span>
+<span class="line"></span>
+<span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">CMD</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> [</span><span style="--shiki-light:#032F62;--shiki-dark:#9ECBFF;">&quot;./myapp&quot;</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">]</span></span></code></pre></div>`,6)])])}const c=i(p,[["render",t]]);export{g as __pageData,c as default};

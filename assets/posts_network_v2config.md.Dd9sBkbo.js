@@ -386,4 +386,4 @@ import{_ as i,c as a,o as n,af as l,ag as p}from"./chunks/framework.CpcvffoB.js"
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">      }</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">    ]</span></span>
 <span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">  }</span></span>
-<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div><ul><li>启动中继V2Ray服务: ./v2ray -c relay_tcp.json</li><li>使用示例参考v2rayN的配置</li></ul></li></ul>`,18)])])}const y=i(t,[["render",h]]);export{g as __pageData,y as default};
+<span class="line"><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;">}</span></span></code></pre></div><ul><li>启动中继V2Ray服务: ./v2ray -c relay_tcp.json</li><li>使用示例参考v2rayN的配置</li></ul></li></ul><hr>`,19)])])}const y=i(t,[["render",h]]);export{g as __pageData,y as default};
