@@ -41,13 +41,13 @@ export default defineConfig({
         text: '语言相关',
         collapsed: true,
         items: [
-          {
-            text: 'Rust',
-            collapsed: true,
-            items: [
-               { text: '编码事项', link: '/posts/language/rust/index' },
-            ]
-          },
+          // {
+          //   text: 'Rust',
+          //   collapsed: true,
+          //   items: [
+          //      { text: '编码事项', link: '/posts/language/rust/index' },
+          //   ]
+          // },
           // {
           //   text: 'Java',
           //   collapsed: true,
@@ -188,11 +188,12 @@ export default defineConfig({
         ]
       },
       {
-        text: '其他',
+        text: '其他知识点',
         collapsed: true,
         items: [
           { text: '一些工具', link: '/posts/other/index' },
           { text: '生活常识', link: '/posts/other/life/index' },
+          { text: '书籍推荐', link: '/posts/other/book/index' },
         ]
       }
     ],

@@ -3,3 +3,5 @@
 
 
 - [FastDepends 依赖注入](https://github.com/Lancetnik/FastDepends)
+
+- [aiohttp 接口示例](./aiohttp.md)
