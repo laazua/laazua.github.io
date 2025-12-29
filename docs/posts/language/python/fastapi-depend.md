@@ -15,7 +15,7 @@ user_router = APIRouter(tags=['用户接口'])
 
 @user_router.post('/create')
 async def creat(service: UserServiceDeps):
-    return service.add_user()
+    return await service.add_user()
 
 ```
 ```python [service层]
