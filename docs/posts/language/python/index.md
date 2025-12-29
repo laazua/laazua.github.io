@@ -4,6 +4,7 @@
   安装pip： python3 -m ensurepip
 </pre>
 
+- [fastapi框架](./fastapi.md)
 - [django-drf接口示例](./py-drf.md)
 - [标准库 asyncio](./asyncio.md)
 - [标准库示例](https://pymotw.com/3/)
