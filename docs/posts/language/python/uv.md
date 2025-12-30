@@ -71,3 +71,11 @@ export PYTHONPATH=vendor && python -m app             # 设置依赖路径并运
     # 或者使用精准依赖锁文件: 
     # uv run python -m pip install --no-index --find-links deps/ -t vendor -r requirements.lock
     ```
+
+---
+
+- **[astral-sh/ty](https://github.com/astral-sh/ty)**
+    + VScode插件市场安装
+
+- **[astral-sh/ruff](https://github.com/astral-sh/ruff)**
+    + uv add ruff --dev
