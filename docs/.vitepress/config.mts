@@ -18,7 +18,7 @@ export default defineConfig({
         text: '操作系统',
         collapsed: true,
         items: [
-          { text: 'Linux相关', link: '/posts/linux/index'},
+          { text: 'Linux相关', link: '/posts/linux/index' },
           { text: 'RockyLinux', link: '/posts/linux/rocky' },
         ]
       },

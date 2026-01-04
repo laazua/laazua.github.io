@@ -37,7 +37,7 @@ class UserService:
         pass
     # 增删改查
 
-    def __call(self, *args, **kwargs):
+    def __call__(self, *args, **kwargs):
         """依赖注入使用"""
         return self
 

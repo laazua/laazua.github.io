@@ -2,6 +2,6 @@
 
 
 
-- [FastDepends 依赖注入](https://github.com/Lancetnik/FastDepends)
+- [FastDepends 依赖注入](./third-py-depends.md)
 
 - [aiohttp 接口示例](./aiohttp.md)
