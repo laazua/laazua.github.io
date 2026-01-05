@@ -32,4 +32,4 @@ export PYTHONPATH="/app/vendor:/app/src"
 
 # python --help-all 查看所有启动优化配置
 ```
-2. > python -m app 根据模块启动项目(实现app/__main__.py模块)
+2. 启动: python -m app 根据模块启动项目(实现`app/__main__.py`模块)

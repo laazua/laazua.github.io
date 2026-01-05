@@ -6,7 +6,7 @@
 ```python [类依赖]
 ## uv add fast-depends
 
-from typing import Annotated
+from typing import Annotated, TypeAlias
 from fast_depends import Depends, inject
 
 
@@ -21,7 +21,7 @@ class A:
         return self
 
 
-ADeps = Annotated[A, Depends(A)]
+ADeps: TypeAlias = Annotated[A, Depends(A)]
 
 
 @inject
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     main(ADeps)
 ```
 ```python [方法依赖]
-from typing import Annotated, Callable
+from typing import Annotated, Callable, TypeAlias
 from fast_depends import Depends, inject
 
 
@@ -45,7 +45,7 @@ def greet(name):
     return f"Hello, {name}!"
 
 
-FunDeps = Annotated[Callable[[str], None], Depends(lambda: greet)]
+FunDeps: TypeAlias = Annotated[Callable[[str], None], Depends(lambda: greet)]
 
 
 @inject
@@ -57,6 +57,5 @@ def main(greeting: FunDeps):
 
 if __name__ == "__main__":
     main(FunDeps)
-
 ```
 :::
