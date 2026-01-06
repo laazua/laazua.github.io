@@ -1,6 +1,6 @@
 ##### 共享库
 
-- **[代码结构](https://gitee.com/laazua/sharedlibs.git)**
+- **[代码结构](https://github.com/laazua/sharedlib)**
 ```text
 sharedlib/
 ├── entrypoint                           # 流水线入口文件目录
