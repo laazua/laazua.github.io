@@ -9,3 +9,5 @@
 - **用户相关目录权限**
 > chmod 700 ~/.ssh  
 > chmod 600 ~/.ssh/config  
+
+- **[SSH CA使用示例教程](./sshd-ca.md)**
