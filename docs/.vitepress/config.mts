@@ -53,8 +53,7 @@ export default defineConfig({
           //   text: 'Java',
           //   collapsed: true,
           //   items: [
-          //     { text: '运行时环境优化', link: '/posts/language/java/runtime' },
-          //     { text: '模块化编程', link: '/posts/language/java/module' },
+          //     { text: '编码事项', link: '/posts/language/java/index' },
           //   ]
           // },
           {
