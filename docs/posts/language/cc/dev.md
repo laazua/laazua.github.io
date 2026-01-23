@@ -18,6 +18,8 @@ endif()
 
 target_link_libraries("your target" ${BOOST_LIBRARIES} )
 ```
+> [参考示例](https://github.com/zero-rp/ops)  
+
 
 - **[如何内嵌的方式在项目中加入三方库](https://github.com/avplayer/avpn/tree/master/third_party/boost)**
 

@@ -11,3 +11,5 @@
 > chmod 600 ~/.ssh/config  
 
 - **[SSH CA使用示例教程](./sshd-ca.md)**
+
+- **[SSH CA 堡垒机实验](./bastion.md)**
