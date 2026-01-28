@@ -131,5 +131,26 @@ EOF
 
 - 日志与审计
 ```bash
-# 在所有服务端新建审计bash脚本: /usr/local/bin/audit-wrapper
+#!/bin/bash
+
+## 在所有服务端新建审计bash脚本: /usr/local/bin/ssh-forcecmd.sh
+## 检查 /var/log/session 路径是否存在，并授权登录用户zhangsan可访问: chown zhangsan:zhangsan /var/log/session
+
+CERT_FILE=$SSH_USER_AUTH
+if [[ -n "$CERT_FILE" && -f "$CERT_FILE" ]]; then
+  #ssh-keygen -Lf <(cat "$CERT_FILE"|awk '{sub($1 OFS, ""); print}')
+  ## 这里解析的登录认证,需要在签发登录用户证书时使用 -O extension:realuser=alice 进行参数传递
+  REAL_USER=$(ssh-keygen -Lf <(cat "$CERT_FILE"|awk '{sub($1 OFS, ""); print}') | awk '/realuser/ {print $4}'| xxd -r -p | tail -c +5)
+else
+  REAL_USER="unknown"
+fi
+#echo $REAL_USER
+export REAL_USER
+
+LOG=/var/log/session/${REAL_USER}-$(date +%Y%m%d%H%M%S)-$$.log
+logger -p authpriv.notice "ssh-login real_user=$REAL_USER unix_user=$USER src=$SSH_CONNECTION cert_id=$SSH_CERT_KEY_ID log=$LOG"
+
+exec script -q -f "$LOG"
+
+# chmod +x /usr/local/bin/ssh-forcecmd.sh
 ```
