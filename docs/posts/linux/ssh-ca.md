@@ -8,11 +8,11 @@
 ```
 
 - 相关示意截图
-  1. **CA服务器证书目录结构**
+  1. **CA服务器证书目录结构**  
   ![CA服务器证书目录结构](./ca.png)
-  2. **CLIENT服务器用户目录结构**
+  2. **CLIENT服务器用户目录结构**  
   ![CLIENT服务器用户目录结构](./client.png)
-  3. **SERVER服务器sshd目录结构**
+  3. **SERVER服务器sshd目录结构**  
   ![SERVER服务器sshd目录结构](./server-sshd.png)
 
 - CA服务器
