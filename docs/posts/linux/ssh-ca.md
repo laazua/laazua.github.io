@@ -2,10 +2,18 @@
 
 - 说明
 ```bash
-# CA:     192.168.165.71
-# CLIENT: 192.168.165.72
-# SERVER: 192.168.165.73
+# CA:     192.168.165.71  (进行CA证书签发)
+# CLIENT: 192.168.165.72  (可做堡垒机进行登录认证用户管理)
+# SERVER: 192.168.165.73  (业务节点)
 ```
+
+- 相关示意截图
+  1. **CA服务器证书目录结构**
+  ![CA服务器证书目录结构](./ca.png)
+  2. **CLIENT服务器用户目录结构**
+  ![CLIENT服务器用户目录结构](./client.png)
+  3. **SERVER服务器sshd目录结构**
+  ![SERVER服务器sshd目录结构](./server-sshd.png)
 
 - CA服务器
 ```bash
@@ -23,7 +31,8 @@ mkdir /etc/ssh/ca/user_keys
 ##### 获取认证用户的个人公钥放在 /etc/ssh/ca/user_keys 路径进行签名 (CLIENT进行认证用户的相关操作后执行)
 ## 对认证用户: alice 进行认证: 参数 -n 标识登录用户为张三(服务端必须创建此登录用户), -O "force-command=/usr/local/bin/audit-wrapper" 每次用户登录时都会执行的脚本
 ## ssh-keygen -s ca_key -I "alice_to_zhangsan" -n zhangsan -V +52w /etc/ssh/ca/user_keys/alice.pub
-ssh-keygen -s ca_key -I alice_to_zhangsan -n zhangsan -O force-command=/usr/local/bin/audit-wrapper alice alice_to_zhangsan  -V +52w /etc/ssh/ca/user_keys/alice.pub
+## ssh-keygen -s ca_key -I alice_to_zhangsan -n zhangsan -O force-command=/usr/local/bin/audit-wrapper -V +52w /etc/ssh/ca/user_keys/alice.pub
+ssh-keygen -s ca_key -I efls_to_zhangsan -n zhangsan -V +2w -O extension:realuser=efls /etc/ssh/ca/user_keys/efls.pub
 ## 查看认证详情
 ssh-keygen -L -f /etc/ssh/ca/user_keys/alice-cert.pub
 ## 将生成的用户证书alice-cert.pub回传到客户端(CLIENT): /home/alice/.ssh/id_rsa-cert.pub
@@ -135,6 +144,7 @@ EOF
 
 ## 在所有服务端新建审计bash脚本: /usr/local/bin/ssh-forcecmd.sh
 ## 检查 /var/log/session 路径是否存在，并授权登录用户zhangsan可访问: chown zhangsan:zhangsan /var/log/session
+## 用户登录时需要先调用此脚本(需要sshd服务端进行相关配置才能生效)
 
 CERT_FILE=$SSH_USER_AUTH
 if [[ -n "$CERT_FILE" && -f "$CERT_FILE" ]]; then
