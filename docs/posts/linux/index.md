@@ -11,6 +11,7 @@
 - [内核参数调整示例](./kernel.md)
 
 - [OpenSSL自签证书](./cert.md)
+- [OpenSSL CA自签证书](./openssl-ca.md)
 - [OpenSSL加密解密](./salt.md)
 
 <!-- - [OpenSSL加密解密](./salt.md) -->

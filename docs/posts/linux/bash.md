@@ -227,3 +227,32 @@ printf '"%s"\n' "$*"
     ```
     + 运行脚本:  bash test.sh 或者 bash test.sh .env 
 
+- **标准输入重定向解决需要交互运行的命令**
+    1. a.sh 模拟交互命令, 代码如下：
+    ```bash 
+    #!/bin/bash
+    #
+    # 标准输入解决交互式输入
+
+    read -p "input your name: " name
+    read -p "input your emal: " email
+    read -p "input your addr: " addr
+    read -p "countine[yes|no]: " enter
+
+    if [ "$enter" != "yes" ];then
+    echo "do nothing"
+    exit
+    fi
+    echo "Got your info: $name  $email $addr"
+    ```
+    2. 将交互运行变成非交互运行, 使用语法:
+    ```bash
+    bash a.sh <<EOF
+    > zhangsan
+    > admin@freedom.com
+    > chengdu
+    > yes
+    > EOF
+    # 输出：
+    #   Got your info: zhangsan  admin@freedom.com chengdu
+    ```
