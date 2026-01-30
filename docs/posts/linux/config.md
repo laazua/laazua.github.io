@@ -1,3 +1,13 @@
+---
+title: 一些系统相关配置
+prev:
+    text: OpenSSL加密解密
+    link: ./salt
+next:
+    text: firewalld简介
+    link: ./firewalld
+---
+
 ##### 一些系统配置
 
 - **history配置**

@@ -1,3 +1,13 @@
+---
+title: Linux权限系统
+prev:
+    text: Bash脚本语法
+    link: ./bash
+next:
+    text: sshd服务配置
+    link: ./sshd
+---
+
 ##### 权限系统
 
 <pre>

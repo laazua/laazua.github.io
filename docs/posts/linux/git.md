@@ -1,3 +1,13 @@
+---
+title: Git仓库操作
+prev:
+    text: NetworkManager配置
+    link: ./net
+next:
+    text: 给 dnf/yum 源设置代理
+    link: ./yum-repo
+---
+
 ##### git
 
 - **将远程非空仓库与本地git同步**

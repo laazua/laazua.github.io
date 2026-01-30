@@ -1,3 +1,13 @@
+---
+title: firewalld简介
+prev:
+    text: 一些系统相关配置
+    link: ./config
+next:
+    text: NetworkManager配置
+    link: ./net.md
+---
+
 ##### firewalld
 
 - **白名单**

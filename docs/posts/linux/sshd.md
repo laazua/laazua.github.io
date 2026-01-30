@@ -1,3 +1,13 @@
+---
+title: sshd服务配置
+prev:
+    text: Linux权限系统
+    link: ./permission
+next:
+    text: 内核参数调整示例
+    link: ./kernel
+---
+
 ##### ssh配置
 
 - **[ssh服务端配置](./ssh-server-conn.md)**

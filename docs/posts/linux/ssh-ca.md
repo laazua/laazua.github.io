@@ -1,5 +1,10 @@
 ##### SSH CA 登录认证
 
+- **注意:`新买的云主机一定要修改sshd服务端口`**
+    1. 查看主机被暴力破解登录记录: lastb
+    2. 同级具体登录失败IP数量前十: lastb -f /var/log/btmp |awk '{print $3}'|sort|uniq -c |sort -nr|head -n 10  
+       或者: lastb -f /var/log/btmp | awk '{ip[$3]++}END{for(i in ip) {print ip[i], i}}'|sort -nr |head -n 10
+
 - 说明
 ```bash
 # CA:     192.168.165.71  (进行CA证书签发)
@@ -109,7 +114,7 @@ chmod +x /usr/local/bin/ssh-forcecmd.sh
 
 ## 创建会话回放目录: mkdir /var/log/session && chown zhangsan:zhangsan /var/log/session
 
-## 测试配置文件sshd -t
+## 测试配置文件: sshd -t
 ## 重启sshd服务: systemctl restart sshd
 ```
 
@@ -134,8 +139,6 @@ Host 192.168.165.73
     IdentityFile ~/.ssh/id_ed25519
     CertificateFile ~/.ssh/id_ed25519-cert.pub
 EOF
-
-## 扽了给测试
 ```
 
 - 日志与审计

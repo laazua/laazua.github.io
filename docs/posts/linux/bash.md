@@ -1,3 +1,13 @@
+---
+title: Bash脚本语法
+prev:
+    text: Linux命令
+    link: ./command
+next:
+    text: Linux权限系统
+    link: ./permission
+---
+
 ##### bash语法(man bash)
 
 - **文档注释**

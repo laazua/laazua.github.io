@@ -1,3 +1,9 @@
+---
+title: linux系统
+next:
+    text: Linux命令
+    link: ./command.md
+---
 ### Linux
 
 - [Linux命令](./command.md)

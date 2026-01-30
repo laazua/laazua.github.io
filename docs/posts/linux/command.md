@@ -1,3 +1,13 @@
+---
+title: Linux命令
+prev:
+    text: Linux系统
+    link: ./index
+next:
+    text: Bash脚本语法
+    link: ./bash.md
+---
+
 ##### 命令用法
 
 - **getent**

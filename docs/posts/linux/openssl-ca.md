@@ -1,3 +1,14 @@
+---
+title: OpenSSL CA自签证书
+prev:
+    text: OpenSSL自签证书
+    link: ./cert
+next:
+    text: OpenSSL加密解密
+    link: ./salt
+---
+
+
 ##### 实现私有CA生成，申请详解
 
 
@@ -60,3 +71,6 @@ echo '0F' >/etc/pki/CA/serial
         2. 更新吊销证书列表: openssl ca -gencrl -out /etc/pki/CA/crl.pem
         3. 查看吊销证书列表: openssl crl -in /etc/pki/CA/crl.pem -noout -text
         4. 后续可以发布吊销证书文件: /etc/pki/CA/crl.pem
+
+- **最终生成的文件目录结构**
+![CA](./ca-files.png)
