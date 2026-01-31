@@ -5,7 +5,7 @@ prev:
     link: ./git
 next:
     text: monit 监控工具
-    link: https://mmonit.com/
+    link: ./monit
 ---
 
 ##### 给源设置代理

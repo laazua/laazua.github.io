@@ -1,3 +1,13 @@
+---
+title: Rust
+prev:
+    text: vault证书管理工具
+    link:  /posts/tools/vault
+next:
+    text: 构建打包
+    link: /posts/language/rust/build
+---
+
 ##### Rust
 
 <pre>

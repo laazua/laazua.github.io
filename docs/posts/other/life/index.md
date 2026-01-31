@@ -1,3 +1,13 @@
+---
+title: 生活常识
+prev:
+    text: 浏览器插件
+    link:  /posts/other/chrome
+next:
+    text: 书籍推荐
+    link: /posts/other/book/index
+---
+
 ##### 生活常识
 
 - **年化利率**

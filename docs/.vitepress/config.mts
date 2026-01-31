@@ -42,20 +42,20 @@ export default defineConfig({
         text: '语言相关',
         collapsed: true,
         items: [
-          // {
-          //   text: 'Rust',
-          //   collapsed: true,
-          //   items: [
-          //      { text: '编码事项', link: '/posts/language/rust/index' },
-          //   ]
-          // },
-          // {
-          //   text: 'Java',
-          //   collapsed: true,
-          //   items: [
-          //     { text: '编码事项', link: '/posts/language/java/index' },
-          //   ]
-          // },
+          {
+            text: 'Rust',
+            collapsed: true,
+            items: [
+               { text: '编码事项', link: '/posts/language/rust/index' },
+            ]
+          },
+          {
+            text: 'Java',
+            collapsed: true,
+            items: [
+              { text: '编码事项', link: '/posts/language/java/index' },
+            ]
+          },
           {
             text: 'Python',
             collapsed: true,
@@ -72,13 +72,13 @@ export default defineConfig({
               { text: '编码事项', link: '/posts/language/golang/index' },
             ]
           },
-          // {
-          //   text: 'C/C++',
-          //   collapsed: true,
-          //   items: [
-          //     { text: '编码事项', link: '/posts/language/cc/index' },
-          //   ]
-          // }
+          {
+            text: 'C/C++',
+            collapsed: true,
+            items: [
+              { text: '编码事项', link: '/posts/language/cc/index' },
+            ]
+          }
         ]
       },
       {

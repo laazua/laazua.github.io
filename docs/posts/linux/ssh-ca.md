@@ -1,3 +1,14 @@
+---
+title: SSH CA 通用账号登录
+prev:
+    text: SSH CA 堡垒机实验
+    link: ./bastion
+next:
+    text: 内核参数调整示例
+    link: ./kernel
+---
+
+
 ##### SSH CA 登录认证
 
 - **注意:`新买的云主机一定要修改sshd服务端口`**

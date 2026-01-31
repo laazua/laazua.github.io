@@ -1,5 +1,14 @@
-##### 项目配置
+---
+title: Python项目环境差异化配置
+prev:
+    text: Python DRF
+    link:  /posts/language/java/py-drf
+next:
+    text: Python 装饰器
+    link: /posts/language/python/py-decorator
+---
 
+##### 项目配置
 
 - 使用 pydantic_settings 进行不同环境配置
 - pip install pydantic_settings

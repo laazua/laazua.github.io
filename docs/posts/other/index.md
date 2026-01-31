@@ -1,3 +1,13 @@
+---
+title: 一些工具
+prev:
+    text: Haproxy
+    link:  /posts/middleware/haproxy/index
+next:
+    text: 编辑器相关
+    link: /posts/other/font
+---
+
 ##### 一些工具
 
 - [编辑器相关](./font.md)

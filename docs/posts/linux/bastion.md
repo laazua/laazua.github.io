@@ -1,3 +1,13 @@
+---
+title: SSH CA 堡垒机实验
+prev:
+    text: SSH CA使用示例教程
+    link: ./sshd-ca.md
+next:
+    text: SSH CA 通用账号登录
+    link: ./ssh-ca.md
+---
+
 ##### 基于OpenssL SSH的堡垒机实现
 
 ### carl

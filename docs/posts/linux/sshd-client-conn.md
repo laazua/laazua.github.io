@@ -1,3 +1,14 @@
+---
+title: ssh客户端连接配置
+prev:
+    text: ssh服务端配置
+    link: ./ssh-server-conn
+next:
+    text: ssh客户全局端配置
+    link: ./sshd-client-conn-glob
+---
+
+
 ##### ssh客户端连接配置
 
 ~/.ssh/config - SSH 用户客户端配置  

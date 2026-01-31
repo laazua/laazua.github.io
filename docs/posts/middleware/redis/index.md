@@ -1,3 +1,12 @@
+---
+title: Redis
+prev:
+    text: Elastic
+    link:  /posts/middleware/elastic/index
+next:
+    text: MySQL
+    link: /posts/middleware/mysql/index
+---
 ##### redis
 
 <pre>

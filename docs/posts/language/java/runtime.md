@@ -1,3 +1,13 @@
+---
+title: 运行时优化
+prev:
+    text: 模块化编程
+    link:  /posts/language/java/module
+next:
+    text: Python
+    link: /posts/language/python/index
+---
+
 ##### Runtime
 
 - **定制jre**

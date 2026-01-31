@@ -1,3 +1,13 @@
+---
+title: ssh服务端配置
+prev:
+    text: sshd服务配置
+    link: ./sshd
+next:
+    text: ssh客户端连接配置
+    link: ./sshd-client-conn
+---
+
 ##### ssh服务端配置
 
 /etc/ssh/sshd_config - SSH 服务器配置  

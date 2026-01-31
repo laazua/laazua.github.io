@@ -1,3 +1,14 @@
+---
+title: C/C++ 开发与运行
+prev:
+    text: C/C++
+    link:  /posts/language/cc/index
+next:
+    text: 网络相关
+    link: /posts/network/index
+---
+
+
 ##### 编码事项
 
 - hello world

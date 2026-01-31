@@ -1,3 +1,13 @@
+---
+title: Springboot初始化项目
+prev:
+    text: Java
+    link:  /posts/language/java/index
+next:
+    text: 模块化编程
+    link: /posts/language/java/module
+---
+
 ##### springboot
 
 - **命令行初始化项目**

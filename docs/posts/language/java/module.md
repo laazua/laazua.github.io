@@ -1,3 +1,13 @@
+---
+title: 模块化编程
+prev:
+    text: Springboot初始化项目
+    link:  /posts/language/java/springboot
+next:
+    text: 运行时优化
+    link: /posts/language/java/runtime
+---
+
 ##### 模块化编程
 
 

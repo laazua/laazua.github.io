@@ -4,7 +4,7 @@ prev:
     text: NetworkManager配置
     link: ./net
 next:
-    text: 给 dnf/yum 源设置代理
+    text: dnf/yum 源设置代理
     link: ./yum-repo
 ---
 

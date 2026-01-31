@@ -1,3 +1,14 @@
+---
+title: 其他示例代码
+prev:
+    text: 守护进程启动
+    link:  /posts/language/golang/daemon
+next:
+    text: C/C++
+    link: /posts/language/cc/index
+---
+
+
 ##### 示例代码
 
 - Linux远程执行命名

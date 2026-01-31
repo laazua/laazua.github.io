@@ -1,3 +1,13 @@
+---
+title: ssh客户全局端配置
+prev:
+    text: ssh客户端连接配置
+    link: ./ssh-client-conn
+next:
+    text: SH CA使用示例教程
+    link: ./sshd-ca.md
+---
+
 ##### ssh客户端全局配置
 
 

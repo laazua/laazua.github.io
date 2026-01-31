@@ -1,3 +1,13 @@
+---
+title: Rust构建打包
+prev:
+    text: Rust
+    link:  /posts/language/rust
+next:
+    text: Rust基础语法
+    link: /posts/language/rust/syntax
+---
+
 ##### 构建独立目标二进制文件
 
 - 打包

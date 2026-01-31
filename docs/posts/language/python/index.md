@@ -1,3 +1,13 @@
+---
+title: Python
+prev:
+    text: Java运行时优化
+    link:  /posts/language/java/runtime
+next:
+    text: Python fastapi
+    link: /posts/language/python/fastapi
+---
+
 ##### python
 
 <pre>

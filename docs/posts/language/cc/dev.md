@@ -1,3 +1,14 @@
+---
+title: C/C++ 开发与运行
+prev:
+    text: C/C++
+    link:  /posts/language/cc/index
+next:
+    text: C/C++ 编码注意事项
+    link: /posts/language/cc/code
+---
+
+
 ##### C/C++
 
 - **项目开发**

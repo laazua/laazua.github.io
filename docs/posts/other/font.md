@@ -1,3 +1,12 @@
+---
+title: 编辑器相关
+prev:
+    text: 一些工具
+    link:  /posts/other/index
+next:
+    text: windows截屏制作
+    link: /posts/other/cut
+---
 ##### vscode
 
 **字体**
