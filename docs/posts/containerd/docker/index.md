@@ -2,7 +2,7 @@
 title: Docker 容器相关
 prev:
     text: OpenVPN 软件
-    link:  /posts/network/openvpn
+    link:  /posts/network/openVpn
 next:
     text: Docker 语法指令
     link: /posts/containerd/docker/base
