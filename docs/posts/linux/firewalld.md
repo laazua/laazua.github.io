@@ -2,10 +2,10 @@
 title: firewalld简介
 prev:
     text: 一些系统相关配置
-    link: ./config
+    link: /posts/linux/config
 next:
     text: NetworkManager配置
-    link: ./net.md
+    link: /posts/linux/net
 ---
 
 ##### firewalld

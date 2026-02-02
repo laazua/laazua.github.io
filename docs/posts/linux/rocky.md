@@ -1,8 +1,8 @@
 ---
 title: RockyLinux
 prev:
-    text: monit 监控工具
-    link: ./monit
+    text: Linux
+    link: /posts/linux/index
 next:
     text: Ansible
     link: /posts/tools/ansible

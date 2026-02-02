@@ -2,10 +2,10 @@
 title: Bash脚本语法
 prev:
     text: Linux命令
-    link: ./command
+    link: /posts/linux/command
 next:
     text: Linux权限系统
-    link: ./permission
+    link: /posts/linux/permission
 ---
 
 ##### bash语法(man bash)

@@ -2,10 +2,10 @@
 title: Linux命令
 prev:
     text: Linux系统
-    link: ./index
+    link: /posts/linux/linux
 next:
     text: Bash脚本语法
-    link: ./bash.md
+    link: /posts/linux/bash
 ---
 
 ##### 命令用法

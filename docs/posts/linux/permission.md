@@ -2,10 +2,10 @@
 title: Linux权限系统
 prev:
     text: Bash脚本语法
-    link: ./bash
+    link: /posts/linux/bash
 next:
     text: sshd服务配置
-    link: ./sshd
+    link: /posts/linux/sshd
 ---
 
 ##### 权限系统

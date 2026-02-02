@@ -1,7 +1,7 @@
 ---
 title: MySQL
 prev:
-    text: Redis
+    text: MySQL
     link:  /posts/middleware/mysql/index
 next:
     text: PostgreSQL

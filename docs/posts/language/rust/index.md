@@ -1,11 +1,11 @@
 ---
-title: Rust
+title: Rust语言
 prev:
-    text: vault证书管理工具
-    link:  /posts/tools/vault
+    text: Java语言
+    link:  /posts/language/java/index
 next:
-    text: 构建打包
-    link: /posts/language/rust/build
+    text: Zig语言
+    link: /posts/language/zig/index
 ---
 
 ##### Rust

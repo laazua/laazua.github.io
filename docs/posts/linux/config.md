@@ -2,10 +2,10 @@
 title: 一些系统相关配置
 prev:
     text: OpenSSL加密解密
-    link: ./salt
+    link: /posts/linux/salt
 next:
     text: firewalld简介
-    link: ./firewalld
+    link: /posts/linux/firewalld
 ---
 
 ##### 一些系统配置

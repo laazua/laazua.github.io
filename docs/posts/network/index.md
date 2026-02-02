@@ -1,11 +1,11 @@
 ---
 title: 网络相关
 prev:
-    text: C/C++ 编码事项
-    link:  /posts/language/cc/code
+    text: Zig语言
+    link:  /posts/language/zig/index
 next:
-    text: 网络ISO模型
-    link: /posts/network/net-iso
+    text: 容器相关
+    link: /posts/containerd/docker/index
 ---
 
 ##### 网络
@@ -13,3 +13,7 @@ next:
 - **[网络模型](./net-iso.md)**
 
 - **[IP网络分组](./net-ip.md)**
+
+- **[V2ray](./v2ray.md)**
+
+- **[OpenVPN](./openVpn.md)**

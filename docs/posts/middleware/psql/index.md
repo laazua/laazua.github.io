@@ -1,10 +1,10 @@
 ---
 title: MySQL
 prev:
-    text: Redis
+    text: MongoDB
     link:  /posts/middleware/mongo/index
 next:
-    text: MySQL
+    text: Nginx
     link: /posts/middleware/nginx/index
 ---
 

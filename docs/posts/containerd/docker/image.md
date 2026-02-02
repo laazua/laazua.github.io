@@ -1,3 +1,13 @@
+---
+title: 基础镜像
+prev:
+    text: Dockerfile
+    link:  /posts/containerd/docker/dockerfile
+next:
+    text: Kubernetes
+    link: /posts/containerd/k8s/index
+---
+
 ##### 生产用的轻量级基础镜像
 
 

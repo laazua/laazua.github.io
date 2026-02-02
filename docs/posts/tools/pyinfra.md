@@ -1,3 +1,13 @@
+---
+title: Pyinfra
+prev:
+    text: Ansible
+    link:  /posts/tools/ansible
+next:
+    text: Zabbix
+    link: /posts/tools/zabbix
+---
+
 ##### [pyinfra](https://github.com/pyinfra-dev/pyinfra)
 
 <pre>

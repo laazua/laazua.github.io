@@ -2,10 +2,10 @@
 title: Git仓库操作
 prev:
     text: NetworkManager配置
-    link: ./net
+    link: /posts/linux/net
 next:
     text: dnf/yum 源设置代理
-    link: ./yum-repo
+    link: /posts/linux/yum-repo
 ---
 
 ##### git

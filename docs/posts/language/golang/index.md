@@ -1,11 +1,11 @@
 ---
-title: Golang
+title: Golang语言
 prev:
-    text: Python加密配置文件字段通过环境变量进行解密
-    link:  /posts/language/python/py-enc-config
+    text: C/C++语言
+    link:  /posts/language/cc/index
 next:
-    text: 编译优化
-    link: /posts/language/golang/build
+    text: Python语言
+    link: /posts/language/python/index
 ---
 
 ##### golang

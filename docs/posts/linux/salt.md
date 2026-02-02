@@ -2,10 +2,10 @@
 title: OpenSSL加密解密
 prev:
     text: OpenSSL CA自签证书
-    link: ./openssl-ca
+    link: /posts/linux/openssl-ca
 next:
     text: 一些系统相关配置
-    link: ./config
+    link: /posts/linux/config
 ---
 
 ##### OpenSSL

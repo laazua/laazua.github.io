@@ -1,3 +1,13 @@
+---
+title: Jenkins
+prev:
+    text: Prometheus
+    link:  /posts/tools/prometheus
+next:
+    text: EBPF技术
+    link: /posts/tools/ebpf
+---
+
 ##### jenkins
 
 - [war包运行](./jenkins-install.md)

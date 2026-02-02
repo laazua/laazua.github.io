@@ -2,10 +2,10 @@
 title: sshd服务配置
 prev:
     text: Linux权限系统
-    link: ./permission
+    link: /posts/linux/permission
 next:
     text: 内核参数调整示例
-    link: ./kernel
+    link: /posts/linux/kernel
 ---
 
 ##### ssh配置

@@ -1,11 +1,11 @@
 ---
 title: C/C++
 prev:
-    text: Golang其他示例代码
-    link:  /posts/language/golang/example
+    text: 运维工具
+    link:  /posts/tools/index
 next:
-    text: C/C++ 开发与运行
-    link: /posts/language/cc/dev
+    text: Go语言
+    link: /posts/language/golang/index
 ---
 
 ##### C/C++

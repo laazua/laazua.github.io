@@ -4,8 +4,8 @@ prev:
     text: Docker 语法指令
     link:  /posts/containerd/docker/base
 next:
-    text: Kubernetes
-    link: /posts/containerd/k8s/index
+    text: 基础镜像
+    link: /posts/containerd/docker/image
 ---
 
 ##### [Dockerfile](https://docs.docker.com/reference/dockerfile/)

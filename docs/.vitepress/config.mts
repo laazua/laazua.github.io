@@ -17,14 +17,16 @@ export default defineConfig({
       {
         text: '操作系统',
         collapsed: true,
+        link: '/posts/linux/index',
         items: [
-          { text: 'Linux相关', link: '/posts/linux/index' },
+          { text: 'Linux相关', link: '/posts/linux/linux' },
           { text: 'RockyLinux', link: '/posts/linux/rocky' },
         ]
       },
       {
         text: '运维工具',
         collapsed: true,
+        link: '/posts/tools/index',
         items: [
           { text: 'Ansible', link: '/posts/tools/ansible' },
           { text: 'Pyinfra', link: '/posts/tools/pyinfra' },
@@ -41,24 +43,28 @@ export default defineConfig({
       {
         text: '语言相关',
         collapsed: true,
+        link: '/posts/language/index',
         items: [
           {
-            text: 'Rust',
+            text: 'C/C++',
             collapsed: true,
+            link: '/posts/language/cc/index',
             items: [
-               { text: '编码事项', link: '/posts/language/rust/index' },
+              { text: '编码事项', link: '/posts/language/cc/index' },
             ]
           },
-          {
-            text: 'Java',
+           {
+            text: 'Golang',
             collapsed: true,
+            link: '/posts/language/golang/index',
             items: [
-              { text: '编码事项', link: '/posts/language/java/index' },
+              { text: '编码事项', link: '/posts/language/golang/index' },
             ]
           },
           {
             text: 'Python',
             collapsed: true,
+            link: '/posts/language/python/index',
             items: [
               { text: '一些知识点', link: '/posts/language/python/index' },
               { text: 'uv项目管理工具', link: '/posts/language/python/uv' },
@@ -66,17 +72,35 @@ export default defineConfig({
             ]
           },
           {
-            text: 'Golang',
+            text: 'PHP',
             collapsed: true,
+            link: '/posts/language/php/index',
             items: [
-              { text: '编码事项', link: '/posts/language/golang/index' },
+              { text: 'fpm', link: '/posts/language/php/fpm' }
             ]
           },
           {
-            text: 'C/C++',
+            text: 'Java',
             collapsed: true,
+            link: '/posts/language/java/index',
             items: [
-              { text: '编码事项', link: '/posts/language/cc/index' },
+              { text: '编码事项', link: '/posts/language/java/index' },
+            ]
+          },
+          {
+            text: 'Rust',
+            collapsed: true,
+            link: '/posts/language/rust/index',
+            items: [
+               { text: '编码事项', link: '/posts/language/rust/index' },
+            ]
+          },
+          {
+            text: 'Zig',
+            collapsed: true,
+            link: '/posts/language/zig/index',
+            items: [
+              { text: '编码事项', link: '/posts/language/zig/index'}
             ]
           }
         ]
@@ -84,8 +108,8 @@ export default defineConfig({
       {
         text: '网络相关',
         collapsed: true,
+        link: '/posts/network/index',
         items: [
-          { text: '网络概念', link: '/posts/network/index' },
           { text: 'v2ray', link: '/posts/network/v2ray' },
           { text: 'openVpn', link: '/posts/network/openVpn' }
         ]
@@ -93,6 +117,7 @@ export default defineConfig({
       {
         text: '容器相关',
         collapsed: true,
+        link: '/posts/containerd/docker/index',
         items: [
           {
             text: 'Docker',
@@ -125,6 +150,7 @@ export default defineConfig({
       {
         text: '中间件相关',
         collapsed: true,
+        link: '/posts/middleware/index',
         items: [
           {
             text: 'Etcd',
@@ -188,10 +214,11 @@ export default defineConfig({
         ]
       },
       {
-        text: '其他知识点',
+        text: '杂七杂八',
         collapsed: true,
+        link: '/posts/other/index',
         items: [
-          { text: '一些工具', link: '/posts/other/index' },
+          { text: '一些工具', link: '/posts/other/tool' },
           { text: '生活常识', link: '/posts/other/life/index' },
           { text: '书籍推荐', link: '/posts/other/book/index' },
         ]

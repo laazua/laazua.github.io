@@ -1,8 +1,8 @@
 ---
 title: 生活常识
 prev:
-    text: 浏览器插件
-    link:  /posts/other/chrome
+    text: 一些工具
+    link:  /posts/other/tool
 next:
     text: 书籍推荐
     link: /posts/other/book/index

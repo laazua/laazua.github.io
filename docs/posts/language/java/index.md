@@ -1,11 +1,11 @@
 ---
-title: Java
+title: Java语言
 prev:
-    text: Rust语法基础
-    link:  /posts/language/rust/syntax
+    text: PHP语言
+    link:  /posts/language/php/index
 next:
-    text: Springboot初始化项目
-    link: /posts/language/java/springboot
+    text: Rust语言
+    link: /posts/language/rust/index
 ---
 
 ##### Java
