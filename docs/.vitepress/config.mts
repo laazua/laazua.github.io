@@ -38,7 +38,7 @@ export default defineConfig({
           },
           { text: 'EBPF技术', link: '/posts/tools/ebpf' },
           { text: 'vault', link: '/posts/tools/vault' },
-          { text: 'asdf', link: '/posts/tools/asdf' },
+          { text: 'asdf工具', link: '/posts/tools/asdf' },
         ]
       },
       {
