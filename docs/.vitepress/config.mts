@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress'
+import { sidebar } from 'vitepress-plugin-sidebar'  // 引入插件
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -19,8 +20,8 @@ export default defineConfig({
         collapsed: true,
         link: '/posts/linux/index',
         items: [
-          { text: 'Linux相关', link: '/posts/linux/linux' },
-          { text: 'RockyLinux', link: '/posts/linux/rocky' },
+          { text: '⏩ Linux相关', link: '/posts/linux/linux' },
+          { text: '⏩ RockyLinux', link: '/posts/linux/rocky' },
         ]
       },
       {
@@ -28,17 +29,16 @@ export default defineConfig({
         collapsed: true,
         link: '/posts/tools/index',
         items: [
-          { text: 'Ansible', link: '/posts/tools/ansible' },
-          { text: 'Pyinfra', link: '/posts/tools/pyinfra' },
-          // { text: 'Elastic', link: '/posts/tools/elk' },
-          { text: 'Zabbix', link: '/posts/tools/zabbix' },
-          { text: 'Prometheus', link: '/posts/tools/prometheus' },
+          { text: '⏩ Ansible', link: '/posts/tools/ansible' },
+          { text: '⏩ Pyinfra', link: '/posts/tools/pyinfra' },
+          { text: '⏩ Zabbix', link: '/posts/tools/zabbix' },
+          { text: '⏩ Prometheus', link: '/posts/tools/prometheus' },
           { 
-            text: 'Jenkins', link: '/posts/tools/jenkins'
+            text: '⏩ Jenkins', link: '/posts/tools/jenkins'
           },
-          { text: 'EBPF技术', link: '/posts/tools/ebpf' },
-          { text: 'vault', link: '/posts/tools/vault' },
-          { text: 'asdf工具', link: '/posts/tools/asdf' },
+          { text: '⏩ EBPF技术', link: '/posts/tools/ebpf' },
+          { text: '⏩ vault', link: '/posts/tools/vault' },
+          { text: '⏩ asdf工具', link: '/posts/tools/asdf' },
         ]
       },
       {
@@ -47,7 +47,7 @@ export default defineConfig({
         link: '/posts/language/index',
         items: [
           {
-            text: 'C/C++',
+            text: '⏩ C/C++',
             collapsed: true,
             link: '/posts/language/cc/index',
             items: [
@@ -55,7 +55,7 @@ export default defineConfig({
             ]
           },
            {
-            text: 'Golang',
+            text: '⏩ Golang',
             collapsed: true,
             link: '/posts/language/golang/index',
             items: [
@@ -63,7 +63,7 @@ export default defineConfig({
             ]
           },
           {
-            text: 'Python',
+            text: '⏩ Python',
             collapsed: true,
             link: '/posts/language/python/index',
             items: [
@@ -73,7 +73,7 @@ export default defineConfig({
             ]
           },
           {
-            text: 'PHP',
+            text: '⏩ PHP',
             collapsed: true,
             link: '/posts/language/php/index',
             items: [
@@ -81,7 +81,7 @@ export default defineConfig({
             ]
           },
           {
-            text: 'Java',
+            text: '⏩ Java',
             collapsed: true,
             link: '/posts/language/java/index',
             items: [
@@ -89,7 +89,7 @@ export default defineConfig({
             ]
           },
           {
-            text: 'Rust',
+            text: '⏩ Rust',
             collapsed: true,
             link: '/posts/language/rust/index',
             items: [
@@ -97,7 +97,7 @@ export default defineConfig({
             ]
           },
           {
-            text: 'Zig',
+            text: '⏩ Zig',
             collapsed: true,
             link: '/posts/language/zig/index',
             items: [
@@ -107,12 +107,12 @@ export default defineConfig({
         ]
       },
       {
-        text: '📞 网络相关',
+        text: '🌐 网络相关',
         collapsed: true,
         link: '/posts/network/index',
         items: [
-          { text: 'v2ray', link: '/posts/network/v2ray' },
-          { text: 'openVpn', link: '/posts/network/openVpn' }
+          { text: '⏩ v2ray', link: '/posts/network/v2ray' },
+          { text: '⏩ openVpn', link: '/posts/network/openVpn' }
         ]
       },
       {
@@ -121,19 +121,19 @@ export default defineConfig({
         link: '/posts/containerd/docker/index',
         items: [
           {
-            text: 'Docker',
+            text: '⏩ Docker',
             collapsed: true,
             items: [
               { text: '基础知识', link: '/posts/containerd/docker/index' },
             ]
           },
           {
-            text: 'Podman',
+            text: '⏩ Podman',
             collapsed: true,
             items: []
           },
           {
-            text: 'Kubernetes',
+            text: '⏩ Kubernetes',
             collapsed: true,
             items: [
               { text: '详解', link: '/posts/containerd/k8s/index' },
@@ -142,7 +142,7 @@ export default defineConfig({
             ]
           },
           {
-            text: 'Helm',
+            text: '⏩ Helm',
             collapsed: true,
             items: [],
           }
@@ -151,24 +151,25 @@ export default defineConfig({
       {
         text: '🧱 中间件相关',
         collapsed: true,
+        collapsible: true,
         link: '/posts/middleware/index',
         items: [
           {
-            text: 'Etcd',
+            text: '⏩ Etcd',
             collapsed: true,
             items: [
               { text: '基础知识', link: '/posts/middleware/etcd/index' }
             ]
           },
           {
-            text: 'Elastic',
+            text: '⏩ Elastic',
             collapsed: true,
             items: [
               { text: 'ELK技术栈', link: '/posts/middleware/elastic/index' }
             ]
           },
           {
-            text: 'Redis',
+            text: '⏩ Redis',
             collapsed: true,
             items: [
               { text: '基础知识', link: '/posts/middleware/redis/index' },
@@ -176,39 +177,39 @@ export default defineConfig({
             ]
           },
           {
-            text: 'MySQL',
+            text: '⏩ MySQL',
             collapsed: true,
             items: []
           },
           { 
-            text: 'MongoDB',
+            text: '⏩ MongoDB',
             collapsed: true,
             items: []
           },
           {
-            text: 'PostgreSQL',
+            text: '⏩ PostgreSQL',
             collapsed: true,
             items: []
           },
           {
-            text: 'Nginx',
+            text: '⏩ Nginx',
             collapsed: true,
             items: [
               { text: '基础知识', link: '/posts/middleware/nginx/index' },
             ]
           },
           {
-            text: 'Kafka',
+            text: '⏩ Kafka',
             collapsed: true,
             items: [],
           },
           {
-            text: 'Rabbitmq',
+            text: '⏩ Rabbitmq',
             collapsed: true,
             items: [],
           },
           {
-            text: 'Haproxy',
+            text: '⏩ Haproxy',
             collapsed: true,
             items: []
           },
@@ -219,9 +220,9 @@ export default defineConfig({
         collapsed: true,
         link: '/posts/other/index',
         items: [
-          { text: '一些工具', link: '/posts/other/tool' },
-          { text: '生活常识', link: '/posts/other/life/index' },
-          { text: '书籍推荐', link: '/posts/other/book/index' },
+          { text: '⏩ 一些工具', link: '/posts/other/tool' },
+          { text: '⏩ 生活常识', link: '/posts/other/life/index' },
+          { text: '⏩ 书籍推荐', link: '/posts/other/book/index' },
         ]
       }
     ],

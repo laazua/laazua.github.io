@@ -7,6 +7,11 @@
 
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe, #41d1ff);
+
+    /* 导航文字颜色 */
+  --vp-c-text-2: rgba(60, 60, 67, 0.78);
+
+  --vp-home-hero-name-color: rgb(130, 130, 146);
 }
 
 .VPContent {
