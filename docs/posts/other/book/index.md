@@ -10,4 +10,4 @@ next:
 
 ###### 书籍
 
-- [awesome](https://awesome-programming-books.github.io/)
+- [编程类](https://awesome-programming-books.github.io/)
