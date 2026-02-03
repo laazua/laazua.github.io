@@ -4,7 +4,7 @@ prev:
     text: 生活常识
     link:  /posts/other/life/index
 next:
-    text: 浏览完啦
+    text: 没有内容啦🤷‍♂️
     link: /posts/other/book/index
 ---
 

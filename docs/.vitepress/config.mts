@@ -15,7 +15,7 @@ export default defineConfig({
     ],
     sidebar: [
       {
-        text: '操作系统',
+        text: '🖥 操作系统',
         collapsed: true,
         link: '/posts/linux/index',
         items: [
@@ -24,7 +24,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '运维工具',
+        text: '⛏ 运维工具',
         collapsed: true,
         link: '/posts/tools/index',
         items: [
@@ -42,7 +42,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '语言相关',
+        text: '💻 语言相关',
         collapsed: true,
         link: '/posts/language/index',
         items: [
@@ -107,7 +107,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '网络相关',
+        text: '📞 网络相关',
         collapsed: true,
         link: '/posts/network/index',
         items: [
@@ -116,7 +116,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '容器相关',
+        text: '🎡 容器相关',
         collapsed: true,
         link: '/posts/containerd/docker/index',
         items: [
@@ -149,7 +149,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '中间件相关',
+        text: '🧱 中间件相关',
         collapsed: true,
         link: '/posts/middleware/index',
         items: [
@@ -215,7 +215,7 @@ export default defineConfig({
         ]
       },
       {
-        text: '杂七杂八',
+        text: '👓 杂七杂八',
         collapsed: true,
         link: '/posts/other/index',
         items: [
