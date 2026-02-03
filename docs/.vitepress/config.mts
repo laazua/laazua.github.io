@@ -37,7 +37,8 @@ export default defineConfig({
             text: 'Jenkins', link: '/posts/tools/jenkins'
           },
           { text: 'EBPF技术', link: '/posts/tools/ebpf' },
-          { text: 'vault', link: '/posts/tools/vault' }
+          { text: 'vault', link: '/posts/tools/vault' },
+          { text: 'asdf', link: '/posts/tools/asdf' },
         ]
       },
       {

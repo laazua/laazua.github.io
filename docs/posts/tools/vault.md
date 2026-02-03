@@ -4,8 +4,8 @@ prev:
     text: EBPF技术
     link: /posts/tools/ebpf
 next:
-    text: Rust语言
-    link: /posts/language/rust/index
+    text: asdf工具
+    link: /posts/tools/asdf
 ---
 
 ##### [vault](https://github.com/hashicorp/vault)
