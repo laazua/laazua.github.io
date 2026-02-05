@@ -1,10 +1,10 @@
 ---
 layout: home
-title: "Laazua の Document"
+title: "博客文档"
 hero:
-  name: "Laazua の Document"
-  text: "记录 · 思考 · 实践"
-  tagline: "记录日常学习、工作与思考的点点滴滴。"
+  # name: "博客文档"
+  # text: "记录日常学习、工作与思考的点点滴滴"
+  tagline: "记录 · 思考 · 实践"
 #   image:
 #     src: /avatar.png
 #     alt: LAAZUA LOGO

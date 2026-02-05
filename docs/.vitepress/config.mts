@@ -4,7 +4,7 @@ import { sidebar } from 'vitepress-plugin-sidebar'  // 引入插件
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: 'zh-CN',
-  title: "LAAZUA の Document",
+  title: "📚博客文档",
   description: "记录日常学习和工作的点点滴滴",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
