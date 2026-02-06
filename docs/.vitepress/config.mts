@@ -232,6 +232,11 @@ export default defineConfig({
     footer: {
       message: '欢迎来到 Laazua 的站点',
       copyright: '版权归 Laazua 所有'
+    },
+    // 翻页
+    docFooter: {
+      prev: '上一页',
+      next: '下一页'
     }
   }
 })
