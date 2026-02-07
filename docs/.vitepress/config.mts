@@ -20,8 +20,8 @@ export default defineConfig({
         collapsed: true,
         link: '/posts/linux/index',
         items: [
-          { text: '⏩ Linux相关', link: '/posts/linux/linux' },
-          { text: '⏩ RockyLinux', link: '/posts/linux/rocky' },
+          { text: '\u3000\u3000⏩ Linux相关', link: '/posts/linux/linux' },
+          { text: '\u3000\u3000⏩ RockyLinux', link: '/posts/linux/rocky' },
         ]
       },
       {
@@ -29,16 +29,16 @@ export default defineConfig({
         collapsed: true,
         link: '/posts/tools/index',
         items: [
-          { text: '⏩ Ansible', link: '/posts/tools/ansible' },
-          { text: '⏩ Pyinfra', link: '/posts/tools/pyinfra' },
-          { text: '⏩ Zabbix', link: '/posts/tools/zabbix' },
-          { text: '⏩ Prometheus', link: '/posts/tools/prometheus' },
+          { text: '\u3000\u3000⏩ Ansible', link: '/posts/tools/ansible' },
+          { text: '\u3000\u3000⏩ Pyinfra', link: '/posts/tools/pyinfra' },
+          { text: '\u3000\u3000⏩ Zabbix', link: '/posts/tools/zabbix' },
+          { text: '\u3000\u3000⏩ Prometheus', link: '/posts/tools/prometheus' },
           { 
-            text: '⏩ Jenkins', link: '/posts/tools/jenkins'
+            text: '\u3000\u3000⏩ Jenkins', link: '/posts/tools/jenkins'
           },
-          { text: '⏩ EBPF技术', link: '/posts/tools/ebpf' },
-          { text: '⏩ vault', link: '/posts/tools/vault' },
-          { text: '⏩ asdf工具', link: '/posts/tools/asdf' },
+          { text: '\u3000\u3000⏩ EBPF技术', link: '/posts/tools/ebpf' },
+          { text: '\u3000\u3000⏩ vault', link: '/posts/tools/vault' },
+          { text: '\u3000\u3000⏩ asdf工具', link: '/posts/tools/asdf' },
         ]
       },
       {
@@ -47,7 +47,7 @@ export default defineConfig({
         link: '/posts/language/index',
         items: [
           {
-            text: '⏩ C/C++',
+            text: '\u3000\u3000⏩ C/C++',
             collapsed: true,
             link: '/posts/language/cc/index',
             items: [
@@ -55,7 +55,7 @@ export default defineConfig({
             ]
           },
            {
-            text: '⏩ Golang',
+            text: '\u3000\u3000⏩ Golang',
             collapsed: true,
             link: '/posts/language/golang/index',
             items: [
@@ -63,7 +63,7 @@ export default defineConfig({
             ]
           },
           {
-            text: '⏩ Python',
+            text: '\u3000\u3000⏩ Python',
             collapsed: true,
             link: '/posts/language/python/index',
             items: [
@@ -73,7 +73,7 @@ export default defineConfig({
             ]
           },
           {
-            text: '⏩ PHP',
+            text: '\u3000\u3000⏩ PHP',
             collapsed: true,
             link: '/posts/language/php/index',
             items: [
@@ -81,7 +81,7 @@ export default defineConfig({
             ]
           },
           {
-            text: '⏩ Java',
+            text: '\u3000\u3000⏩ Java',
             collapsed: true,
             link: '/posts/language/java/index',
             items: [
@@ -89,7 +89,7 @@ export default defineConfig({
             ]
           },
           {
-            text: '⏩ Rust',
+            text: '\u3000\u3000⏩ Rust',
             collapsed: true,
             link: '/posts/language/rust/index',
             items: [
@@ -97,7 +97,7 @@ export default defineConfig({
             ]
           },
           {
-            text: '⏩ Zig',
+            text: '\u3000\u3000⏩ Zig',
             collapsed: true,
             link: '/posts/language/zig/index',
             items: [
@@ -111,8 +111,8 @@ export default defineConfig({
         collapsed: true,
         link: '/posts/network/index',
         items: [
-          { text: '⏩ v2ray', link: '/posts/network/v2ray' },
-          { text: '⏩ openVpn', link: '/posts/network/openVpn' }
+          { text: '\u3000\u3000⏩ v2ray', link: '/posts/network/v2ray' },
+          { text: '\u3000\u3000⏩ openVpn', link: '/posts/network/openVpn' }
         ]
       },
       {
@@ -121,19 +121,19 @@ export default defineConfig({
         link: '/posts/containerd/docker/index',
         items: [
           {
-            text: '⏩ Docker',
+            text: '\u3000\u3000⏩ Docker',
             collapsed: true,
             items: [
               { text: '基础知识', link: '/posts/containerd/docker/index' },
             ]
           },
           {
-            text: '⏩ Podman',
+            text: '\u3000\u3000⏩ Podman',
             collapsed: true,
             items: []
           },
           {
-            text: '⏩ Kubernetes',
+            text: '\u3000\u3000⏩ Kubernetes',
             collapsed: true,
             items: [
               { text: '详解', link: '/posts/containerd/k8s/index' },
@@ -142,7 +142,7 @@ export default defineConfig({
             ]
           },
           {
-            text: '⏩ Helm',
+            text: '\u3000\u3000⏩ Helm',
             collapsed: true,
             items: [],
           }
@@ -155,21 +155,21 @@ export default defineConfig({
         link: '/posts/middleware/index',
         items: [
           {
-            text: '⏩ Etcd',
+            text: '\u3000\u3000⏩ Etcd',
             collapsed: true,
             items: [
               { text: '基础知识', link: '/posts/middleware/etcd/index' }
             ]
           },
           {
-            text: '⏩ Elastic',
+            text: '\u3000\u3000⏩ Elastic',
             collapsed: true,
             items: [
               { text: 'ELK技术栈', link: '/posts/middleware/elastic/index' }
             ]
           },
           {
-            text: '⏩ Redis',
+            text: '\u3000\u3000⏩ Redis',
             collapsed: true,
             items: [
               { text: '基础知识', link: '/posts/middleware/redis/index' },
@@ -177,39 +177,39 @@ export default defineConfig({
             ]
           },
           {
-            text: '⏩ MySQL',
+            text: '\u3000\u3000⏩ MySQL',
             collapsed: true,
             items: []
           },
           { 
-            text: '⏩ MongoDB',
+            text: '\u3000\u3000⏩ MongoDB',
             collapsed: true,
             items: []
           },
           {
-            text: '⏩ PostgreSQL',
+            text: '\u3000\u3000⏩ PostgreSQL',
             collapsed: true,
             items: []
           },
           {
-            text: '⏩ Nginx',
+            text: '\u3000\u3000⏩ Nginx',
             collapsed: true,
             items: [
               { text: '基础知识', link: '/posts/middleware/nginx/index' },
             ]
           },
           {
-            text: '⏩ Kafka',
+            text: '\u3000\u3000⏩ Kafka',
             collapsed: true,
             items: [],
           },
           {
-            text: '⏩ Rabbitmq',
+            text: '\u3000\u3000⏩ Rabbitmq',
             collapsed: true,
             items: [],
           },
           {
-            text: '⏩ Haproxy',
+            text: '\u3000\u3000⏩ Haproxy',
             collapsed: true,
             items: []
           },
@@ -220,9 +220,9 @@ export default defineConfig({
         collapsed: true,
         link: '/posts/other/index',
         items: [
-          { text: '⏩ 一些工具', link: '/posts/other/tool' },
-          { text: '⏩ 生活常识', link: '/posts/other/life/index' },
-          { text: '⏩ 书籍推荐', link: '/posts/other/book/index' },
+          { text: '\u3000\u3000⏩ 一些工具', link: '/posts/other/tool' },
+          { text: '\u3000\u3000⏩ 生活常识', link: '/posts/other/life/index' },
+          { text: '\u3000\u3000⏩ 书籍推荐', link: '/posts/other/book/index' },
         ]
       }
     ],
