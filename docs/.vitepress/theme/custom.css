@@ -92,7 +92,7 @@ html.dark .vp-doc pre,
 }
 
 .text-family-monospace {
-  font-family: serif;
+  font-family: "Lucida Console", Courier, monospace;
   font-size: 1.2rem;
   font-weight: bold;
   color: #2d6caa;
