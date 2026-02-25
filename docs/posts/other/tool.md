@@ -24,4 +24,4 @@ next:
 
 - [ssh Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
-- [codeberg](codeberg.org)
+- [codeberg](https://codeberg.org/)

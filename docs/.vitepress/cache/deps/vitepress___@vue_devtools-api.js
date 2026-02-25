@@ -522,9 +522,7 @@ function getInstanceName(instance) {
   return "Anonymous Component";
 }
 function getUniqueComponentId(instance) {
-  const appId = instance?.appContext?.app?.__VUE_DEVTOOLS_NEXT_APP_RECORD_ID__ ?? 0;
-  const instanceId = instance === instance?.root ? "root" : instance.uid;
-  return `${appId}:${instanceId}`;
+  return `${instance?.appContext?.app?.__VUE_DEVTOOLS_NEXT_APP_RECORD_ID__ ?? 0}:${instance === instance?.root ? "root" : instance.uid}`;
 }
 function getComponentInstance(appRecord, instanceId) {
   instanceId = instanceId || `${appRecord.id}:root`;
@@ -741,10 +739,7 @@ function inspectFn(e) {
 function selectComponentFn(e, cb) {
   e.preventDefault();
   e.stopPropagation();
-  if (inspectInstance) {
-    const uniqueComponentId = getUniqueComponentId(inspectInstance);
-    cb(uniqueComponentId);
-  }
+  if (inspectInstance) cb(getUniqueComponentId(inspectInstance));
 }
 var inspectComponentHighLighterSelectFn = null;
 function cancelInspectComponentHighLighter() {
@@ -866,7 +861,6 @@ function toRaw$1(observed) {
   const raw = observed && observed[ReactiveFlags.RAW];
   return raw ? toRaw$1(raw) : observed;
 }
-var Fragment = Symbol.for("v-fgt");
 var StateEditor = class {
   constructor() {
     this.refEditor = new RefStateEditor();
@@ -960,7 +954,7 @@ var RefStateEditor = class {
 var stateEditor = new StateEditor();
 var TIMELINE_LAYERS_STATE_STORAGE_ID = "__VUE_DEVTOOLS_KIT_TIMELINE_LAYERS_STATE__";
 function getTimelineLayersStateFromStorage() {
-  if (!isBrowser || typeof localStorage === "undefined" || localStorage === null) return {
+  if (typeof window === "undefined" || !isBrowser || typeof localStorage === "undefined" || localStorage === null) return {
     recordingState: false,
     mouseEventEnabled: false,
     keyboardEventEnabled: false,
@@ -968,7 +962,7 @@ function getTimelineLayersStateFromStorage() {
     performanceEventEnabled: false,
     selected: ""
   };
-  const state = localStorage.getItem(TIMELINE_LAYERS_STATE_STORAGE_ID);
+  const state = typeof localStorage.getItem !== "undefined" ? localStorage.getItem(TIMELINE_LAYERS_STATE_STORAGE_ID) : null;
   return state ? JSON.parse(state) : {
     recordingState: false,
     mouseEventEnabled: false,
@@ -1323,10 +1317,7 @@ function getPluginSettings(pluginId, fallbackValue) {
     const localSettings = localStorage.getItem(localKey);
     if (localSettings) return JSON.parse(localSettings);
   }
-  if (pluginId) {
-    const item = devtoolsPluginBuffer.find((item$1) => item$1[0].id === pluginId)?.[0] ?? null;
-    return _getSettings(item?.settings ?? {});
-  }
+  if (pluginId) return _getSettings((devtoolsPluginBuffer.find((item) => item[0].id === pluginId)?.[0] ?? null)?.settings ?? {});
   return _getSettings(fallbackValue);
 }
 function initPluginSettings(pluginId, settings) {
@@ -3201,8 +3192,7 @@ function updateDevToolsClientDetected(params) {
     ...devtoolsState.devtoolsClientDetected,
     ...params
   };
-  const devtoolsClientVisible = Object.values(devtoolsState.devtoolsClientDetected).some(Boolean);
-  toggleHighPerfMode(!devtoolsClientVisible);
+  toggleHighPerfMode(!Object.values(devtoolsState.devtoolsClientDetected).some(Boolean));
 }
 target.__VUE_DEVTOOLS_UPDATE_CLIENT_DETECTED__ ??= updateDevToolsClientDetected;
 var DoubleIndexedKV = class {
@@ -3733,8 +3723,7 @@ function copy(target$1, options = {}) {
   return [...props, ...symbols].reduce((carry, key) => {
     if (isArray$1(options.props) && !options.props.includes(key)) return carry;
     const val = target$1[key];
-    const newVal = copy(val, options);
-    assignProp(carry, key, newVal, target$1, options.nonenumerable);
+    assignProp(carry, key, copy(val, options), target$1, options.nonenumerable);
     return carry;
   }, {});
 }

@@ -1,5 +1,8 @@
 import { defineConfig } from 'vitepress'
-import { sidebar } from 'vitepress-plugin-sidebar'  // 引入插件
+// import { sidebar } from 'vitepress-plugin-sidebar'  // 引入插件
+
+
+const TSPACE = '\u3000\u3000' // 定义两个全角空格
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -20,8 +23,8 @@ export default defineConfig({
         collapsed: true,
         link: '/posts/linux/index',
         items: [
-          { text: '\u3000\u3000⏩ Linux相关', link: '/posts/linux/linux' },
-          { text: '\u3000\u3000⏩ RockyLinux', link: '/posts/linux/rocky' },
+          { text: `${TSPACE}⏩ Linux相关`, link: '/posts/linux/linux' },
+          { text: `${TSPACE}⏩ RockyLinux`, link: '/posts/linux/rocky' },
         ]
       },
       {
@@ -29,16 +32,16 @@ export default defineConfig({
         collapsed: true,
         link: '/posts/tools/index',
         items: [
-          { text: '\u3000\u3000⏩ Ansible', link: '/posts/tools/ansible' },
-          { text: '\u3000\u3000⏩ Pyinfra', link: '/posts/tools/pyinfra' },
-          { text: '\u3000\u3000⏩ Zabbix', link: '/posts/tools/zabbix' },
-          { text: '\u3000\u3000⏩ Prometheus', link: '/posts/tools/prometheus' },
+          { text: `${TSPACE}⏩ Ansible`, link: '/posts/tools/ansible' },
+          { text: `${TSPACE}⏩ Pyinfra`, link: '/posts/tools/pyinfra' },
+          { text: `${TSPACE}⏩ Zabbix`, link: '/posts/tools/zabbix' },
+          { text: `${TSPACE}⏩ Prometheus`, link: '/posts/tools/prometheus' },
           { 
-            text: '\u3000\u3000⏩ Jenkins', link: '/posts/tools/jenkins'
+            text: `${TSPACE}⏩ Jenkins`, link: '/posts/tools/jenkins'
           },
-          { text: '\u3000\u3000⏩ EBPF技术', link: '/posts/tools/ebpf' },
-          { text: '\u3000\u3000⏩ vault', link: '/posts/tools/vault' },
-          { text: '\u3000\u3000⏩ asdf工具', link: '/posts/tools/asdf' },
+          { text: `${TSPACE}⏩ EBPF技术`, link: '/posts/tools/ebpf' },
+          { text: `${TSPACE}⏩ vault`, link: '/posts/tools/vault' },
+          { text: `${TSPACE}⏩ asdf工具`, link: '/posts/tools/asdf' },
         ]
       },
       {
@@ -47,61 +50,61 @@ export default defineConfig({
         link: '/posts/language/index',
         items: [
           {
-            text: '\u3000\u3000⏩ C/C++',
+            text: `${TSPACE}⏩ C/C++`,
             collapsed: true,
             link: '/posts/language/cc/index',
             items: [
-              { text: '编码事项', link: '/posts/language/cc/index' },
+              { text: `${TSPACE}编码事项`, link: '/posts/language/cc/index' },
             ]
           },
            {
-            text: '\u3000\u3000⏩ Golang',
+            text: `${TSPACE}⏩ Golang`,
             collapsed: true,
             link: '/posts/language/golang/index',
             items: [
-              { text: '编码事项', link: '/posts/language/golang/index' },
+              { text: `${TSPACE}编码事项`, link: '/posts/language/golang/index' },
             ]
           },
           {
-            text: '\u3000\u3000⏩ Python',
+            text: `${TSPACE}⏩ Python`,
             collapsed: true,
             link: '/posts/language/python/index',
             items: [
-              { text: '一些知识点', link: '/posts/language/python/index' },
-              { text: 'uv项目管理工具', link: '/posts/language/python/uv' },
-              { text: 'python启动设置', link: '/posts/language/python/py-run-env' },
+              { text: `${TSPACE}一些知识点`, link: '/posts/language/python/index' },
+              { text: `${TSPACE}uv项目管理工具`, link: '/posts/language/python/uv' },
+              { text: `${TSPACE}python启动设置`, link: '/posts/language/python/py-run-env' },
             ]
           },
           {
-            text: '\u3000\u3000⏩ PHP',
+            text: `${TSPACE}⏩ PHP`,
             collapsed: true,
             link: '/posts/language/php/index',
             items: [
-              { text: 'fpm', link: '/posts/language/php/fpm' }
+              { text: `${TSPACE}fpm`, link: '/posts/language/php/fpm' }
             ]
           },
           {
-            text: '\u3000\u3000⏩ Java',
+            text: `${TSPACE}⏩ Java`,
             collapsed: true,
             link: '/posts/language/java/index',
             items: [
-              { text: '编码事项', link: '/posts/language/java/index' },
+              { text: `${TSPACE}编码事项`, link: '/posts/language/java/index' },
             ]
           },
           {
-            text: '\u3000\u3000⏩ Rust',
+            text: `${TSPACE}⏩ Rust`,
             collapsed: true,
             link: '/posts/language/rust/index',
             items: [
-               { text: '编码事项', link: '/posts/language/rust/index' },
+               { text: `${TSPACE}编码事项`, link: '/posts/language/rust/index' },
             ]
           },
           {
-            text: '\u3000\u3000⏩ Zig',
+            text: `${TSPACE}⏩ Zig`,
             collapsed: true,
             link: '/posts/language/zig/index',
             items: [
-              { text: '编码事项', link: '/posts/language/zig/index'}
+              { text: `${TSPACE}编码事项`, link: '/posts/language/zig/index'}
             ]
           }
         ]
@@ -111,8 +114,8 @@ export default defineConfig({
         collapsed: true,
         link: '/posts/network/index',
         items: [
-          { text: '\u3000\u3000⏩ v2ray', link: '/posts/network/v2ray' },
-          { text: '\u3000\u3000⏩ openVpn', link: '/posts/network/openVpn' }
+          { text: `${TSPACE}⏩ v2ray`, link: '/posts/network/v2ray' },
+          { text: `${TSPACE}⏩ openVpn`, link: '/posts/network/openVpn' }
         ]
       },
       {
@@ -121,28 +124,28 @@ export default defineConfig({
         link: '/posts/containerd/docker/index',
         items: [
           {
-            text: '\u3000\u3000⏩ Docker',
+            text: `${TSPACE}⏩ Docker`,
             collapsed: true,
             items: [
-              { text: '基础知识', link: '/posts/containerd/docker/index' },
+              { text: `${TSPACE}基础知识`, link: '/posts/containerd/docker/index' },
             ]
           },
           {
-            text: '\u3000\u3000⏩ Podman',
+            text: `${TSPACE}⏩ Podman`,
             collapsed: true,
             items: []
           },
           {
-            text: '\u3000\u3000⏩ Kubernetes',
+            text: `${TSPACE}⏩ Kubernetes`,
             collapsed: true,
             items: [
-              { text: '详解', link: '/posts/containerd/k8s/index' },
-              { text: '部署', link: 'https://github.com/laazua/k8s' },
-              { text: '示例', link: 'https://github.com/laazua/k8s/tree/main/examples' }
+              { text: `${TSPACE}详解`, link: '/posts/containerd/k8s/index' },
+              { text: `${TSPACE}部署`, link: 'https://github.com/laazua/k8s' },
+              { text: `${TSPACE}示例`, link: 'https://github.com/laazua/k8s/tree/main/examples' }
             ]
           },
           {
-            text: '\u3000\u3000⏩ Helm',
+            text: `${TSPACE}⏩ Helm`,
             collapsed: true,
             items: [],
           }
@@ -151,65 +154,64 @@ export default defineConfig({
       {
         text: '🧱 中间件相关',
         collapsed: true,
-        collapsible: true,
         link: '/posts/middleware/index',
         items: [
           {
-            text: '\u3000\u3000⏩ Etcd',
+            text: `${TSPACE}⏩ Etcd`,
             collapsed: true,
             items: [
-              { text: '基础知识', link: '/posts/middleware/etcd/index' }
+              { text: `${TSPACE}基础知识`, link: '/posts/middleware/etcd/index' }
             ]
           },
           {
-            text: '\u3000\u3000⏩ Elastic',
+            text: `${TSPACE}⏩ Elastic`,
             collapsed: true,
             items: [
-              { text: 'ELK技术栈', link: '/posts/middleware/elastic/index' }
+              { text: `${TSPACE}ELK技术栈`, link: '/posts/middleware/elastic/index' }
             ]
           },
           {
-            text: '\u3000\u3000⏩ Redis',
+            text: `${TSPACE}⏩ Redis`,
             collapsed: true,
             items: [
-              { text: '基础知识', link: '/posts/middleware/redis/index' },
-              { text: '技术文档', link: '/posts/middleware/redis/redis' },
+              { text: `${TSPACE}基础知识`, link: '/posts/middleware/redis/index' },
+              { text: `${TSPACE}技术文档`, link: '/posts/middleware/redis/redis' },
             ]
           },
           {
-            text: '\u3000\u3000⏩ MySQL',
+            text: `${TSPACE}⏩ MySQL`,
             collapsed: true,
             items: []
           },
           { 
-            text: '\u3000\u3000⏩ MongoDB',
+            text: `${TSPACE}⏩ MongoDB`,
             collapsed: true,
             items: []
           },
           {
-            text: '\u3000\u3000⏩ PostgreSQL',
+            text: `${TSPACE}⏩ PostgreSQL`,
             collapsed: true,
             items: []
           },
           {
-            text: '\u3000\u3000⏩ Nginx',
+            text: `${TSPACE}⏩ Nginx`,
             collapsed: true,
             items: [
-              { text: '基础知识', link: '/posts/middleware/nginx/index' },
+              { text: `${TSPACE}基础知识`, link: '/posts/middleware/nginx/index' },
             ]
           },
           {
-            text: '\u3000\u3000⏩ Kafka',
+            text: `${TSPACE}⏩ Kafka`,
             collapsed: true,
             items: [],
           },
           {
-            text: '\u3000\u3000⏩ Rabbitmq',
+            text: `${TSPACE}⏩ Rabbitmq`,
             collapsed: true,
             items: [],
           },
           {
-            text: '\u3000\u3000⏩ Haproxy',
+            text: `${TSPACE}⏩ Haproxy`,
             collapsed: true,
             items: []
           },
@@ -220,9 +222,9 @@ export default defineConfig({
         collapsed: true,
         link: '/posts/other/index',
         items: [
-          { text: '\u3000\u3000⏩ 一些工具', link: '/posts/other/tool' },
-          { text: '\u3000\u3000⏩ 生活常识', link: '/posts/other/life/index' },
-          { text: '\u3000\u3000⏩ 书籍推荐', link: '/posts/other/book/index' },
+          { text: `${TSPACE}⏩ 一些工具`, link: '/posts/other/tool' },
+          { text: `${TSPACE}⏩ 生活常识`, link: '/posts/other/life/index' },
+          { text: `${TSPACE}⏩ 书籍推荐`, link: '/posts/other/book/index' },
         ]
       }
     ],
