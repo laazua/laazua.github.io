@@ -23,7 +23,8 @@ hero:
 - [简说 v2ray](/posts/network/v2ray.md)
 
 
-> 想了解更多？访问 [全部文章 →](/posts/)
+<!-- > 想了解更多？访问 [全部文章 →](/posts/) -->
+> <span style="color: #2d6caa;">想了解更多？访问 [全部文章 →](/posts/)</span>
 
 ---
 
@@ -44,11 +45,18 @@ hero:
 
 ### 👨‍💻 关于我
 
-*LAAZUA*  
-> 熟悉 Docker, K8s & Helm 等容器化技术.  
-> 能够使用 Python & Golang 制作一些工具, 也懂点 Java.  
-> Linux 系统运维 & DevOps 工程师, 专注于系统可靠性与自动化.  
+<span class="text-family-monospace" >
+熟悉 Docker, K8s & Helm 等容器化技术.<br>
+能够使用 Python & Golang 制作一些工具, 也懂点 Java. <br>
+Linux 系统运维 & DevOps 工程师, 专注于系统可靠性与自动化. <br>
+</span>
 
-- 🌍 GitHub: [@Laazua](https://github.com/laazua)
+<a href="https://github.com/laazua" target="_blank">
+  <span class="text-family-monospace" >
+    🌍 GitHub: @Laazua
+  </span>
+</a>
+
+
 <!-- - 🐦 Twitter: [@laazua_dev](https://twitter.com/laazua_dev)
 - 📧 Email: laazua@example.com -->

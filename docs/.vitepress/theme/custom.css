@@ -74,3 +74,26 @@ html.dark .vp-doc pre,
   color: var(--vp-c-brand);
   font-size: 2.8rem;
 }
+
+/* 设置hero区域tagline的颜色 */
+.VPHero .tagline {
+  color: #2d6caa !important;
+}
+
+/* 自定义 */
+.text-primary {
+    color: #3eaf7c;
+}
+.text-success {
+    color: #67c23a;
+}
+.text-warning {
+    color: #e6a23c;
+}
+
+.text-family-monospace {
+  font-family: serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2d6caa;
+}
