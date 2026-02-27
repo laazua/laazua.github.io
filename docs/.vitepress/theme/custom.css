@@ -12,11 +12,28 @@
   --vp-c-text-2: rgba(60, 60, 67, 0.78);
 
   --vp-home-hero-name-color: rgb(130, 130, 146);
+
+    /* 1. 布局最大宽度 */
+  --vp-layout-max-width: 1860px;
+  
+  /* 2. 内容区域宽度 */
+  --vp-content-width: 1200px;
+  
+  /* 3. 侧边栏宽度 */
+  --vp-sidebar-width: 300px;
+  
+  /* 4. 导航栏高度 */
+  --vp-nav-height: 64px;
+  /* 6. 新增：代码块最大宽度变量 */
+  --vp-code-block-max-width: 1000px;
 }
 
 .VPContent {
   padding-left: 16px;   /* 增加左右内边距，让内容更靠中 */
   padding-right: 16px;
+  width: 100%;  /* 改为100%，不再限制固定宽度 */
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 /* 代码块样式 */
@@ -30,6 +47,105 @@ html.dark .vp-doc pre,
   max-width: calc(var(--vp-content-width) - 32px); /* 宽度随内容区域 */
   overflow-x: auto;
   box-shadow: 0 2px 8px rgba(58, 58, 58, 0.3);
+}
+
+/* 基础代码块样式 - 使用更精确的选择器 */
+.vp-doc div[class*='language-'] {
+  max-width: var(--vp-code-block-max-width, 1000px) !important;
+  width: 100% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 针对带行号的代码块 */
+.vp-doc .line-numbers-mode {
+  max-width: var(--vp-code-block-max-width, 1000px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 针对代码组 */
+.vp-doc .vp-code-group {
+  max-width: var(--vp-code-block-max-width, 1000px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 确保代码内容不溢出 */
+.vp-doc pre {
+  overflow-x: auto !important;
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+}
+
+/* ============ 优化：文档内容容器 ============ */
+
+/* 文档内容容器宽度调整 */
+.VPDoc:not(.has-sidebar) .content-container {
+  max-width: var(--vp-code-block-max-width, 1000px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* 有侧边栏时，内容区域自动调整 */
+.VPDoc.has-sidebar .content-container {
+  max-width: calc(100% - 20px) !important;
+}
+
+/* ============ 优化：响应式设计 ============ */
+
+/* 超大屏幕：可以适当增大代码块宽度 */
+@media (min-width: 1920px) {
+  :root {
+    --vp-code-block-max-width: 1200px;
+  }
+}
+
+/* 中等屏幕：保持原样 */
+@media (max-width: 1440px) and (min-width: 1101px) {
+  :root {
+    --vp-code-block-max-width: 1000px;
+  }
+}
+
+/* 小屏幕：代码块占满宽度 */
+@media (max-width: 1100px) {
+  :root {
+    --vp-code-block-max-width: 100%;
+  }
+  
+  .vp-doc div[class*='language-'],
+  .vp-doc .line-numbers-mode,
+  .vp-doc .vp-code-group {
+    max-width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 0 !important; /* 可选：移除圆角，使占满更自然 */
+  }
+  
+  .VPContent {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+/* ============ 可选：调整其他元素以匹配新宽度 ============ */
+
+/* 表格也自适应宽度 */
+.vp-doc table {
+  max-width: var(--vp-code-block-max-width, 1000px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 100%;
+  overflow-x: auto;
+  display: block;
+}
+
+/* 自定义容器也适应宽度 */
+.vp-doc .custom-block {
+  max-width: var(--vp-code-block-max-width, 1000px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .vp-doc pre code {
