@@ -12,6 +12,7 @@ next:
 
 - 打包
 ```bash
+# 查看支持的平台架构: rustup target list 或者 rustc --print target-list
 # linux 安装 musl 目标(其他平台安装对应的musl： *-unknown-linux-musl)
 rustup target add x86_64-unknown-linux-musl
 # 生成目标文件: target/x86_64-unknown-linux-musl/release/binName
