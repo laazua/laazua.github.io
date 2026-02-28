@@ -181,11 +181,13 @@ export default defineConfig({
           {
             text: `${TSPACE}⏩ MySQL`,
             collapsed: true,
+            link: '/posts/middleware/mysql/index',
             items: []
           },
           { 
             text: `${TSPACE}⏩ MongoDB`,
             collapsed: true,
+            link: '/posts/middleware/mongo/index',
             items: []
           },
           {
@@ -203,16 +205,19 @@ export default defineConfig({
           {
             text: `${TSPACE}⏩ Kafka`,
             collapsed: true,
+            link: '/posts/middleware/kafka/index',
             items: [],
           },
           {
             text: `${TSPACE}⏩ Rabbitmq`,
             collapsed: true,
+            link: '/posts/middleware/rabbitmq/index',
             items: [],
           },
           {
             text: `${TSPACE}⏩ Haproxy`,
             collapsed: true,
+            link: '/posts/middleware/haproxy/index',
             items: []
           },
         ]
