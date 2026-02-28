@@ -1,3 +1,10 @@
+---
+prev: false
+next:
+  text: 回到v2ray
+  link: ./v2ray
+---
+
 ##### 生成服务端节点配置
 
 - **主机优化**

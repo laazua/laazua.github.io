@@ -4,8 +4,8 @@ prev:
     text: vault
     link: /posts/tools/vault
 next:
-    text: Rust语言
-    link: /posts/language/rust/index
+    text: 语言相关
+    link: /posts/language/index
 ---
 
 ##### [asdf](https://github.com/asdf-vm/asdf)
