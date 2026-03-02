@@ -1,5 +1,7 @@
 ### [airflow](https://github.com/apache/airflow)
 
+- **描述**
+> `DAG有向无环图`任务流调度工具.
 
 - **单实例安装运行**
 ```bash
