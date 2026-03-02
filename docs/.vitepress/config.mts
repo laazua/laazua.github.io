@@ -42,6 +42,7 @@ export default defineConfig({
           { text: `${TSPACE}⏩ EBPF技术`, link: '/posts/tools/ebpf' },
           { text: `${TSPACE}⏩ vault`, link: '/posts/tools/vault' },
           { text: `${TSPACE}⏩ asdf工具`, link: '/posts/tools/asdf' },
+          { text: `${TSPACE}⏩ airflow工具`, link: '/posts/tools/airflow' },
         ]
       },
       {

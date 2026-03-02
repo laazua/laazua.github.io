@@ -18,3 +18,4 @@ next:
 - **[EBPF技术](./ebpf.md)**
 - **[Vault](./vault.md)**
 - **[asdf工具](./asdf.md)**
+- **[airflow](./airflow.md)**
