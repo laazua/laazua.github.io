@@ -19,5 +19,5 @@ next:
 - **[Python](./python/index.md)**
 - **[PHP](./php/index.md)**
 - **[Java](./java/index.md)**
-- **[Rust](./rust/index.md)**
-- **[Zig](./zig/index.md)**
+<!-- - **[Rust](./rust/index.md)**
+- **[Zig](./zig/index.md)** -->

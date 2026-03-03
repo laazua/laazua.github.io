@@ -12,6 +12,8 @@ next:
 
 - [编辑器相关](./font.md)
 
+- [windows定时任务:重启程序](./win-cron.md)
+
 - [windows截屏制作](./cut.md)
 
 - [源码分析工具 Zread](https://zread.ai/)

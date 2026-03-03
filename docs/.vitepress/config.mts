@@ -92,22 +92,22 @@ export default defineConfig({
               { text: `${TSPACE}编码事项`, link: '/posts/language/java/index' },
             ]
           },
-          {
-            text: `${TSPACE}⏩ Rust`,
-            collapsed: true,
-            link: '/posts/language/rust/index',
-            items: [
-               { text: `${TSPACE}编码事项`, link: '/posts/language/rust/index' },
-            ]
-          },
-          {
-            text: `${TSPACE}⏩ Zig`,
-            collapsed: true,
-            link: '/posts/language/zig/index',
-            items: [
-              { text: `${TSPACE}编码事项`, link: '/posts/language/zig/index'}
-            ]
-          }
+          // {
+          //   text: `${TSPACE}⏩ Rust`,
+          //   collapsed: true,
+          //   link: '/posts/language/rust/index',
+          //   items: [
+          //      { text: `${TSPACE}编码事项`, link: '/posts/language/rust/index' },
+          //   ]
+          // },
+          // {
+          //   text: `${TSPACE}⏩ Zig`,
+          //   collapsed: true,
+          //   link: '/posts/language/zig/index',
+          //   items: [
+          //     { text: `${TSPACE}编码事项`, link: '/posts/language/zig/index'}
+          //   ]
+          // }
         ]
       },
       {
