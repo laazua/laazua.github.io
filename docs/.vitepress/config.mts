@@ -194,6 +194,7 @@ export default defineConfig({
           {
             text: `${TSPACE}⏩ PostgreSQL`,
             collapsed: true,
+            link: '/posts/middleware/psql/index',
             items: []
           },
           {
