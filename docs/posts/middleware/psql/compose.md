@@ -27,3 +27,16 @@ services:
     environment:
       POSTGRES_PASSWORD: abc123456
 ```
+---
+
+### 操作命令
+```bash
+# 启动实例: 
+sudo docker compose up -d
+# 停止实例: 
+sudo docker compose down -v
+# 删除数据卷: 
+sudo docker volume rm pg-data
+# 端口查看: 
+sudo docker ps --format "table {{.Names}}\t{{.Ports}}"
+```
