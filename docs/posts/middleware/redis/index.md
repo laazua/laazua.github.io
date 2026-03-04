@@ -19,4 +19,6 @@ next:
 
 * **[Redis文档](./redis.md)**
 
-- **[相关问题概念](qustion.md)**
+* **[相关问题概念](qustion.md)**
+
+* **[compose配置](./compose.md)**
