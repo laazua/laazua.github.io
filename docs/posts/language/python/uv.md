@@ -79,3 +79,98 @@ export PYTHONPATH=vendor && python -m app             # 设置依赖路径并运
 
 - **[astral-sh/ruff](https://github.com/astral-sh/ruff)**
     + uv add ruff --dev
+
+---
+
+### uv workspace示例
+
+- **项目初始化**
+```bash
+# 创建项目
+mkdir monorepo && cd monorepo
+# 初始化项目
+uv init --python 3.12
+```
+
+- **项目布局**
+```bash
+# 第一步: 修改根目录: monorepo/pyproject.toml
+: <'EOF'
+
+[project]
+name = "monorepo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
+
+
+[tool.uv.workspace]
+# 正确格式：使用数组的数组
+members = [
+    "apps/*",
+    "libs/*",
+]
+
+EOF
+
+# 第二步: 项目模块布局, 与上面 members 对应
+uv init --app apps/web-app
+uv init --app apps/cli-tool
+uv init --lib libs/shared-utils
+```
+
+- **项目模块添加依赖**
+```bash
+# workspace 成员: web-app 添加 fastapi,uvicorn 依赖
+uv add fastapi uvicorn --package web-app
+# workspace 成员: cli-tool 添加 click 依赖
+uv add click --package cli-tool
+
+# 建立内部库的依赖关系：假设 web-app 需要使用我们刚刚创建的 shared-utils 库
+# 可以像添加外部依赖一样添加它
+uv add shared-utils --package web-app
+```
+
+- **workspace其他操作**
+```bash
+# 同步环境：在项目根目录运行以下命令，uv 会创建一个全局的虚拟环境 (.venv)，并根据 uv.lock 文件安装所有成员的所有依赖
+uv sync --all-packages
+
+# 运行特定应用：使用 uv run 加上 --package 参数来执行某个应用的入口文件
+# 假设 web-app 的入口文件是 apps/web-app/src/web_app/main.py
+uv run --package web-app python -m web_app.main
+
+# 构建 shared-utils 库
+uv build --package shared-utils
+
+# 构建 web-app 应用
+uv build --package web-app
+```
+
+- **项目最终结构**
+```text
+monorepo/
+├── apps
+│   ├── cli-tool
+│   │   ├── main.py
+│   │   ├── pyproject.toml
+│   │   └── README.md
+│   └── web-app
+│       ├── main.py
+│       ├── pyproject.toml
+│       └── README.md
+├── libs
+│   └── shared-utils
+│       ├── pyproject.toml
+│       ├── README.md
+│       └── src
+│           └── shared_utils
+│               ├── __init__.py
+│               └── py.typed
+├── main.py
+├── pyproject.toml
+├── README.md
+└── uv.lock
+```
