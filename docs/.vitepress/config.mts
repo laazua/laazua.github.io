@@ -69,7 +69,6 @@ export default defineConfig({
           {
             text: `${TSPACE}⏩ Python`,
             collapsed: true,
-            link: '/posts/language/python/index',
             items: [
               { text: `${TSPACE}一些知识点`, link: '/posts/language/python/index' },
               { text: `${TSPACE}uv项目管理工具`, link: '/posts/language/python/uv' },
