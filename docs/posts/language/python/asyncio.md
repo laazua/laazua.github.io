@@ -1,11 +1,6 @@
 ---
-title: 标准库 asyncio
-prev:
-    text: Python DRF
-    link:  /posts/language/python/py-drf
-next:
-    text: python项目环境差异化配置
-    link: /posts/language/python/py-config
+prev: false
+next: false
 ---
 ##### 标准库 asyncio
 

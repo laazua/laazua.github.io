@@ -1,13 +1,7 @@
 ---
-title: Ansible
-prev:
-    text: RockyLinux
-    link:  /posts/linux/rocky
-next:
-    text: Pyinfra
-    link: /posts/tools/pyinfra
+prev: false
+next: false
 ---
-
 ##### ansible
 
 <pre>

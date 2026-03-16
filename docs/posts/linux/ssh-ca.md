@@ -1,13 +1,7 @@
 ---
-title: SSH CA 通用账号登录
-prev:
-    text: SSH CA 堡垒机实验
-    link: ./bastion
-next:
-    text: 内核参数调整示例
-    link: ./kernel
+prev: false
+next: false
 ---
-
 
 ##### SSH CA 登录认证
 

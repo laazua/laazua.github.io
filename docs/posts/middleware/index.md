@@ -1,11 +1,6 @@
 ---
-title: 中间件相关
-prev:
-    text: 容器相关
-    link:  /posts/containerd/index
-next:
-    text: Docker 语法指令
-    link: /posts/containerd/docker/base
+prev: false
+next: false
 ---
 
 #### 中间件相关

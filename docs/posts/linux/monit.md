@@ -1,11 +1,6 @@
 ---
-title: monit 监控工具
-prev:
-    text: dnf/yum 源设置代理
-    link: /posts/linux/yum-repo.md
-next:
-    text: RockyLinux
-    link: /posts/linux/rocky
+prev: false
+next: false
 ---
 
 ##### [monit](https://mmonit.com/)

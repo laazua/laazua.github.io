@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 ##### module 代码示例
 
 - **项目结构**

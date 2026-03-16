@@ -1,11 +1,6 @@
 ---
-title: Bash脚本语法
-prev:
-    text: Linux命令
-    link: /posts/linux/command
-next:
-    text: Linux权限系统
-    link: /posts/linux/permission
+prev: false
+next: false
 ---
 
 ##### bash语法(man bash)

@@ -1,11 +1,6 @@
 ---
-title: RockyLinux
-prev:
-    text: Linux
-    link: /posts/linux/index
-next:
-    text: Ansible
-    link: /posts/tools/ansible
+prev: false
+next: false
 ---
 
 ### RockyLinux

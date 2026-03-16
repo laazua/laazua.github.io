@@ -1,11 +1,6 @@
 ---
-title: Redis
-prev:
-    text: Elastic
-    link:  /posts/middleware/elastic/index
-next:
-    text: MySQL
-    link: /posts/middleware/mysql/index
+prev: false
+next: false
 ---
 ##### redis
 

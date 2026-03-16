@@ -1,13 +1,7 @@
 ---
-title: 一般编程范式
-prev:
-    text: 项目代码组织
-    link:  /posts/language/golang/project
-next:
-    text: 守护进程启动
-    link: /posts/language/golang/daemon
+prev: false
+next: false
 ---
-
 ##### 面向接口编程
 
 <pre>

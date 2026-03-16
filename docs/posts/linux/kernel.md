@@ -1,11 +1,6 @@
 ---
-title: 内核参数调整示例
-prev:
-    text: sshd服务配置
-    link: /posts/linux/sshd
-next:
-    text: OpenSSL自签证书
-    link: /posts/linux/cert
+prev: false
+next: false
 ---
 
 ##### Linux 内核调优示例

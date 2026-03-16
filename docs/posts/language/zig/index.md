@@ -1,13 +1,7 @@
 ---
-title: Zig语言
-prev:
-    text: Java语言
-    link:  /posts/language/java/index
-next:
-    text: 网络相关
-    link: /posts/network/index
+prev: false
+next: false
 ---
-
 ##### Zig语言
 
 <pre>

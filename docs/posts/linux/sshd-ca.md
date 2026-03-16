@@ -1,11 +1,6 @@
 ---
-title: SSH CA使用示例教程
-prev:
-    text: ssh客户全局端配置
-    link: ./sshd-client-conn-glob
-next:
-    text: SSH CA 堡垒机实验
-    link: ./bastion.md
+prev: false
+next: false
 ---
 
 ##### 基于 SSH CA 的集中密钥管理 - 完整实现过程

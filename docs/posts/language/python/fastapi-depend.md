@@ -1,11 +1,6 @@
 ---
-title: Python 依赖注入解耦业务逻辑
-prev:
-    text: Python fastAPI
-    link:  /posts/language/python/fastapi
-next:
-    text: Python DRF
-    link: /posts/language/python/py-drf
+prev: false
+next: false
 ---
 
 ##### 依赖注入

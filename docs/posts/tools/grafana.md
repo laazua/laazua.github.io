@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 ### Grafana
 
 * [下载软件包](https://github.com/grafana/grafana/releases)

@@ -1,11 +1,6 @@
 ---
-title: 网络ISO模型
-prev:
-    text: 网络相关
-    link:  /posts/network/index
-next:
-    text: IP网络分组
-    link: /posts/network/net-ip.md
+prev: false
+next: false
 ---
 
 ##### 网络模型

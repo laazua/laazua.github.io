@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 #### trait
 
 - **孤儿原则**

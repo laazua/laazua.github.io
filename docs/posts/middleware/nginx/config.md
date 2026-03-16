@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 ##### 一些配置示例
 
 

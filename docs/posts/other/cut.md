@@ -1,11 +1,6 @@
 ---
-title: windows截屏制作
-prev:
-    text: 编辑器相关
-    link:  /posts/other/font
-next:
-    text: 浏览器插件
-    link: /posts/other/chrome
+prev: false
+next: false
 ---
 
 ##### 制作截屏小工具

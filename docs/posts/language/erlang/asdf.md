@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 #### [asdf](https://github.com/asdf-vm/asdf)
 
 - 安装

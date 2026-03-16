@@ -1,11 +1,6 @@
 ---
-title: OpenSSL CA自签证书
-prev:
-    text: OpenSSL自签证书
-    link: /posts/linux/cert
-next:
-    text: OpenSSL加密解密
-    link: /posts/linux/salt
+prev: false
+next: false
 ---
 
 

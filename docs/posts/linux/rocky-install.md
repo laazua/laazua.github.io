@@ -1,3 +1,8 @@
+---
+prev: false
+next: false
+---
+
 ##### Rocky10系统安装
 
 

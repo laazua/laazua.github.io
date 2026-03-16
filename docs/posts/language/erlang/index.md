@@ -1,13 +1,7 @@
 ---
-title: Erlang语言
-prev:
-    text: 
-    link:
-next:
-    text:
-    link:
+prev: false
+next: false
 ---
-
 ##### Erlang
 
 - otp安装

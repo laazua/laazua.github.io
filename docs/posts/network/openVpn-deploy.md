@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 ##### openVpn 部署
 
 > 阅读脚本,根据实际清空进行修改!!!

@@ -1,11 +1,6 @@
 ---
-title: 网络相关
-prev:
-    text: Zig语言
-    link:  /posts/language/zig/index
-next:
-    text: 容器相关
-    link: /posts/containerd/docker/index
+prev: false
+next: false
 ---
 
 ##### 网络

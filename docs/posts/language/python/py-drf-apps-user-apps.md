@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 ##### apps/user/apps.py
 
 ```python

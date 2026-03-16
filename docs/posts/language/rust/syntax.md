@@ -1,4 +1,8 @@
 ---
+prev: false
+next: false
+---
+---
 title: Rust语法基础
 prev:
     text: Rust构建打包

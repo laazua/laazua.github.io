@@ -1,13 +1,7 @@
 ---
-title: OpenSSL自签证书
-prev:
-    text: 内核参数调整示例
-    link: /posts/linux/kernel
-next:
-    text: OpenSSL CA自签证书
-    link: /posts/linux/openssl-ca
+prev: false
+next: false
 ---
-
 #####
 
 - **OpenSSL自签web通用证书**  

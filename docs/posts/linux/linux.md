@@ -1,11 +1,6 @@
 ---
-title: Linux系统
-prev:
-    text: 操作系统
-    link: /posts/linux/index
-next:
-    text: RockyLinux
-    link: /posts/linux/rocky
+prev: false
+next: false
 ---
 ### Linux
 

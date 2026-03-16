@@ -1,11 +1,6 @@
 ---
-title: 给 dnf/yum 源设置代理
-prev:
-    text: Git仓库操作
-    link: /posts/linux/git
-next:
-    text: monit 监控工具
-    link: /posts/linux/monit
+prev: false
+next: false
 ---
 
 ##### 给源设置代理

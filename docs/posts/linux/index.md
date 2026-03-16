@@ -1,8 +1,6 @@
 ---
-title: 操作系统
-next:
-    text: Linux
-    link: ./linux.md
+prev: false
+next: false
 ---
 
 #### 操作系统

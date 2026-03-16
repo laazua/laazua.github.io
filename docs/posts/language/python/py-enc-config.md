@@ -1,11 +1,6 @@
 ---
-title: 加密配置文件字段通过环境变量进行解密
-prev:
-    text: Python 装饰器
-    link:  /posts/language/python/py-decorator
-next:
-    text: Golang
-    link: /posts/language/golang/index
+prev: false
+next: false
 ---
 
 ##### 加密配置文件字段

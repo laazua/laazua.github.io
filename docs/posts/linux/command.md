@@ -1,11 +1,6 @@
 ---
-title: Linux命令
-prev:
-    text: Linux系统
-    link: /posts/linux/linux
-next:
-    text: Bash脚本语法
-    link: /posts/linux/bash
+prev: false
+next: false
 ---
 
 ##### 命令用法

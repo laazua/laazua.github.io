@@ -1,11 +1,6 @@
 ---
-title: Python fastapi
-prev:
-    text: Python
-    link:  /posts/language/python/index
-next:
-    text: Python DRF
-    link: /posts/language/python/py-drf-api
+prev: false
+next: false
 ---
 
 ##### fastapi

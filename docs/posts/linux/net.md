@@ -1,11 +1,6 @@
 ---
-title: NetworkManager配置
-prev:
-    text: firewalld简介
-    link: /posts/linux/firewalld
-next:
-    text: Git仓库操作
-    link: /posts/linux/git
+prev: false
+next: false
 ---
 
 

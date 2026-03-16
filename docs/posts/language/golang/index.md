@@ -1,11 +1,6 @@
 ---
-title: Golang语言
-prev:
-    text: C/C++语言
-    link:  /posts/language/cc/index
-next:
-    text: Python语言
-    link: /posts/language/python/index
+prev: false
+next: false
 ---
 
 ##### golang

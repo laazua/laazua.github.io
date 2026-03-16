@@ -1,8 +1,6 @@
 ---
 prev: false
-next:
-  text: 回到v2ray
-  link: ./v2ray
+next: false
 ---
 
 ##### V2ray 配置生成

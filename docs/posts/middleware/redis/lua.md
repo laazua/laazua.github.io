@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 #### Lua脚本
 
 - **lua脚本执行示例**

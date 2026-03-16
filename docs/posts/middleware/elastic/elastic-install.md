@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 ##### 安装
 
 * **[主机初始化](https://www.elastic.co/docs/deploy-manage/deploy/self-managed/important-system-configuration)**

@@ -1,13 +1,7 @@
 ---
-title: C/C++
-prev:
-    text: 运维工具
-    link:  /posts/tools/index
-next:
-    text: Go语言
-    link: /posts/language/golang/index
+prev: false
+next: false
 ---
-
 ##### C/C++
 <pre>
   编程入门还得C/C++

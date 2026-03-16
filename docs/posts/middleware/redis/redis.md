@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 #### redis
 
 - **[源码仓库](https://github.com/redis/redis)**

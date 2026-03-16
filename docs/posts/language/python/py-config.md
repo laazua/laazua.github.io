@@ -1,11 +1,6 @@
 ---
-title: Python项目环境差异化配置
-prev:
-    text: Python DRF
-    link:  /posts/language/java/py-drf
-next:
-    text: Python 装饰器
-    link: /posts/language/python/py-decorator
+prev: false
+next: false
 ---
 
 ##### 项目配置

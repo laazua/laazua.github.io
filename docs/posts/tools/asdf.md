@@ -1,11 +1,6 @@
 ---
-title: asdf工具
-prev:
-    text: vault
-    link: /posts/tools/vault
-next:
-    text: 语言相关
-    link: /posts/language/index
+prev: false
+next: false
 ---
 
 ##### [asdf](https://github.com/asdf-vm/asdf)

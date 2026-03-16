@@ -1,11 +1,6 @@
 ---
-title: Prometheus
-prev:
-    text: Zabbix
-    link:  /posts/tools/ansible
-next:
-    text: Jenkins
-    link: /posts/tools/jenkins
+prev: false
+next: false
 ---
 
 ##### [Prometheus](https://github.com/prometheus)

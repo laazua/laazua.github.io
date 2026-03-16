@@ -1,11 +1,6 @@
 ---
-title: Jenkins
-prev:
-    text: Prometheus
-    link:  /posts/tools/prometheus
-next:
-    text: EBPF技术
-    link: /posts/tools/ebpf
+prev: false
+next: false
 ---
 
 ##### jenkins

@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 ##### [Redis安装](https://redis.io/docs/latest/operate/oss_and_stack/install/build-stack/almalinux-rocky-9/)
 
 

@@ -1,11 +1,6 @@
 ---
-title: 一些工具
-prev:
-    text: 杂七杂八
-    link:  /posts/other/index
-next:
-    text: 生活常识
-    link: /posts/other/life/index
+prev: false
+next: false
 ---
 
 ##### 一些工具

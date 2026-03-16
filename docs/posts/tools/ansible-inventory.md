@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 ##### Inventory
 
 - **ini风格**

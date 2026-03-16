@@ -1,11 +1,6 @@
 ---
-title: Python语言
-prev:
-    text: Go语言
-    link:  /posts/language/golang/index
-next:
-    text: PHP语言
-    link: /posts/language/php/index
+prev: false
+next: false
 ---
 
 ##### python

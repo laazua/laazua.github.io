@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 #### [FastDepends](https://github.com/Lancetnik/FastDepends)
 
 

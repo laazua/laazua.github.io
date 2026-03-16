@@ -1,11 +1,6 @@
 ---
-title: 运维工具
-prev:
-    text: 操作系统
-    link: /posts/linux/index
-next:
-    text: 语言相关
-    link: /posts/language/index
+prev: false
+next: false
 ---
 
 ##### 运维工具

@@ -1,11 +1,6 @@
 ---
-title: Pyinfra
-prev:
-    text: Ansible
-    link:  /posts/tools/ansible
-next:
-    text: Zabbix
-    link: /posts/tools/zabbix
+prev: false
+next: false
 ---
 
 ##### [pyinfra](https://github.com/pyinfra-dev/pyinfra)

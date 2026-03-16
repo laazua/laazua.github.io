@@ -1,11 +1,6 @@
 ---
-title: Python DRF
-prev:
-    text: Python FastAPI
-    link:  /posts/language/python/fastapi
-next:
-    text: Python 标准库 asyncio
-    link: ./asyncio
+prev: false
+next: false
 ---
 
 ##### 接口访问示例

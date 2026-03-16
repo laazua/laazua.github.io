@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 ### 域名代理
 
 - 说明

@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 ##### 共享库
 
 - **[代码结构](https://github.com/laazua/sharedlib)**

@@ -1,13 +1,7 @@
 ---
-title: Rust语言
-prev:
-    text: Java语言
-    link:  /posts/language/java/index
-next:
-    text: Zig语言
-    link: /posts/language/zig/index
+prev: false
+next: false
 ---
-
 ##### Rust
 
 <pre>

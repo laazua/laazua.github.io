@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 ### 一些问题
 
 - **缓存击穿**

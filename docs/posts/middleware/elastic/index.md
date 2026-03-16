@@ -1,11 +1,6 @@
 ---
-title: Elastic
-prev:
-    text: Etcd
-    link:  /posts/middleware/etcd/index
-next:
-    text: Redis
-    link: /posts/middleware/redis/index
+prev: false
+next: false
 ---
 ##### ELK技术栈
 

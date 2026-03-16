@@ -1,11 +1,6 @@
 ---
-title: 语言相关
-prev:
-    text: 运维工具
-    link: /posts/tools/index
-next:
-    text: 网络相关
-    link: /posts/network/index
+prev: false
+next: false
 ---
 
 ##### 语言相关

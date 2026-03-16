@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 ### windown 定时重启
 
 - **重启脚本示例**

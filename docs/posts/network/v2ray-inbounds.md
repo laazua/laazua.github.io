@@ -1,8 +1,6 @@
 ---
 prev: false
-next:
-  text: 回到v2ray
-  link: ./v2ray
+next: false
 ---
 
 - **inbounds**

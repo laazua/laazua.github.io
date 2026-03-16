@@ -1,11 +1,6 @@
 ---
-title: 生活常识
-prev:
-    text: 一些工具
-    link:  /posts/other/tool
-next:
-    text: 书籍推荐
-    link: /posts/other/book/index
+prev: false
+next: false
 ---
 
 ##### 生活常识

@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 ##### apps/user/middlewares.py
 
 ```python

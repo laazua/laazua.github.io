@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 ##### Jar包瘦身
 
 ```shell

@@ -1,13 +1,7 @@
 ---
-title: 杂七杂八
-prev:
-    text: Haproxy
-    link:  /posts/middleware/haproxy/index
-next:
-    text: 一些工具
-    link: /posts/other/tool
+prev: false
+next: false
 ---
-
 ##### 杂七杂八
 
 - **[一些工具](./tool.md)**

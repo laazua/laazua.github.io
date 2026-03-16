@@ -1,11 +1,6 @@
 ---
-title: Python 装饰器
-prev:
-    text: Python项目环境差异化配置
-    link:  /posts/language/python/py-config
-next:
-    text: 加密配置文件字段通过环境变量进行解密
-    link: /posts/language/python/py-enc-config
+prev: false
+next: false
 ---
 
 ##### 装饰器

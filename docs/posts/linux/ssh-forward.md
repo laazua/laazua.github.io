@@ -1,13 +1,7 @@
 ---
-title: SSH 流量转发
-prev:
-    text: SSH CA 通用账号登录
-    link: ./ssh-ca
-next:
-    text: 内核参数调整示例
-    link: ./kernel
+prev: false
+next: false
 ---
-
 ### SSH 流量转发
 
 ::: code-group

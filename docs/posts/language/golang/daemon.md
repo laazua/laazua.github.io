@@ -1,12 +1,7 @@
 ---
-title: 守护进程启动
-prev:
-    text: 一般编程范式
-    link:  /posts/language/golang/interface
-next:
-    text: 其他示例代码
-    link: /posts/language/golang/example
----
+prev: false
+next: false
+----
 
 ##### 守护进程
 

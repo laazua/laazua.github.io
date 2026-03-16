@@ -1,13 +1,7 @@
 ---
-title: 项目代码组织
-prev:
-    text: 编译优化
-    link:  /posts/language/golang/build
-next:
-    text: 一般编程范式
-    link: /posts/language/golang/interface
+prev: false
+next: false
 ---
-
 ##### 项目组织
 
 <pre>

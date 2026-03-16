@@ -1,3 +1,7 @@
+---
+prev: false
+next: false
+---
 ##### Django-drf
 
 - **面向资源**

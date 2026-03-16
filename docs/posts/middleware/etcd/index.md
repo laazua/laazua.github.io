@@ -1,10 +1,5 @@
 ---
-title: Etcd
-prev:
-    text: Helm
-    link:  /posts/containerd/k8s/helm
-next:
-    text: Elastic
-    link: /posts/middleware/elastic/index
+prev: false
+next: false
 ---
 ##### [Etcd]()

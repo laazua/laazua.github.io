@@ -1,11 +1,6 @@
 ---
-title: 编译优化
-prev:
-    text: Golang
-    link:  /posts/language/golang/index
-next:
-    text: 项目代码组织
-    link: /posts/language/golang/project
+prev: false
+next: false
 ---
 
 ##### 编译

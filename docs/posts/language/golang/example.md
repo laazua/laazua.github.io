@@ -1,13 +1,7 @@
 ---
-title: 其他示例代码
-prev:
-    text: 守护进程启动
-    link:  /posts/language/golang/daemon
-next:
-    text: C/C++
-    link: /posts/language/cc/index
+prev: false
+next: false
 ---
-
 
 ##### 示例代码
 
