@@ -2,7 +2,6 @@
 prev: false
 next: false
 ---
-
 ### kubeadm安装集群
 
 ---
