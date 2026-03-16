@@ -32,7 +32,7 @@ sudo hostnamectl set-hostname k8s-node-02
 
 ---
 - *配置节点 /etc/hosts*
-```cnf
+```text
 182.168.165.80 k8s-master
 192.168.165.81 k8s-node-01
 192.168.165.82 k8s-node-02

@@ -110,7 +110,7 @@ RUN apk add --no-cache curl=8.5.0-r0
 # --no-cache 参数会自动清理临时文件，是最简单的方式
 ```
 
-```dockerignore [使用 .dockerignore]
+```text [使用 .dockerignore]
 # 文件内容 .dockerignore
 .git
 node_modules

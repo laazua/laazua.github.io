@@ -45,7 +45,7 @@ ssh -J user_jump@192.168.1.100:22022 user_target@10.0.0.5 -p 2222
 # 多级跳转: ssh -J user@jump1,user@jump2 user@target
 ```
 
-```conf [堡垒机跳转配置]
+```text [堡垒机跳转配置]
 # 配置: ~/.ssh/config
 
 # 1. 先定义跳板机

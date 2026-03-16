@@ -14,7 +14,7 @@ next: false
 </pre>
 
 - 配置
-```conf
+```text
 server {
     listen 80;
     server_name aaaaa.com
