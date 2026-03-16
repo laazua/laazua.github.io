@@ -39,7 +39,7 @@ import{_ as i,o as a,c as n,ai as l}from"./chunks/framework.rV0OLpih.js";const g
 <span class="line"></span>
 <span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># 对于 apk (Alpine)</span></span>
 <span class="line"><span style="--shiki-light:#D73A49;--shiki-dark:#F97583;">RUN</span><span style="--shiki-light:#24292E;--shiki-dark:#E1E4E8;"> apk add --no-cache curl=8.5.0-r0</span></span>
-<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># --no-cache 参数会自动清理临时文件，是最简单的方式</span></span></code></pre></div><div class="language-dockerignore"><button title="Copy Code" class="copy"></button><span class="lang">dockerignore</span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span># 文件内容 .dockerignore</span></span>
+<span class="line"><span style="--shiki-light:#6A737D;--shiki-dark:#6A737D;"># --no-cache 参数会自动清理临时文件，是最简单的方式</span></span></code></pre></div><div class="language-gitignore"><button title="Copy Code" class="copy"></button><span class="lang">gitignore</span><pre class="shiki shiki-themes github-light github-dark" style="--shiki-light:#24292e;--shiki-dark:#e1e4e8;--shiki-light-bg:#fff;--shiki-dark-bg:#24292e;" tabindex="0" dir="ltr"><code><span class="line"><span># 文件内容 .dockerignore</span></span>
 <span class="line"><span>.git</span></span>
 <span class="line"><span>node_modules</span></span>
 <span class="line"><span>Dockerfile</span></span>
