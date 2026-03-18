@@ -16,7 +16,6 @@ next: false
     - /etc/sysctl.d/99-sysctl.conf
     ```bash
     vm.max_map_count = 655360
-    # 
     ```
     - 关闭交换分区
 
