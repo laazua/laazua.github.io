@@ -7,6 +7,7 @@ next: false
 
 - **[Ansible](./ansible.md)**
 - **[Pyinfra](./pyinfra.md)**
+- **[saltstack](./saltstack.md)**
 - **[Zabbix](./zabbix.md)**
 - **[Prometheus](./prometheus.md)**
 - **[Jenkins](./jenkins.md)**
