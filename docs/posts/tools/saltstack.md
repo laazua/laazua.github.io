@@ -12,7 +12,7 @@ next: false
 dnf install -y gcc git python3-devel
 
 # 下载源码
-git clone --depth https://github.com/saltstack/salt.git
+git clone --depth 1 https://github.com/saltstack/salt.git
 
 # 安装到指定路径
 ## master节点
