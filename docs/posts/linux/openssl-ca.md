@@ -5,8 +5,6 @@ next: false
 
 
 ##### 实现私有CA生成，申请详解
-
-
 - **描述**
     1. 生成 CA 相关密钥文件
     2. 生成申请 CA 请求相关文件
@@ -69,3 +67,75 @@ echo '0F' >/etc/pki/CA/serial
 
 - **最终生成的文件目录结构**
 ![CA](./ca-files.png)
+
+---
+##### 简单版本脚本
+```bash
+#!/bin/bash
+
+set -e
+
+# 配置证书过期时间(天)
+EXPIRED_TIME=36500
+CA_EXPIRED_TIME=36500
+
+if ! command -v openssl >/dev/null; then
+    echo "openssl command not exists, please install it!"
+    exit
+fi
+
+# 如果还没有CA，先创建CA
+if [ ! -f ca.crt ]; then
+    echo "Creating CA..."
+    openssl req -x509 -new -nodes \
+        -newkey rsa:4096 -keyout ca.key -out ca.crt \
+        -days ${CA_EXPIRED_TIME} -sha256 \
+        -subj "/C=CN/ST=SC/L=CD/O=laazua/CN=MyCA"
+fi
+
+# 生成服务端证书
+echo "Generating server certificate..."
+openssl req -new -nodes \
+    -newkey rsa:2048 -keyout server.key -out server.csr \
+    -subj "/C=CN/ST=SC/L=CD/O=laazua/CN=localhost"
+
+openssl x509 -req -in server.csr \
+    -CA ca.crt -CAkey ca.key -CAcreateserial \
+    -out server.crt -days ${EXPIRED_TIME} -sha256 \
+    -extfile <(cat <<EOF
+basicConstraints = CA:FALSE
+keyUsage = digitalSignature, keyEncipherment
+extendedKeyUsage = serverAuth
+EOF
+)
+
+# 生成客户端证书
+echo "Generating client certificate..."
+openssl req -new -nodes \
+    -newkey rsa:2048 -keyout client.key -out client.csr \
+    -subj "/C=CN/ST=SC/L=CD/O=laazua/CN=client"
+
+
+openssl x509 -req -in client.csr \
+    -CA ca.crt -CAkey ca.key -CAserial ca.srl \
+    -out client.crt -days ${EXPIRED_TIME} -sha256 \
+    -extfile <(cat <<EOF
+basicConstraints = CA:FALSE
+keyUsage = digitalSignature
+extendedKeyUsage = clientAuth
+EOF
+)
+
+# 清理临时文件
+rm -f *.csr *.srl
+
+echo "Done! Generated certificates:"
+echo "  CA: ca.crt, ca.key"
+echo "  Server: server.crt, server.key"
+echo "  Client: client.crt, client.key"
+
+# 验证
+echo -e "\nVerifying certificates..."
+openssl verify -CAfile ca.crt server.crt
+openssl verify -CAfile ca.crt client.crt
+```
