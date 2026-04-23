@@ -22,3 +22,6 @@ next: false
 - **[SSH CA 通用账号登录](./ssh-ca.md)**
 
 - **[SSH 流量转发](./ssh-forward.md)**
+
+
+##### 清理当前主机的known_hosts: ssh-keygen -R 192.168.165.71
