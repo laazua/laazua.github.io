@@ -11,6 +11,8 @@ next: false
 
 - [windows截屏制作](./cut.md)
 
+- [windows 删除特殊权限文件](rm.md)
+
 - [源码分析工具 Zread](https://zread.ai/)
 
 - [浏览器插件](./chrome.md)
