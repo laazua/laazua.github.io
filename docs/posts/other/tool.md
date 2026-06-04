@@ -21,6 +21,8 @@ next: false
 
 - [DMIT VPS](https://www.dmit.io/)
 
+- [hosteons VPS](https://my.hosteons.com/)
+
 - [ssh Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
 - [codeberg](https://codeberg.org/)
