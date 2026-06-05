@@ -21,6 +21,8 @@ next: false
 
 - [DMIT VPS](https://www.dmit.io/)
 
+- [justhost VPS](https://justhost.asia)
+
 - [hosteons VPS](https://my.hosteons.com/)
 
 - [ssh Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
@@ -28,3 +30,5 @@ next: false
 - [codeberg](https://codeberg.org/)
 
 - [CSS 学习参考](https://developer.mozilla.org/zh-CN/docs/Web/CSS/Reference/Properties/font-kerning)
+
+- [一元机场](https://xn--4gqx1hgtfdmt.com)
