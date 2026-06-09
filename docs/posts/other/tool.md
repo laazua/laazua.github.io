@@ -25,6 +25,8 @@ next: false
 
 - [hosteons VPS](https://my.hosteons.com/)
 
+- [一分机场](https://xn--4gqx1hgtfdmt.com/#/dashboard)
+
 - [ssh Putty](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
 
 - [codeberg](https://codeberg.org/)
