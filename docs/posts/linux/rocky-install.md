@@ -68,8 +68,12 @@ EOF
 * **更新系统软件源**
     - [参考阿里云替换源](https://developer.aliyun.com/mirror/)
     ```bash
-    # 替换源并备份
+    # 替换源并备份(阿里源)
     sudo sed -e 's|^mirrorlist=|#mirrorlist=|g' -e 's|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.aliyun.com/rockylinux|g' -i.bak /etc/yum.repos.d/rocky-*.repo
+
+    # 或者使用tencent源
+    sudo sed -e 's|^mirrorlist=|#mirrorlist=|g' -e 's|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.tencent.com/rocky|g' -i.bak /etc/yum.repos.d/[Rr]ocky-*.repo
+
     # 建立元数据缓存
     sudo dnf makecache
     # 添加repo源
